@@ -627,7 +627,7 @@
     // CR 4.3.2.4 pay the total cost.
     if (pay === 'ink') payInk(s, p, LC.costToPlay(s, iid));
     else if (pay === 'shift') payInk(s, p, LC.costToPlay(s, iid, LC.printedKeywords(d).Shift));
-    else if (pay === 'shiftAlt') ABIL(d.id).altShift.pay(x, iid);
+    else if (pay === 'shiftAlt') x.withSource(iid, () => ABIL(d.id).altShift.pay(x, iid));
     else if (pay === 'sing') { paidSingers = [job.singer]; exert(s, job.singer, 'sing'); }
     else if (pay === 'singTogether') {
       const n = LC.printedKeywords(d).SingTogether;
@@ -760,7 +760,9 @@
     if (s.cards[a].zone !== 'play' || s.cards[t].zone !== 'play') return; // CR 4.6.9
     const A = LC.chars(s, a), T = LC.chars(s, t);
     // CR 4.6.6.1 damage = Strength (+Challenger while challenging, 8.5); negative counts as 0.
-    const atk = Math.max(0, (A.flags.dealWithWillpower ? A.wp : A.str) + (A.kw.Challenger || 0));
+    // Challenger is +N {S} (CR 8.5.1); a character dealing damage with its {W} instead (Dale -
+    // Ready for His Shot) doesn't add it.
+    const atk = Math.max(0, A.flags.dealWithWillpower ? A.wp : A.str + (A.kw.Challenger || 0));
     const dfn = LC.isCharacter(def(s, t)) ? Math.max(0, T.flags.dealWithWillpower ? T.wp : T.str) : 0;
     // CR 4.6.6.2 simultaneous.
     const ignoreA = A.flags.noDamageFromClass && T.classifications.includes(A.flags.noDamageFromClass);
@@ -1039,4 +1041,29 @@
     }
     return { ok: true, state: s };
   };
+})();
+
+// Deck legality (CR 1.10/2.1 deck building: at least 60 cards, at most 4 copies of a card with
+// the same full name, one or two ink types) and the defects gate (CLAUDE.md rule 7).
+(function () {
+  const LC = globalThis.LC;
+  LC.deckProblems = function (deck) {
+    const out = [];
+    const n = deck.cards.reduce((a, [, q]) => a + q, 0);
+    if (n < 60) out.push(`Only ${n} cards; a deck needs at least 60.`);
+    const byName = {};
+    const inks = new Set();
+    for (const [id, q] of deck.cards) {
+      const d = LC.CARDS[id];
+      if (!d) { out.push(`Unknown card ${id}.`); continue; }
+      const k = LC.fullName(d);
+      byName[k] = (byName[k] || 0) + q;
+      for (const i of d.inks || [d.ink]) if (i) inks.add(i);
+      if (LC.DEFECTS[id]) out.push(`${k} doesn't play as printed yet (${LC.DEFECTS[id]}).`);
+    }
+    for (const [k, q] of Object.entries(byName)) if (q > 4) out.push(`${q} copies of ${k}; at most 4.`);
+    if (inks.size > 2) out.push(`${inks.size} inks (${[...inks].join(', ')}); at most 2.`);
+    return out;
+  };
+  LC.playableDecks = () => LC.DECKS.filter((d) => !d.cards.some(([id]) => LC.DEFECTS[id]));
 })();
