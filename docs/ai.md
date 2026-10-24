@@ -42,3 +42,14 @@ best position at the start of its next turn.
 - 40 Hard-vs-Hard games: 0 errors, first-player wins 52.5% (Normal: 62%), challenges 0.28 per
   turn (Normal 0.18), empty turns 3.7% (Normal 0.1%) — **watch**: the owner has complained about
   AI turns where nothing happens; check whether these are deliberate holds or empty-hand turns.
+
+## Levels shipped (2026-10-24)
+
+| Level | Search | ms/decision | Evidence |
+|---|---|---|---|
+| easy | one ply, noise 14, 25% blunders | ~20 | tutorial opponent |
+| normal | one opponent ply, top 2 + end, 1 world | ~100 | beats the old one-ply normal 32/40 (80%) |
+| hard | one opponent ply, top 4 + end, 3 worlds | ~330 | beats normal 23/40 (57.5%); top 3 / 2 worlds tied normal 21/40 |
+
+Common random numbers matter: before every candidate shared the same reshuffled worlds, Hard
+skipped early inks (empty turns 3.7%); after, 0.6% and +13 points head-to-head.

@@ -6,10 +6,14 @@
   const LC = globalThis.LC;
   const AI = (LC.ai = LC.ai || {});
 
+  // easy: one ply with noise and blunders. normal/hard: one opponent ply on determinized
+  // copies (see AI.choose); measured in docs/ai.md. `onePly` is the rollout policy and the old
+  // normal level.
   const LEVELS = {
     easy: { noise: 14, blunder: 0.25, threat: 0.25, sample: 10 },
-    normal: { noise: 2, blunder: 0, threat: 0.7, sample: 18 },
-    hard: { noise: 0, blunder: 0, threat: 0.7, sample: 28, reply: 3 },
+    onePly: { noise: 2, blunder: 0, threat: 0.7, sample: 18 },
+    normal: { noise: 1, blunder: 0, threat: 0.7, sample: 18, reply: 2, worlds: 1 },
+    hard: { noise: 0, blunder: 0, threat: 0.7, sample: 28, reply: 4, worlds: 3 },
   };
 
   // Lore is the race. Superlinear near 20 because the last points end the game (KB §3: "score
@@ -165,11 +169,16 @@
     if (w.reply && scored.length) {
       const cands = scored.slice(0, w.reply).map((x) => x.a);
       if (end) cands.push(end);
+      // Every candidate is judged in the SAME hidden-card worlds (common random numbers), or
+      // the comparison measures the luck of each candidate's reshuffle instead of the move.
+      const worlds = Array.from({ length: w.worlds || 2 }, (_, k) => 'det:' + s.logN + ':' + s.seed + ':' + k);
       let best = null;
       for (const a of cands) {
         let s2;
         try { s2 = settleOwn(LC.apply(s, a), seat, w); } catch (e) { continue; }
-        const sc = rollout(determinize(s2, seat), seat);
+        let sc = 0;
+        for (const key of worlds) sc += rollout(determinize(s2, seat, key), seat);
+        sc /= worlds.length;
         if (!best || sc > best.sc) best = { a, sc };
       }
       if (best) return best.a;
@@ -183,9 +192,9 @@
 
   // The AI may not read the opponent's hand or either deck order (KB LESSONS §1.1): reshuffle
   // the opponent's hand+deck and our own deck in a copy before looking ahead.
-  function determinize(s, me) {
+  function determinize(s, me, key) {
     const t = LC.clone(s);
-    let r = (LC.hashSeed('det:' + s.logN + ':' + s.seed) >>> 0) || 1;
+    let r = (LC.hashSeed(key) >>> 0) || 1;
     const rand = (n) => { r = (Math.imul(r, 1103515245) + 12345) >>> 0; return r % n; };
     const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = rand(i + 1); [a[i], a[j]] = [a[j], a[i]]; } return a; };
     const op = t.players[1 - me];
@@ -200,7 +209,7 @@
 
   // Play both sides with the normal policy (fewer candidates) until it is our turn again.
   function rollout(s, me) {
-    const w = { ...LEVELS.normal, noise: 0, sample: 10 };
+    const w = { ...LEVELS.onePly, noise: 0, sample: 10 };
     const stopTurn = s.turn + (s.active === me ? 2 : 1);
     let t = s;
     for (let n = 0; n < 60 && !LC.isTerminal(t); n++) {

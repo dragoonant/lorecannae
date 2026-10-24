@@ -29,6 +29,23 @@ Cards that cannot play as printed at all are kept out of decks via `data/defects
   cards that say "in any order" use it, both for looked-at cards (private order) and revealed
   ones (public order, 7.2.3).
 
+### Last-known information for characters that left play
+- **CR:** 6.7.7 (use the values from just before a card left play).
+- **Engine does:** a trigger whose source left play before it resolves reads the card's printed
+  values (e.g. Support adds printed strength; a banished character's own damage trigger credits
+  nobody). No card in the pool hits this in normal play.
+- **Closes when:** `leavePlay` snapshots `chars()` onto the bag entry and triggers read it.
+
+### Rulings we made without an official answer (check against Ravensburger Q&A)
+- **angel-experiment-624 GOOD AIM** ("Once during your turn, you may choose and discard a card to
+  deal 2 damage…") is offered like an activated ability with the discard as its cost, the way
+  Boost's identical "Once during your turn, you may pay…" wording works (CR 8.4).
+- **mike-wazowski-heroic-climber FIND A FRIEND:** a revealed character card the player declines
+  to take stays on top of their deck ("Otherwise" covers only non-character cards).
+- **ariel-ethereal-voice COMMAND PERFORMANCE:** the "if there's a card under this character"
+  check is applied when the trigger would be added as well as on resolution, so a trigger that
+  would do nothing doesn't use up "once during your turn".
+
 <!-- Add more entries above this line, same fields: CR, Engine does, Closes when. -->
 
 ## Not deviations, recorded so they are not mistaken for one
