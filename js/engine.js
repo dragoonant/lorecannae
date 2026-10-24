@@ -1020,3 +1020,23 @@
   // Expose internals the ability runtime and tests use.
   LC._internal = { settle, runJob, gsc, emit, move, placeIn, removeFromZone, playCard, readyInk, validSelection, freshTurnInfo };
 })();
+
+// Black box (KB LESSONS §7): a game is fully described by its newGame options and the actions
+// applied. LC.replay re-runs a trace and reports the first ILLEGAL/THREW/DIVERGED step.
+(function () {
+  const LC = globalThis.LC;
+  LC.makeTrace = (opts) => ({ v: 1, opts: { decks: opts.decks, seed: opts.seed, first: opts.first, names: opts.names }, actions: [], marks: [] });
+  LC.replay = function (trace, upTo) {
+    let s = LC.newGame(trace.opts);
+    const n = upTo == null ? trace.actions.length : upTo;
+    for (let k = 0; k < n; k++) {
+      const a = trace.actions[k];
+      const legal = LC.legalActions(s);
+      const isAnswer = a.type === 'answer';
+      if (!isAnswer && !legal.some((l) => JSON.stringify(l) === JSON.stringify(a))) return { ok: false, at: k, kind: 'ILLEGAL', action: a, state: s };
+      try { s = LC.apply(s, a); } catch (e) { return { ok: false, at: k, kind: e instanceof LC.Illegal ? 'ILLEGAL' : 'THREW', error: String(e && e.stack || e), action: a, state: s }; }
+      if (trace.logN && trace.logN[k] != null && trace.logN[k] !== s.logN) return { ok: false, at: k, kind: 'DIVERGED', action: a, state: s };
+    }
+    return { ok: true, state: s };
+  };
+})();
