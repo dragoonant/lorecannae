@@ -49,12 +49,17 @@ All art and sound is made on the owner's machine; no cloud service is called (D1
 | Use | Tool | Licence of the model |
 |---|---|---|
 | Card and board art | FLUX.2 klein 4B, run locally through Flux Studio | Apache-2.0 |
+| MGSD style audition (D17) | FLUX.1 dev (fp8) and FLUX.1 schnell (fp8), run locally through Flux Studio | dev: FLUX.1 [dev] **Non-Commercial** Licence, used only because this is a free, non-commercial fan project (owner's call, D17); schnell: Apache-2.0 |
 | Sound effects | Stable Audio Open, run locally through Audio Studio | Stability AI community licence |
 | Music | ACE-Step, run locally through Audio Studio | Apache-2.0 |
 | Floor sound kit | Procedural Web Audio, written in this repo | this repo |
 
-- Prompts are linted by `tools/build-art-prompts.mjs`: no card or character names, no franchise,
-  studio, film or artist names, no text-magnet words (`CLAUDE.md` rule 9).
+- Prompts are linted by `tools/build-art-prompts.mjs`: no text-magnet words, negations or counts
+  above two. Under D17 (which supersedes D3) character names may appear in prompts; studio and film
+  titles stay out. Official card images (Lorcast `image_uris`) were viewed only to describe each
+  character; they are never used as image inputs and never committed.
+- If FLUX.1 dev is picked for the batch, its output is bound by the non-commercial licence: the
+  project must stay free and non-commercial.
 - Stable Audio Open's community licence has conditions on commercial use and on attribution of
   the model. This project is non-commercial; the owner should re-read the licence text before
   shipping generated audio and record anything it requires here.

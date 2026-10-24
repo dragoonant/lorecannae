@@ -1,9 +1,9 @@
-// UI plates (16:9, 2 MP) → art/ui/<name>.png masters, art/ui/<name>.webp delivery.
+// UI plates (16:9, 2 MP) -> art/masters/ui/<name>.png masters, art/ui/<name>.webp delivery.
 // Backdrops are "empty places": no figures, calm open centre, detail fading toward the edges, so
-// cards and panels can sit on top. Same STYLE and lint as the cards; LANDSCAPE instead of PORTRAIT.
-// UI prompts additionally ban castle/palace/spire/turret (build-art-prompts.mjs): a castle on a hill
-// is too close to a famous studio logo's trade dress (lead, 2026-10-25). The title plate was
-// re-rendered without one; board-courtyard's plate predates the rewording ("castle courtyard").
+// cards and panels can sit on top. They use UI_STYLE (the D17 feature-animation direction as a
+// background painting). UI prompts also refuse castle/palace/spire/turret/citadel/kingdom (D16:
+// a castle on a hill is too close to a famous studio logo's trade dress). The ink field is unused
+// since D17 (kept as a colour note).
 export const UI_EMPTY = 'an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges';
 export const UI = {
   'title': { subject: 'an enchanted moonlit forest clearing where glowing swirls of liquid ink light rise from a still open ink pool and drift up among the trees like ribbons of northern lights', set: 'at twilight with the first stars appearing', ink: 'Amber', empty: true },

@@ -20,7 +20,7 @@ const arg = (k, d) => { const i = process.argv.indexOf('--' + k); return i < 0 ?
 const dry = process.argv.includes('--dry-run'), force = process.argv.includes('--force'), keepLoaded = process.argv.includes('--keep-loaded');
 const yieldGpu = process.argv.includes('--yield'), useLock = process.argv.includes('--lock'), maxSec = +arg('max-seconds', 0);
 const set = arg('set', 'cards'), limit = +arg('limit', 9999), only = arg('only', null), model = arg('model', 'klein'), bump = +arg('seed-bump', 0);
-if (model !== 'klein' && model !== 'schnell') { console.log('gen-art: model ' + model + ' refused (dev is non-commercial)'); process.exit(2); }
+if (!['klein', 'schnell', 'dev'].includes(model)) { console.log('gen-art: unknown model ' + model); process.exit(2); }  // dev: non-commercial licence, allowed for this free fan project (PLAN.md D17)
 const tokens = {};
 for (const f of ['tokens.txt', 'tokens.txt.txt']) { const p = path.join(ROOT, f); if (fs.existsSync(p)) for (const l of fs.readFileSync(p, 'utf8').split(/\r?\n/)) { const m = l.match(/^(\w+)=(.*)$/); if (m) tokens[m[1]] = m[2].trim(); } }
 const FLUX_URL = (process.env.FLUX_URL || tokens.FLUX || 'http://localhost:7880').replace(/\/$/, '');
@@ -34,7 +34,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 function seedOf(id) { let h = 2166136261; for (const ch of id + ':' + bump) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return (h >>> 0) % 2147483647; }
 async function settings(freeAfter) { await fetch(FLUX_URL + '/api/settings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ freeAfter }) }).catch(() => {}); }
 async function flux(id, e) {
-  const body = { model, prompt: e.prompt, aspect: e.aspect || '2:3', megapixels: e.megapixels || 1, batch: 1, seed: seedOf(id) };
+  const body = { model: e.model || model, prompt: e.prompt, aspect: e.aspect || '2:3', megapixels: e.megapixels || 1, batch: 1, seed: seedOf(id) };
   const r = await fetch(FLUX_URL + '/api/jobs', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   const job = await r.json();
   if (!r.ok) throw new Error('flux ' + r.status + ' ' + (job.error || ''));
@@ -51,7 +51,7 @@ const wanted = only ? only.split(',') : null;
 if (wanted) for (const w of wanted) if (!table[w]) { console.log('gen-art: unknown id ' + w + ' (--only is an exact match)'); process.exit(2); }
 const ids = Object.keys(table).filter(id => !wanted || wanted.includes(id));
 if (!dry) { fs.mkdirSync(masters, { recursive: true }); fs.mkdirSync(archive, { recursive: true }); }
-let done = 0, skipped = 0; const failed = []; const tAll = Date.now();
+let done = 0, skipped = 0; const failed = []; const rendered = new Set(); const tAll = Date.now();
 if (!dry) await settings(false);
 try {
   for (const id of ids) {
@@ -70,13 +70,15 @@ try {
       catch (err) { console.log('  retry ' + id + ' (' + attempt + '): ' + err.message.slice(0, 160)); await sleep(4000 * attempt); }
     }
     if (!buf) { failed.push(id); console.log('  FAILED ' + id + ' (rerun to retry)'); continue; }
-    fs.writeFileSync(out, buf); done++;
+    fs.writeFileSync(out, buf); done++; rendered.add(id);
     console.log('[' + done + '] ' + id + ' ' + Math.round((Date.now() - t0) / 1000) + 's (' + buf.length + ' bytes)');
   }
 } finally {
   if (!dry && !keepLoaded) { await settings(true); await fetch(FLUX_URL + '/api/backend/free', { method: 'POST' }).catch(() => {}); }
 }
 console.log((dry ? 'dry-run: ' : '') + done + ' planned/rendered, ' + skipped + ' already present, set ' + set + ', ' + Math.round((Date.now() - tAll) / 1000) + 's, studio ' + FLUX_URL + ' (' + model + ', seed-bump ' + bump + ')' + (failed.length ? '; FAILED: ' + failed.join(', ') : ''));
-const remaining = ids.filter(id => !fs.existsSync(path.join(masters, id + '.png'))).length;
+// Under --force a re-run would redo everything, so REMAINING counts the ids this run did not render
+// (a slice that hit its time budget must not report 0). Keep --force lists to one slice (~18 dev plates).
+const remaining = force && !dry ? ids.filter(id => !rendered.has(id)).length : ids.filter(id => !fs.existsSync(path.join(masters, id + '.png'))).length;
 console.log('REMAINING ' + remaining);
 if (failed.length) process.exitCode = 1;

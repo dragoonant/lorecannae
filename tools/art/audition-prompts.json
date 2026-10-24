@@ -1,0 +1,101 @@
+{
+ "style": "super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition",
+ "prompts": {
+  "A-darkwing": {
+   "name": "A klein+name darkwing",
+   "model": "klein",
+   "label": "A klein+name",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "Darkwing Duck, a white cartoon duck hero with an orange bill, a purple domino mask, a wide-brimmed purple fedora, a long purple cape lined in pink and a teal turtleneck, leaping out of the shadows with a gas gun raised and a confident grin, in a misty night alley of a city with purple shadows and a glowing streetlamp, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "A-stitch": {
+   "name": "A klein+name stitch",
+   "model": "klein",
+   "label": "A klein+name",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy blue chest, black eyes and a huge toothy grin, wearing a sleeveless golden studded rock jacket, shredding an electric guitar, on a beachside concert stage at night with confetti, spotlights and palm trees, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "A-elsa": {
+   "name": "A klein+name elsa",
+   "model": "klein",
+   "label": "A klein+name",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "Elsa, a young snow queen with a long platinum-blonde side braid and blue eyes, wearing a shimmering white ice gown with a long sheer sparkling cape, arms raised to conjure a swirling blizzard of glowing snowflakes, above an ice-locked fjord at night under green northern lights, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "B-darkwing": {
+   "name": "B klein desc darkwing",
+   "model": "klein",
+   "label": "B klein desc",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a white cartoon duck hero with an orange bill, a purple domino mask, a wide-brimmed purple fedora, a long purple cape lined in pink and a teal turtleneck, leaping out of the shadows with a gas gun raised and a confident grin, in a misty night alley of a city with purple shadows and a glowing streetlamp, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "B-stitch": {
+   "name": "B klein desc stitch",
+   "model": "klein",
+   "label": "B klein desc",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small blue koala-like alien with big notched ears, a fluffy blue chest, black eyes and a huge toothy grin, wearing a sleeveless golden studded rock jacket, shredding an electric guitar, on a beachside concert stage at night with confetti, spotlights and palm trees, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "B-elsa": {
+   "name": "B klein desc elsa",
+   "model": "klein",
+   "label": "B klein desc",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a young snow queen with a long platinum-blonde side braid and blue eyes, wearing a shimmering white ice gown with a long sheer sparkling cape, arms raised to conjure a swirling blizzard of glowing snowflakes, above an ice-locked fjord at night under green northern lights, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "C-darkwing": {
+   "name": "C dev+name darkwing",
+   "model": "dev",
+   "label": "C dev+name",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "Darkwing Duck, a white cartoon duck hero with an orange bill, a purple domino mask, a wide-brimmed purple fedora, a long purple cape lined in pink and a teal turtleneck, leaping out of the shadows with a gas gun raised and a confident grin, in a misty night alley of a city with purple shadows and a glowing streetlamp, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "C-stitch": {
+   "name": "C dev+name stitch",
+   "model": "dev",
+   "label": "C dev+name",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy blue chest, black eyes and a huge toothy grin, wearing a sleeveless golden studded rock jacket, shredding an electric guitar, on a beachside concert stage at night with confetti, spotlights and palm trees, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "C-elsa": {
+   "name": "C dev+name elsa",
+   "model": "dev",
+   "label": "C dev+name",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "Elsa, a young snow queen with a long platinum-blonde side braid and blue eyes, wearing a shimmering white ice gown with a long sheer sparkling cape, arms raised to conjure a swirling blizzard of glowing snowflakes, above an ice-locked fjord at night under green northern lights, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "D-darkwing": {
+   "name": "D schnell+name darkwing",
+   "model": "schnell",
+   "label": "D schnell+name",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "Darkwing Duck, a white cartoon duck hero with an orange bill, a purple domino mask, a wide-brimmed purple fedora, a long purple cape lined in pink and a teal turtleneck, leaping out of the shadows with a gas gun raised and a confident grin, in a misty night alley of a city with purple shadows and a glowing streetlamp, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "D-stitch": {
+   "name": "D schnell+name stitch",
+   "model": "schnell",
+   "label": "D schnell+name",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy blue chest, black eyes and a huge toothy grin, wearing a sleeveless golden studded rock jacket, shredding an electric guitar, on a beachside concert stage at night with confetti, spotlights and palm trees, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "D-elsa": {
+   "name": "D schnell+name elsa",
+   "model": "schnell",
+   "label": "D schnell+name",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "Elsa, a young snow queen with a long platinum-blonde side braid and blue eyes, wearing a shimmering white ice gown with a long sheer sparkling cape, arms raised to conjure a swirling blizzard of glowing snowflakes, above an ice-locked fjord at night under green northern lights, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  }
+ }
+}
