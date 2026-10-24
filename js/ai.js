@@ -16,10 +16,10 @@
   // race evaluation is superlinear near the threshold").
   const loreValue = (L) => (L >= 20 ? 1e6 : L * 10 + Math.max(0, L - 12) ** 2 * 1.6);
 
-  function charValue(s, i) {
+  function charValue(s, i, w) {
     const ch = LC.chars(s, i);
     const hp = Math.max(0, ch.wp - ch.damage);
-    let v = ch.lore * 6 + Math.max(0, ch.str) * 1.4 + hp * 1.1 + ch.cost * 0.6;
+    let v = ch.lore * (w.loreBody || 6) + Math.max(0, ch.str) * 1.4 + hp * 1.1 + ch.cost * 0.6;
     // Keywords that make a body harder to answer or better at racing.
     if (ch.kw.Evasive) v += 3;
     if (ch.kw.Ward) v += 2;
@@ -58,14 +58,14 @@
       for (const i of P.play) {
         const d = LC.def(i, s);
         if (LC.isCharacter(d)) {
-          let cv = charValue(s, i);
+          let cv = charValue(s, i, w);
           // The central Lorcana question: will an exerted character survive the other
           // player's turn? Only the side that is about to pass the turn is exposed.
           if (side === s.active && exposed(s, i, 1 - side)) cv -= cv * w.threat;
           board += cv;
         } else board += d.cost * 1.6 + 1;
       }
-      // Lore the opponent threatens next turn is already counted via lore*6 in charValue.
+      // Lore the opponent threatens next turn is already counted via lore*loreBody in charValue.
       const ink = P.ink.length;
       const inkV = Math.min(ink, 7) * 4.2 + Math.max(0, ink - 7) * 0.8;
       const handV = P.hand.length * 3.2;
