@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lorecannae",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["tools/serve.mjs", "8231"],
+      "port": 8231
+    }
+  ]
+}

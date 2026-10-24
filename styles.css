@@ -1,0 +1,1032 @@
+/* styles.css — lorecannae's interface, after Starbound Legions (kb/PRESENTATION-REFERENCE.md):
+   art IS the card, text floats on a scrim, one renderer at three sizes, the board is the
+   whole window, tap inspects / drag commits. Every non-obvious rule says WHY. */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+/* No scrollbars anywhere: the layout solves its own fit (the hand overlaps, the mat
+   scales, panels clip). Wheel/touch scrolling still works where a panel overflows; only
+   the chrome is suppressed. Content that would be stranded must be made to fit. */
+* { scrollbar-width: none; -ms-overflow-style: none; }
+*::-webkit-scrollbar { width: 0; height: 0; display: none; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0e1120; color: #e4e8f3;
+}
+img { -webkit-user-drag: none; user-select: none; }
+
+:root {
+  /* The hand is sized against the WINDOW HEIGHT: two hands share the height, and a fixed
+     rem hand on a short window eats the board's height and pushes the row off-screen. */
+  --card-hand-w: clamp(4.4rem, 12vh, 8.2rem);
+  --card-hand-h: calc(var(--card-hand-w) * 1.4);
+  --card-preview-w: 19rem;
+  --line: #2a3352;
+  --muted: #98a3c2;
+  --panel: #191e33;
+  --accent: #ffd166;
+  --danger: #e5484d;
+  --role-actable: #f5c34d;
+  --role-selected: #5b9dff;
+  --role-target: #ff6bcb;
+  --role-picked: #45c98b;
+}
+
+button, select, input {
+  font-family: inherit;
+}
+button, select {
+  background: #222b4a; color: #e4e8f3; border: 1px solid #3b4670;
+  border-radius: 6px; padding: 6px 12px; font-size: 14px; cursor: pointer;
+}
+button:hover { background: #2d3961; }
+button:disabled { opacity: .45; cursor: default; }
+.action-btn { background: #3a4f8c; border-color: #5368a8; }
+.action-btn:hover { background: #4760a6; }
+.action-btn.is-secondary { background: #2a3352; }
+
+#boot-error {
+  position: fixed; inset: 20px; z-index: 200; padding: 2rem; border-radius: 12px;
+  background: #3a1016; color: #ffd4d6; font-size: 1.1rem; border: 2px solid #e5484d;
+}
+
+/* ================= the board column ================= */
+#app { height: 100%; }
+/* dvh, not vh: mobile browser chrome makes vh taller than the visible window. */
+/* justify-content: center splits any height the width-limited mat can't use (a portrait
+   phone) evenly above and below, instead of stranding it under the turn bar. */
+#board {
+  height: 100dvh; display: flex; flex-direction: column; justify-content: center;
+  padding: 2px 10px 4px; min-width: 0; container-type: size; overflow: hidden;
+}
+#board > * { flex-shrink: 0; }
+/* The mat is THE yielding row: it takes whatever height the hands and turn bar leave,
+   and its width follows from that height through the aspect ratio (align-self: center
+   lets the flexed height transfer across aspect-ratio). max-height keeps the
+   width-limited case honest on tall windows. A fixed share left black bands. */
+#mat {
+  position: relative;
+  flex: 1 1 0; min-height: 0; align-self: center;
+  width: auto; max-height: calc(100cqw * 1280 / 2048); max-width: 100%;
+  aspect-ratio: 2048 / 1280;
+  margin: 0 auto;
+  container-type: size;
+  /* 164 of 2048 board units: one board card, as a share of the mat. */
+  --card-board-w: 8cqw;
+  --card-board-h: 11.2cqw;
+  isolation: isolate;              /* contain the 10..200 stacking of cards on the mat */
+}
+.mat-zone {
+  position: absolute;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5cqw; line-height: 1.25; text-align: center;
+  color: #e4e8f3; text-shadow: 0 1px 3px #000;
+}
+/* Zone rectangles are NOT written here: js/ui/boardart.js owns one geometry table and
+   places every zone from it, so an outline and its hitbox are the same numbers. */
+
+/* ---- the drawn board ---- */
+#board-svg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  z-index: 0; pointer-events: none;        /* decoration never eats a card gesture */
+  /* Side colour = ownership; the centre seam takes a neutral warm/cool pair so it reads
+     as the middle of the table, not anyone's territory. */
+  --bz-mine: #63c0ff;
+  --bz-theirs: #ff7a8c;
+  --bz-rail: #f1c27a;
+}
+.bz-table { fill: url(#bz-wood); }
+.bz-panel { fill: #121733; }
+.bz-sparkle-fill { fill: url(#bz-sparkles); opacity: .7; }
+.bz-spark { fill: #8fd8ff; opacity: .18; }
+.bz-rail { fill: none; stroke: var(--bz-rail); stroke-width: 6; }
+#board-art { opacity: .2; }                 /* a place behind the cards, not a picture */
+.bz-zone-art { opacity: .32; }
+.bz-fill { fill: #1a2046; opacity: .5; }
+.bz-line { fill: none; stroke-width: 3.5; filter: url(#bz-glow-soft); }
+.bz-bracket { fill: none; stroke-width: 5; stroke-linecap: round; filter: url(#bz-glow-soft); }
+.bz-row-mine .bz-line, .bz-row-mine .bz-bracket { stroke: var(--bz-mine); }
+.bz-row-theirs .bz-line, .bz-row-theirs .bz-bracket { stroke: var(--bz-theirs); }
+.bz-play .bz-fill { fill: #141a3c; opacity: .55; }
+.bz-label { fill: #e4e8f3; font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 700; }
+.bz-watermark { letter-spacing: 10px; opacity: .2; }
+.bz-caption { font-size: 19px; letter-spacing: 4px; opacity: .55; }
+.bz-seam { fill: url(#bz-seam); opacity: .55; }
+.seam-a { stop-color: #d9a441; } .seam-mid { stop-color: #ffffff; } .seam-b { stop-color: #9a7ad9; }
+.bz-lore-rail { fill: #222a52; stroke: #39467a; stroke-width: 2; }
+.bz-lore-step { fill: #3a4a7a; }
+.bz-lore-step.is-warm-16 { fill: #7c6a3c; } .bz-lore-step.is-warm-17 { fill: #a88438; }
+.bz-lore-step.is-warm-18 { fill: #d09d3a; } .bz-lore-step.is-warm-19 { fill: #f2bd4d; }
+.bz-lore-goal { fill: #ffd166; filter: url(#bz-glow-soft); }
+.bz-lore-num { fill: #98a3c2; font-size: 20px; font-weight: 700; font-family: 'Segoe UI', system-ui, sans-serif; }
+
+/* ---- the lore tracker (DOM over the drawn track) ---- */
+.lore-zone { display: block; border-radius: 1cqw; }
+.lore-count {
+  position: absolute; left: 0; right: 0; height: 21.5%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  pointer-events: none;
+}
+#my-lore .lore-count { bottom: 0; }
+#enemy-lore .lore-count { top: 0; }
+.lore-num {
+  font-size: 4.2cqw; font-weight: 900; line-height: 1; color: #fff;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 6px #000, 0 0 18px rgba(0,0,0,.8);
+}
+.lore-num.is-warm { color: var(--accent); text-shadow: 0 2px 6px #000, 0 0 22px rgba(255,190,70,.6); }
+.lore-num.is-won { color: #fff4c2; }
+.lore-label { font-size: .85cqw; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.lore-marker {
+  position: absolute; left: 50%; width: 3cqw; height: 3cqw;
+  transform: translate(-50%, -50%); color: #9fc8ff; pointer-events: none;
+  transition: top .35s cubic-bezier(.3,.8,.3,1);
+  filter: drop-shadow(0 0 .5cqw rgba(140,190,255,.8));
+}
+#enemy-lore .lore-marker { color: #ffb0bb; filter: drop-shadow(0 0 .5cqw rgba(255,140,160,.8)); }
+.lore-marker.is-warm { color: var(--accent) !important; filter: drop-shadow(0 0 .7cqw rgba(255,200,80,.95)); }
+.lore-marker .ico { width: 100%; height: 100%; }
+/* The active-player marker lives on that side's lore track: the banner says it once,
+   this keeps saying it. Pulse on the shared wall-clock phase so redraws don't restart it. */
+.lore-zone.is-active { animation: active-pulse 1.9s ease-in-out infinite; }
+@keyframes active-pulse {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(255,209,102,.5), 0 0 10px rgba(255,209,102,.2); }
+  50%      { box-shadow: 0 0 0 4px rgba(255,209,102,.95), 0 0 26px rgba(255,209,102,.65); }
+}
+.lore-label.is-turn { color: #1a1406; background: var(--accent); border-radius: 999px; padding: .05em .45em; letter-spacing: .1em; white-space: nowrap; }
+
+/* ---- piles ---- */
+/* Single-card slots size the card by HEIGHT: they are wider than 5:7. */
+.pile-slot .card, .ink-slot .res-fan > .card { height: 100%; width: auto; aspect-ratio: 5 / 7; }
+.pile-slot { padding: .55cqw 0; }
+.pile-stack { position: relative; height: 100%; aspect-ratio: 5 / 7; }
+.pile-stack > .card { position: absolute; inset: 0; width: 100%; height: 100%; }
+.pile-layer { position: absolute; inset: 0; border-radius: .6cqw; border: 2px solid #3b4670; background: #1d2550; }
+.zone-badge {
+  position: absolute; left: 50%; bottom: 3%; transform: translateX(-50%);
+  z-index: 40; padding: .1em .55em; border-radius: .6em;
+  background: rgba(8,10,22,.85); border: 1px solid #3b4670;
+  font-size: 1.3cqw; font-weight: 700; color: #d8e2ff; white-space: nowrap;
+  font-variant-numeric: tabular-nums; pointer-events: none;
+  display: inline-flex; align-items: center; gap: .2em;
+}
+.zone-badge-alt { bottom: auto; top: 3%; font-size: .95cqw; color: var(--accent); }
+.zone-badge-alt.is-used { color: var(--muted); }
+.pile-slot.is-low .zone-badge { color: #ff9f87; border-color: #a04a3a; }
+.ink-badge .ico { width: 1.1em; height: 1.1em; color: #9fc8ff; }
+
+/* ---- the inkwell fan ----
+   Face-down backs in a self-adjusting overlap: min() takes the ordinary gap while the
+   cards fit and goes negative once they don't, so 1 ink and 20 ink both sit inside the
+   painted box with no JS measuring. JS supplies only --n. Numbers from the geometry:
+   card 8cqw wide (90% of a 12.4cqw slot), row 1332 of 2048 units less padding. */
+.ink-slot { justify-content: flex-start; padding: 0 .8cqw; }
+.res-fan { --gap: .5cqw; --card-w: 8cqw; --row-w: 63.4cqw; display: flex; height: 90%; align-items: center; }
+.res-fan > .card + .card { margin-left: min(var(--gap), (var(--row-w) - var(--card-w) * var(--n)) / (var(--n) - 1)); }
+/* Spent ink = a small tilt and a dim, not 90 degrees: twenty overlapping cards can't
+   afford the width, and ink is read as a count, not as cards (PLAN.md D11). */
+.res-fan > .card.is-spent { transform: rotate(7deg); filter: brightness(.62); }
+
+/* ---- the play lanes ----
+   One line per side, never wrapping: a second line would leave the painted box. Each
+   character sits in a SLOT whose width animates from card width to card height when it
+   exerts, and the card turns 90 degrees inside it (PLAN.md D11) — a transform does not
+   change layout, so without the slot a rotated card would sit on its neighbours. The
+   overlap math is fed the slot widths: --ex counts the exerted (wider) slots. */
+.play-zone { padding: 0 .8cqw; }
+.play-row {
+  --gap: .7cqw; --cw: var(--card-board-w); --ch: var(--card-board-h);
+  display: flex; flex-wrap: nowrap; align-items: center; justify-content: center;
+  width: 100%; height: 100%;
+}
+.char-slot {
+  position: relative; flex: none; width: var(--cw); height: var(--ch);
+  display: grid; place-items: center;
+  transition: width .18s ease-out;
+  z-index: var(--z, 10);
+}
+.char-slot.is-exerted { width: var(--ch); }
+.play-row > .char-slot + .char-slot {
+  margin-left: min(var(--gap), (100% - var(--cw) * var(--n) - (var(--ch) - var(--cw)) * var(--ex)) / (var(--n) - 1));
+}
+.char-slot > .card { grid-area: 1 / 1; width: var(--cw); height: var(--ch); }
+.char-slot.is-exerted > .card { transform: rotate(90deg); }
+.char-slot.is-exerted > .card:hover { transform: rotate(90deg) translateX(-3px); }
+.char-slot:hover, .char-slot:focus-within { z-index: 200; }
+/* A Shift (or Boost) stack: backing layers peek out behind the top card. */
+.stack-layer {
+  grid-area: 1 / 1; width: var(--cw); height: var(--ch); border-radius: .6cqw;
+  background: #262f63; border: 2px solid #4a5aa0;
+  transform: translate(calc(var(--k) * -.45cqw), calc(var(--k) * -.45cqw));
+}
+.char-slot.is-exerted > .stack-layer { transform: rotate(90deg) translate(calc(var(--k) * -.45cqw), calc(var(--k) * .45cqw)); }
+.play-zone.is-empty { pointer-events: auto; }
+
+/* ================= the card ================= */
+.card {
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end;
+  border-radius: .55em; overflow: hidden; border: 2px solid #34406a;
+  background: #0b0e1c; color: #f0f3fa;
+  transition: transform .12s, box-shadow .12s, border-color .12s, opacity .12s;
+  /* A hold is the touch stand-in for hover: iOS must not answer it with a callout. */
+  -webkit-touch-callout: none; -webkit-user-select: none; user-select: none;
+}
+/* em typography cascades from font-size, so each size sets its own base, proportional
+   to its width (otherwise every card renders text at body size). */
+.card-board   { width: var(--card-board-w); aspect-ratio: 5 / 7; font-size: calc(var(--card-board-w) / 5.6); }
+.card-hand    { width: var(--card-hand-w); aspect-ratio: 5 / 7; font-size: calc(var(--card-hand-w) / 5.6); }
+.card-preview { width: var(--card-preview-w); min-height: 26.6rem; font-size: 16px; } /* NO aspect-ratio: text must grow */
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(0,0,0,.55); }
+.card-missing { display: grid; place-items: center; }
+
+.card-art { position: absolute; inset: 0; z-index: 0; }
+.card-art .art { width: 100%; height: 100%; display: block; }
+/* Bias the crop up: generated art crowds faces toward the top, and the plate covers
+   the bottom third. */
+.card-art .art-painted { object-fit: cover; object-position: 50% 25%; }
+.card-art::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(to top, rgba(6,8,18,.95) 0%, rgba(6,8,18,.86) 14%, rgba(6,8,18,.55) 30%, rgba(6,8,18,0) 48%),
+    linear-gradient(to bottom, rgba(6,8,18,.78) 0%, rgba(6,8,18,.42) 9%, rgba(6,8,18,0) 18%);
+}
+.card-preview .card-art::after {
+  background:
+    linear-gradient(to top, rgba(6,8,18,.95) 0%, rgba(6,8,18,.9) 26%, rgba(6,8,18,.62) 42%, rgba(6,8,18,0) 60%),
+    linear-gradient(to bottom, rgba(6,8,18,.78) 0%, rgba(6,8,18,.42) 6%, rgba(6,8,18,0) 14%);
+}
+
+.card-corners {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 3;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: .2em .25em; pointer-events: none;
+}
+.card-corners [data-tip] { pointer-events: auto; }
+/* The ink-cost hexagon; the ring around it says "inkable" (the printed card's swirl). */
+.cost-hex { position: relative; display: inline-grid; place-items: center; width: 1.7em; height: 1.87em; flex: none; }
+.cost-hex svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.cost-hex .hex-body { fill: #1b2140; stroke: #c9d3ef; stroke-width: 2.4; }
+.cost-hex .hex-ring { fill: none; stroke: #e2b44d; stroke-width: 2.6; }
+.cost-num {
+  position: relative; font-weight: 800; font-size: .95em; color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,.95), 0 0 4px rgba(0,0,0,.9);
+  font-variant-numeric: tabular-nums;
+}
+.cost-hex.is-cheaper .cost-num { color: #8ee0ac; }
+.cost-hex.is-dearer .cost-num { color: #ff9f87; }
+.ink-dots { display: flex; gap: .2em; padding-top: .15em; }
+.ink-dot {
+  width: .62em; height: .62em; border-radius: 50%; display: inline-block; flex: none;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.6), 0 0 4px rgba(0,0,0,.9);
+}
+.card-preview .cost-hex { width: 2.1em; height: 2.3em; }
+.card-preview .ink-dot { width: .8em; height: .8em; }
+
+/* the text plate: shadow only, zero background (the scrim does the darkening) */
+.card-plate {
+  position: relative; z-index: 2; margin-top: auto;
+  padding: .3em .38em .32em;
+  text-shadow: 0 1px 2px rgba(0,0,0,.95), 0 0 4px rgba(0,0,0,.9), 0 0 10px rgba(0,0,0,.8), 0 0 18px rgba(0,0,0,.6);
+}
+.card-preview .card-plate { padding: .65rem .8rem .7rem; }
+.card-name { font-size: .74em; font-weight: 700; line-height: 1.15; }
+/* The version is part of the identity: never dropped, wraps instead. */
+.card-version { font-size: .6em; font-style: italic; color: #d6dcf0; line-height: 1.15; }
+.card-type { display: flex; gap: .35em; align-items: baseline; flex-wrap: wrap; margin-top: .08em; }
+.type-tag { font-size: .5em; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.type-tag.is-song { color: #ffd9a0; }
+.traits { font-size: .52em; color: var(--muted); }
+.card-kw { font-size: .56em; font-weight: 700; letter-spacing: .02em; color: #a9c6ff; }
+.card-stats {
+  font-size: .78em; font-weight: 800; display: flex; align-items: center; gap: .45em;
+  border-top: 1px solid rgba(255,255,255,.12); padding-top: .12em; margin-top: .12em;
+  font-variant-numeric: tabular-nums;
+}
+.stat { display: inline-flex; align-items: center; gap: .12em; }
+.stat .ico { width: .95em; height: .95em; }
+.stat.str { color: #ff9f87; }
+.stat.str.is-up { color: #ffd0c4; text-decoration: underline; }
+.stat.str.is-down { color: #c97a6a; }
+.stat.wp { color: #8ee0ac; }
+.stat.wp.damaged { color: #ffcf6b; }
+.stat-gap { flex: 1; }
+.stat.lore { color: var(--accent); gap: 0; }
+.stat.lore .ico { width: .85em; height: .85em; margin-left: -.05em; }
+.lore-zero { color: var(--muted); }
+.card-preview .card-name { font-size: 1.12rem; }
+.card-preview .card-version { font-size: .9rem; }
+.card-preview .type-tag, .card-preview .traits { font-size: .7rem; }
+.card-preview .card-kw { font-size: .78rem; }
+.card-preview .card-stats { font-size: 1.05rem; }
+.card-detail {
+  font-size: .82rem; color: #dde2ef; line-height: 1.38;
+  border-top: 1px solid rgba(255,255,255,.12); padding-top: .35rem; margin-top: .35rem;
+}
+.card-detail .ability { margin-bottom: .35rem; }
+.card-detail .trigger {
+  color: #ffd9a0; background: rgba(255,217,160,.13); font-size: .86em;
+  font-weight: 800; padding: .03rem .3rem; border-radius: 3px; margin-right: .25rem; letter-spacing: .02em;
+}
+.kw-name {
+  color: #a9c6ff; background: rgba(169,198,255,.13); font-weight: 700;
+  padding: .03rem .3rem; border-radius: 3px; margin-right: .2rem; white-space: nowrap;
+}
+.reminder { color: #aab3cc; font-style: italic; }
+.card-flavor { font-size: .74rem; font-style: italic; color: #b5bdd4; margin-top: .3rem; line-height: 1.35; white-space: pre-line; }
+.ico-wrap { display: inline-flex; vertical-align: -.12em; }
+.ico { width: 1em; height: 1em; display: inline-block; }
+.card-detail .ico-s { color: #ff9f87; } .card-detail .ico-w { color: #8ee0ac; }
+.card-detail .ico-l { color: var(--accent); } .card-detail .ico-i { color: #9fc8ff; }
+.card-detail .ico-e { color: #e4e8f3; }
+.ink-word { font-weight: 700; }
+
+/* state badges */
+.damage-marker {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 3;
+  min-width: 1.6em; height: 1.6em; padding: 0 .3em; border-radius: 999px; display: grid; place-items: center;
+  background: rgba(150,30,36,.92); border: 2px solid rgba(255,255,255,.4);
+  font-weight: 800; font-size: .8em; color: #fff;
+}
+.under-badge {
+  position: absolute; top: 1.9em; right: .2em; z-index: 3; font-size: .52em; font-weight: 700;
+  padding: .05em .35em; border-radius: .6em; background: rgba(40,48,100,.92); border: 1px solid #6070b8;
+}
+/* Drying: a slow sheen across the face plus a cool inner ring. It explains why the card
+   has no actable glow without hiding the art (state treatments never hide art). */
+.card.is-drying { box-shadow: inset 0 0 0 2px rgba(127,224,214,.45); }
+.card.is-drying::before {
+  content: ''; position: absolute; inset: 0; z-index: 4; pointer-events: none;
+  background: linear-gradient(115deg, transparent 30%, rgba(190,245,240,.22) 45%, rgba(255,255,255,.32) 50%, rgba(190,245,240,.22) 55%, transparent 70%);
+  background-size: 300% 100%;
+  animation: drying-sheen 3.4s ease-in-out infinite;
+}
+@keyframes drying-sheen { 0% { background-position: 120% 0; } 60%, 100% { background-position: -60% 0; } }
+
+/* Face-down: the drawn back; the mark underneath shows while decoding or if missing. */
+.card-back { background: #171a44; display: grid; place-items: center; }
+.back-mark { grid-area: 1 / 1; width: 40%; aspect-ratio: 1; transform: rotate(45deg); border: 2px solid #e2b44d; opacity: .6; }
+.card-back-art { grid-area: 1 / 1; width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+
+/* ================= roles (derived from legalActions + the open ask only) ================= */
+.role-actable { border-color: var(--role-actable); animation: actable-pulse 1.7s ease-in-out infinite; }
+@keyframes actable-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(245,195,77,.3); }
+  50%      { box-shadow: 0 0 20px rgba(245,195,77,.75); }
+}
+.role-target { box-shadow: 0 0 0 2px var(--role-target), 0 0 14px rgba(255,107,203,.45); border-color: var(--role-target); cursor: pointer; }
+.role-picked { box-shadow: 0 0 0 3px var(--role-picked), 0 0 16px rgba(69,201,139,.6) !important; border-color: var(--role-picked); }
+/* Hovering an action button lights the card it concerns. */
+.role-hinted { box-shadow: 0 0 0 3px var(--role-selected), 0 0 18px rgba(91,157,255,.55) !important; }
+.card.is-dim { opacity: .45; }
+.card.is-asker { box-shadow: 0 0 0 3px var(--role-selected), 0 0 16px rgba(91,157,255,.55); border-color: var(--role-selected); }
+/* An inkable card you can ink right now: its cost ring brightens. */
+.card.can-ink .hex-ring { stroke: #ffe08a; filter: drop-shadow(0 0 3px #ffd166); }
+/* A hand card you can't play: dimmed, cost pip in damage red (the number that is the
+   reason). Hover restores it; the preview says why (LC.whyNot). */
+#hand .card.is-unaffordable { opacity: .58; }
+#hand .card.is-unaffordable:hover, #hand .card.is-unaffordable:focus { opacity: 1; }
+#hand .card.is-unaffordable .cost-num { color: #ff9f87; }
+.drop-ok { box-shadow: inset 0 0 0 2px var(--role-picked), 0 0 0 2px rgba(69,201,139,.55) !important; border-radius: 1cqw; }
+.drop-hot { box-shadow: inset 0 0 0 3px var(--role-picked), 0 0 22px var(--role-picked) !important; border-radius: 1cqw; }
+.card.drop-ok, .card.drop-hot { border-radius: .55em; }
+/* Set at press time, cleared when the gesture ends: dragging must not sweep a text
+   selection across the board. */
+.is-dragging, .is-dragging * { user-select: none; -webkit-user-select: none; }
+.is-dragging-source { opacity: .28; }
+/* touch-action: none is the one line that makes drag work on a phone. */
+.is-draggable { touch-action: none; cursor: grab; }
+.is-draggable img { pointer-events: none; }
+.drag-clone { position: fixed; z-index: 55; pointer-events: none; opacity: .92; transform: rotate(-3deg) scale(1.04); box-shadow: 0 16px 40px rgba(0,0,0,.6); }
+.mat-zone.is-browsable { cursor: pointer; }
+.mat-zone.is-browsable:hover { box-shadow: inset 0 0 0 2px var(--role-selected); border-radius: .8cqw; }
+.mat-zone.is-browsable:focus-visible { outline: 2px solid var(--role-selected); outline-offset: -2px; }
+
+/* The arrow: aiming and resolution are the same picture — amber while a proposal, red
+   once declared, gold when it points at your lore track (a quest). z 45: above the board,
+   below every overlay, and never a control. */
+#arrow-layer { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 45; display: none; pointer-events: none; }
+#arrow-layer.open { display: block; }
+.attack-arrow {
+  fill: none; stroke: var(--danger); stroke-width: 4; stroke-linecap: round;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.8));
+  stroke-dasharray: 11 7; animation: arrow-crawl 700ms linear infinite;
+}
+.attack-arrow.is-aim { stroke: var(--role-actable); }
+.attack-arrow.is-quest { stroke: var(--accent); stroke-dasharray: 3 9; }
+.attack-arrow-head { fill: var(--danger); }
+.attack-arrow-head.is-aim { fill: var(--role-actable); }
+.attack-arrow-head.is-quest { fill: var(--accent); }
+@keyframes arrow-crawl { to { stroke-dashoffset: -18; } }
+
+/* ================= hands ================= */
+/* Their hand: same size as yours (a half-size row read as a different kind of object),
+   upside down, the bar cropped to the near quarter — the way a hand held across the
+   table shows. A revealed card is a real card again, so the bar opens to full height. */
+#enemy-hand-bar {
+  display: flex; justify-content: center; align-items: flex-end;
+  height: calc(var(--card-hand-h) * .25); overflow: hidden; margin-bottom: 2px;
+}
+#enemy-hand-bar.has-revealed { height: calc(var(--card-hand-h) * .62); }
+#enemy-hand {
+  --gap: 5px;
+  display: flex; flex-wrap: nowrap; justify-content: center; align-items: flex-end;
+  overflow: visible; isolation: isolate; flex: 1 1 auto; min-width: 0; height: 100%;
+}
+#enemy-hand .card { flex: none; position: relative; z-index: var(--z, 10); transform: rotate(180deg); }
+#enemy-hand .card:hover { transform: rotate(180deg); box-shadow: none; }
+#enemy-hand .card.is-revealed { transform: none; align-self: flex-end; }  /* the cropped bar shows the name and stats; hover shows the rest */
+#enemy-hand .card + .card { margin-left: min(var(--gap), (100% - var(--card-hand-w) * var(--n)) / (var(--n) - 1)); }
+#enemy-hand .card.is-revealed:hover { z-index: 200; }
+
+/* Your hand: Model B, a flat centred overlapping row (the arc fan cost hit testing, the
+   drag clone and the preview anchor). Width must come from the BAR, not the content:
+   sized to content, the overlap narrows the row, which tightens the overlap... */
+/* Fixed height whatever the hand holds: an empty hand must not hand its height to the mat
+   (a layout input that changes mid-game resizes the board under the pointer). */
+#hand-bar { display: flex; align-items: flex-end; padding: 4px 0 0; height: calc(var(--card-hand-h) + 10px); }
+#hand {
+  --gap: 6px;
+  display: flex; flex-wrap: nowrap; justify-content: center; overflow: hidden;
+  padding-top: 6px;               /* headroom for the hover lift */
+  flex: 1 1 auto; min-width: 0;
+  isolation: isolate;             /* else a hovered card (z 200) paints over every overlay */
+}
+#hand .card { flex: none; position: relative; z-index: var(--z, 10); }
+/* No floor on the overlap: with no scrollbars a floor strands the newest cards. */
+#hand .card + .card { margin-left: min(var(--gap), (100% - var(--card-hand-w) * var(--n)) / (var(--n) - 1)); }
+#hand .card:hover, #hand .card:focus { z-index: 200; }
+/* Covered cards hide their plates: a dozen truncated names read as one card's words
+   spilling onto the next. Toggled outright, no transition (background-tab safety). */
+#hand.is-fanned .card:not(:last-child):not(:hover):not(:focus) .card-plate { visibility: hidden; }
+
+/* ================= turn bar / choice bar ================= */
+#turn-bar {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .6rem;
+  min-height: 2.3rem; padding: 2px 4px 0;
+}
+.turn-left { justify-self: start; display: flex; gap: .7rem; align-items: center; }
+.turn-mid { display: flex; gap: .6rem; align-items: center; justify-content: center; }
+.turn-right { justify-self: end; display: flex; gap: .4rem; align-items: center; margin-right: 2.2rem; }
+.turn-label { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.turn-result { font-size: 1.3rem; font-weight: 800; color: var(--accent); }
+.end-turn { font-weight: 700; padding: .4rem 1.3rem; }
+.turn-hint, .turn-wait { font-size: .78rem; color: var(--muted); font-style: italic; }
+.turn-why { font-size: .8rem; color: #ffcf6b; }
+.speed { font-size: .75rem; color: var(--muted); display: flex; align-items: center; gap: .3rem; }
+.speed input { width: 6rem; }
+/* The choice bar OVERLAYS the hand rather than sitting in the column: a layout input that
+   appears mid-game would resize the board under the player's pointer. Over the hand is
+   the one place it covers nothing the question needs: a board-highlight question's
+   answers are on the board, and a "how do you pay?" question is about a card already
+   dropped from the hand. */
+#choice-bar {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: calc(2.6rem + var(--card-hand-h) * .25);
+  z-index: 57; display: none; gap: .6rem; align-items: center; flex-wrap: wrap; justify-content: center;
+  max-width: min(94vw, 56rem); padding: .55rem .9rem;
+  background: rgba(30,24,52,.96); border: 1px solid #6a4f8a; border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.6);
+}
+#choice-bar.open { display: flex; }
+.choice-bar-prompt { font-size: .86rem; font-weight: 600; color: #f5e8ff; }
+.choice-bar-controls { display: flex; gap: .5rem; align-items: center; }
+.choice-count { font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.choice-flash { font-size: .78rem; color: #ffcf6b; opacity: 0; }
+.choice-flash.show { animation: flash-msg 2.6s ease forwards; }
+@keyframes flash-msg { 0% { opacity: 0; } 8% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
+
+/* ================= the drawer ================= */
+/* An OVERLAY, never a column: opening it never moves the board mid-decision. Closed at
+   the start of every game; the edge handle is all that is left of it on screen. */
+#side {
+  position: fixed; top: 0; right: 0; bottom: 0; width: min(22rem, 88vw);
+  display: flex; flex-direction: column; min-height: 0; z-index: 56;
+  background: #141832; border-left: 1px solid var(--line);
+  box-shadow: -12px 0 40px rgba(0,0,0,.5);
+  transform: translateX(100%); transition: transform .28s ease;
+}
+body.drawer-open #side { transform: translateX(0); }
+#log-handle {
+  position: fixed; right: 0; top: 50%; transform: translateY(-50%);
+  z-index: 55; writing-mode: vertical-rl;
+  padding: 1rem .4rem; border-radius: 10px 0 0 10px; border-right: 0;
+  background: #222b4a; color: var(--muted);
+  letter-spacing: .18em; text-transform: uppercase; font-size: .7rem; font-weight: 700;
+  transition: opacity .18s ease;
+}
+#log-handle:hover { color: #fff; background: #2d3961; }
+body.drawer-open #log-handle { opacity: 0; pointer-events: none; }
+#side-head { display: flex; align-items: center; justify-content: space-between; padding: .55rem .75rem; border-bottom: 1px solid var(--line); background: #191e3a; }
+#side-title { font-size: .68rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; color: var(--muted); }
+#side-close { padding: 0 .55rem; font-size: 1.15rem; line-height: 1.4; }
+#side-controls { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; padding: .55rem .75rem; border-bottom: 1px solid var(--line); }
+#side-controls button { font-size: .78rem; padding: .4rem .5rem; }
+#mute-btn.is-muted { color: var(--muted); }
+.vol { display: flex; flex-direction: column; font-size: .64rem; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; justify-content: center; }
+.vol input { width: 100%; }
+.prompt { padding: .5rem .75rem; font-size: .8rem; line-height: 1.38; border-bottom: 1px solid var(--line); color: #e8ecf6; }
+.prompt.waiting { color: var(--muted); font-style: italic; }
+.prompt.asking { color: var(--role-target); font-weight: 600; }
+.prompt.over { color: var(--accent); font-weight: 700; }
+.side-title { font-size: .6rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; color: var(--muted); padding: .5rem .75rem .3rem; }
+.side-note { text-transform: none; letter-spacing: 0; font-weight: 400; opacity: .7; margin-left: .4rem; }
+#recent-wrap { border-bottom: 1px solid var(--line); padding-bottom: .4rem; }
+#recent { display: flex; gap: .3rem; padding: 0 .6rem .2rem; }
+.recent-card { width: 2.9rem; --card-board-w: 2.9rem; }
+.recent-card .card { width: 100%; font-size: .5rem; }
+.recent-card.theirs { opacity: .85; }
+.recent-empty { color: var(--muted); font-size: .74rem; font-style: italic; padding: 0 .75rem .3rem; }
+#log { flex: 1; min-height: 0; overflow-y: auto; padding: .3rem .75rem .9rem; font-size: .75rem; color: #b9c2dc; }
+.log-line { padding: .14rem 0; border-bottom: 1px solid rgba(255,255,255,.03); line-height: 1.38; }
+.log-line.log-divider { color: var(--accent); font-weight: 700; padding-top: .45rem; border-bottom-color: rgba(255,209,102,.18); }
+.log-line.log-notice { color: var(--role-actable); font-weight: 600; border-left: 2px solid var(--role-actable); padding-left: .4rem; }
+.log-line.log-missing { color: #ff9f87; }
+/* A triggered ability's line, indented under the action that set it off and prefixed
+   with the card that spoke, so a trigger never reads as another player action. */
+.log-line.log-via { padding-left: .85rem; border-left: 2px solid rgba(255,255,255,.1); }
+.log-via-src { color: var(--accent); font-weight: 600; opacity: .9; cursor: help; }
+.log-via-src::after { content: ' \203a'; opacity: .6; }
+/* 'help', not 'pointer': a name explains itself; it does not promise a click. */
+.card-ref { color: #cfe0ff; border-bottom: 1px dotted rgba(207,224,255,.5); cursor: help; }
+.card-ref:hover, .card-ref:focus { color: #fff; border-bottom-color: #fff; outline: none; }
+
+/* ================= enlargements ================= */
+#preview {
+  position: fixed; z-index: 60; display: none; pointer-events: none;
+  filter: drop-shadow(0 12px 32px rgba(0,0,0,.65));
+  transform: scale(.35); opacity: 0;
+  transition: transform .13s ease-out, opacity .13s ease-out;
+}
+#preview.open { display: block; }
+#preview.grown { transform: scale(1); opacity: 1; }
+.preview-row { display: flex; align-items: flex-start; gap: .5rem; }
+.preview-sides { display: flex; flex-direction: column; gap: .5rem; }
+.preview-side {
+  width: 15rem; max-height: 26rem; overflow-y: auto;
+  background: rgba(12,15,32,.96); border: 1px solid var(--line); border-radius: 10px; padding: .6rem .7rem;
+}
+.preview-side-title { font-size: .62rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; color: var(--muted); margin-bottom: .45rem; }
+.preview-why { border-color: #a0603a; }
+.why-text { font-size: .84rem; color: #ffcf6b; line-height: 1.35; }
+.state-text { font-size: .78rem; color: #cfd6ea; line-height: 1.35; margin-bottom: .3rem; }
+.preview-under-stack { display: flex; flex-wrap: wrap; gap: .4rem; --card-board-w: 4.4rem; }
+.preview-under-stack .card { font-size: .78rem; }
+.kw-row { margin-bottom: .5rem; font-size: .78rem; line-height: 1.38; }
+.kw-text { color: #d6dbea; }
+
+#inspector {
+  position: fixed; inset: 0; z-index: 50; display: none; place-items: center;
+  background: rgba(4,6,14,.74); backdrop-filter: blur(2px);
+}
+#inspector.open { display: grid; }
+.inspect-body { max-width: min(94vw, 48rem); max-height: 94dvh; overflow-y: auto; display: flex; flex-direction: column; align-items: center; gap: .6rem; padding: .5rem; }
+.inspect-body .preview-row { flex-wrap: wrap; justify-content: center; }
+
+.browse-overlay {
+  position: fixed; inset: 0; z-index: 52; display: none; place-items: center;
+  background: rgba(4,6,14,.78); backdrop-filter: blur(2px);
+}
+.browse-overlay.open { display: grid; }
+.browse-body {
+  width: min(94vw, 62rem); max-height: 88dvh; display: flex; flex-direction: column;
+  background: var(--panel); border: 1px solid #3b4670; border-radius: 12px; padding: 14px 16px;
+  box-shadow: 0 18px 48px rgba(0,0,0,.6);
+}
+.browse-head { display: flex; align-items: baseline; gap: 12px; padding-bottom: 10px; flex-wrap: wrap; }
+.browse-title { font-size: 18px; font-weight: 700; }
+.browse-note { font-size: 12px; color: var(--muted); }
+.browse-close { margin-left: auto; }
+.browse-empty { color: var(--muted); padding: 18px 2px; }
+.browse-grid { display: flex; flex-wrap: wrap; gap: 10px; overflow-y: auto; align-content: flex-start; padding: 4px; }
+.browse-cell { position: relative; display: flex; flex-direction: column; align-items: center; }
+.browse-count {
+  position: absolute; right: -4px; bottom: 14px; min-width: 22px; padding: 1px 5px; border-radius: 10px;
+  background: var(--panel); border: 1px solid #3b4670; font-size: 12px; font-weight: 700; text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,.5); pointer-events: none;
+}
+.browse-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+#spotlight {
+  position: fixed; left: 50%; top: 50%; z-index: 55; cursor: pointer;
+  filter: drop-shadow(0 12px 32px rgba(0,0,0,.7));
+  display: flex; flex-direction: column; align-items: center; gap: .4rem;
+}
+.spotlight-caption {
+  font-size: .8rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--accent);
+  background: rgba(10,12,26,.9); border: 1px solid var(--line); border-radius: 999px; padding: .25rem .9rem;
+}
+
+/* ================= turn banner ================= */
+/* Said once per turn in the middle, then out of the way; never takes a click. */
+#turn-banner {
+  position: fixed; inset: 0; z-index: 54; pointer-events: none;
+  display: grid; place-content: center; text-align: center; opacity: 0; visibility: hidden;
+}
+#turn-banner.show { animation: turn-banner 2.3s ease forwards; }
+@keyframes turn-banner {
+  0%   { opacity: 0; visibility: visible; transform: scale(.94); }
+  12%  { opacity: 1; transform: scale(1); }
+  70%  { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; visibility: hidden; transform: scale(1.03); }
+}
+.turn-banner-main {
+  font-size: clamp(1.6rem, 4.4vw, 3rem); font-weight: 800; letter-spacing: .04em; color: #fff;
+  text-shadow: 0 3px 22px rgba(0,0,0,.95), 0 0 40px rgba(0,0,0,.8);
+}
+.turn-banner-sub {
+  margin-top: .3rem; font-size: clamp(.8rem, 1.6vw, 1.05rem); font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--accent); text-shadow: 0 2px 14px rgba(0,0,0,.9);
+}
+
+/* ================= the action popover ================= */
+#action-popover {
+  position: fixed; inset: 0; z-index: 59; display: none; place-items: center;
+  background: rgba(2,4,12,.7); backdrop-filter: blur(3px);
+}
+#action-popover.open { display: grid; }
+.pop-box {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 1rem 1.2rem; max-height: 94dvh; max-width: 96vw; overflow: auto;
+  box-shadow: 0 20px 80px rgba(0,0,0,.6);
+}
+.pop-title { font-weight: 800; font-size: 1.05rem; margin-bottom: .6rem; text-align: center; }
+.pop-body { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+.pop-buttons { display: flex; flex-direction: column; gap: .45rem; min-width: 15rem; max-width: 24rem; }
+.pop-buttons .action-btn { white-space: normal; text-align: left; line-height: 1.3; }
+.pop-empty { color: var(--muted); font-style: italic; font-size: .85rem; }
+.pop-why { font-size: .78rem; color: #ffcf6b; line-height: 1.38; border-left: 2px solid #a0703a; padding-left: .5rem; display: flex; flex-direction: column; gap: .25rem; }
+.pop-tip { font-size: .74rem; color: var(--muted); font-style: italic; }
+
+/* ================= the choice modal ================= */
+/* The echo: the question in the middle of the play areas, where the player is already
+   looking. Inert: it never intercepts a click meant for the board below. */
+#play-prompt {
+  position: fixed; transform: translate(-50%, -50%); display: none; z-index: 57; pointer-events: none;
+  font-style: italic; text-align: center; line-height: 1.35; color: #f2f4ff; font-size: .95rem;
+  padding: .45rem .95rem; border-radius: 999px;
+  background: rgba(12,14,32,.86); border: 1px solid var(--line);
+  box-shadow: 0 6px 24px rgba(0,0,0,.55); text-shadow: 0 1px 6px rgba(0,0,0,.8);
+}
+#play-prompt.open { display: block; }
+/* No scrim and no blur: the panel asks about the game, so the game stays readable around
+   it. It is anchored over the play areas; piles, inkwells, lore and hands stay visible. */
+#choice-modal { position: fixed; inset: 0; display: none; z-index: 58; pointer-events: none; }
+#choice-modal.open { display: block; }
+.choice-modal-content {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); pointer-events: auto;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.25rem;
+  max-width: min(94vw, 58rem); max-height: 92dvh; overflow: auto; text-align: center;
+  box-shadow: 0 20px 80px rgba(0,0,0,.75), 0 0 0 1px rgba(0,0,0,.5);
+}
+.choice-modal-prompt { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; line-height: 1.35; }
+.choice-modal-hint { color: var(--muted); font-size: .8rem; margin-bottom: .5rem; }
+.choice-modal-cards { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; align-items: flex-start; margin: .7rem 0 .9rem; }
+.choice-option { position: relative; border-radius: 10px; display: flex; flex-direction: column; align-items: center; gap: .2rem; cursor: pointer; }
+.choice-option.is-dim { opacity: .42; cursor: default; }
+.choice-option:focus { outline: none; }
+.choice-option:focus .card { box-shadow: 0 0 0 3px var(--role-selected); }
+.choice-zone { font-size: .62rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.pick-ordinal {
+  position: absolute; top: -8px; right: -8px; z-index: 5; width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  display: grid; place-items: center; background: var(--role-picked); color: #052012; font-weight: 900;
+}
+.choice-body { display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap; margin: .5rem 0; }
+.choice-source { display: flex; flex-direction: column; align-items: center; gap: .25rem; }
+.choice-source-label { font-size: .62rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+.choice-source .card { --card-board-w: 9rem; width: 9rem; font-size: 1.6rem; }
+.choice-modal-buttons { display: flex; flex-direction: column; gap: .5rem; align-items: stretch; min-width: 14rem; max-width: 30rem; }
+.choice-modal-buttons .action-btn { white-space: normal; line-height: 1.3; }
+.bag-option { display: flex; gap: .6rem; align-items: center; }
+.bag-face { width: 3.6rem; font-size: .64rem; flex: none; }
+.choice-modal-controls { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; align-items: center; margin-top: .3rem; }
+.peek-btn { background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: .4rem 1rem; font-size: .8rem; }
+.peek-btn:hover { color: #fff; border-color: var(--accent); background: transparent; }
+/* Peek: the panel gets out of the way without answering; Esc toggles. The restore pill
+   lives outside the panel so it survives while the panel is hidden. */
+.choice-peek-restore { display: none; }
+#choice-modal.peek .choice-modal-content { display: none; }
+#choice-modal.peek .choice-peek-restore {
+  position: absolute; top: .5rem; left: 50%; transform: translateX(-50%);
+  display: inline-flex; pointer-events: auto; background: var(--accent); color: #1a1406;
+  border: 0; border-radius: 999px; padding: .45rem 1.1rem; font-size: .85rem; font-weight: 700;
+  box-shadow: 0 6px 20px rgba(0,0,0,.55);
+}
+
+/* ================= curtain / results / help / coach / toast / tooltip ================= */
+#curtain {
+  position: fixed; inset: 0; z-index: 75; display: none; place-items: center;
+  background: radial-gradient(circle at 50% 40%, #232a5c 0%, #0b0d20 70%);
+}
+#curtain.open { display: grid; }
+.curtain-box { text-align: center; max-width: 34rem; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.curtain-title { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; color: var(--accent); }
+.curtain-sub { color: #cfd6ea; line-height: 1.5; }
+.curtain-box .action-btn { font-size: 1.05rem; padding: .7rem 1.4rem; }
+
+#results {
+  position: fixed; inset: 0; z-index: 74; display: none; place-items: center; background: rgba(2,4,12,.62);
+}
+#results.open { display: grid; }
+.results-box {
+  position: relative; overflow: hidden;
+  background: var(--panel); border: 1px solid #4a5590; border-radius: 16px; padding: 1.6rem 2rem;
+  width: min(94vw, 40rem); text-align: center; box-shadow: 0 24px 90px rgba(0,0,0,.75);
+}
+.results-box::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; opacity: .28;
+  background: var(--results-art, none) center / cover no-repeat;
+}
+.results-box > * { position: relative; z-index: 1; }
+.results-title { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 900; color: var(--accent); letter-spacing: .06em; text-shadow: 0 4px 30px rgba(0,0,0,.9); }
+.results-title.is-loss { color: #c9d0e8; }
+.results-sub { color: #cfd6ea; margin: .3rem 0 1rem; }
+.results-table { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.results-col { background: rgba(10,12,28,.7); border: 1px solid var(--line); border-radius: 10px; padding: .8rem; }
+.results-col.is-winner { border-color: var(--accent); }
+.results-name { font-size: .78rem; color: var(--muted); }
+.results-lore { font-size: 2.6rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+.results-meta { font-size: .74rem; color: var(--muted); }
+.results-best { font-size: .78rem; margin-top: .4rem; }
+.results-note { font-size: .78rem; color: var(--muted); margin: 1rem 0 .6rem; font-style: italic; }
+.results-buttons { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+
+#help { position: fixed; inset: 0; z-index: 70; display: none; place-items: center; background: rgba(4,6,14,.78); padding: 20px; }
+#help.open { display: grid; }
+.help-box { background: #181d36; border: 1px solid #3b4670; border-radius: 12px; width: min(720px, 94vw); max-height: 86dvh; display: flex; flex-direction: column; box-shadow: 0 12px 40px rgba(0,0,0,.6); }
+.help-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+.help-head h2 { margin: 0; font-size: 20px; }
+.help-body { overflow-y: auto; padding: 6px 18px 18px; }
+.help-body h3 { margin: 14px 0 4px; color: var(--accent); font-size: 15px; }
+.help-body p { margin: 0; line-height: 1.5; font-size: 14px; color: #c8d1e8; }
+
+/* Coach bubbles never block the board: only the bubble itself takes clicks. */
+#coach {
+  position: fixed; z-index: 73; display: none; width: min(24rem, 90vw);
+  background: #fdf6e3; color: #1d1a2e; border-radius: 12px; padding: .8rem 1rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,.6), 0 0 0 3px rgba(255,209,102,.7);
+}
+#coach.open { display: block; }
+.coach-title { font-size: .66rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9a6b12; }
+.coach-text { font-size: .9rem; line-height: 1.45; margin: .3rem 0 .6rem; }
+.coach-buttons { display: flex; gap: .5rem; justify-content: flex-end; }
+.coach-buttons button:not(.action-btn) { background: #e9dfc4; color: #3a3020; border-color: #cbbd99; }
+
+#toast {
+  position: fixed; left: 50%; top: 1rem; transform: translateX(-50%) translateY(-150%); z-index: 130;
+  background: #222b4a; border: 1px solid #4a5590; border-radius: 10px; padding: .55rem 1rem;
+  font-size: .85rem; max-width: min(90vw, 40rem); box-shadow: 0 10px 30px rgba(0,0,0,.6);
+  transition: transform .25s ease; pointer-events: none;
+}
+#toast.show { transform: translateX(-50%) translateY(0); }
+#toast.is-warn { border-color: #a08a3a; }
+#toast.is-error { border-color: var(--danger); background: #3a1620; }
+
+/* The ONE shared tooltip (no native title= anywhere). */
+#tooltip {
+  position: fixed; z-index: 140; display: none; pointer-events: none;
+  max-width: 18rem; padding: .35rem .6rem; border-radius: 6px;
+  background: rgba(10,12,26,.96); border: 1px solid #3b4670; color: #e4e8f3;
+  font-size: .76rem; line-height: 1.35; box-shadow: 0 6px 18px rgba(0,0,0,.6);
+}
+#tooltip.open { display: block; }
+
+/* ================= title screens ================= */
+#title-screen {
+  position: fixed; inset: 0; z-index: 80; display: none; place-items: center; text-align: center;
+  background: #080a18 center / cover no-repeat;
+  /* A painted backdrop when the manifest has one; a drawn dusk sky until then. */
+  background-image: radial-gradient(ellipse at 50% 30%, #3a3f8a 0%, #1a1c4a 45%, #080a18 100%);
+}
+#title-screen.open { display: grid; }
+#title-screen.is-picker::before {
+  content: ''; position: absolute; inset: 0; background: rgba(6,8,18,.7); backdrop-filter: blur(2px);
+}
+#title-screen.is-splash::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(6,8,18,.9) 0%, rgba(6,8,18,.12) 45%, rgba(6,8,18,.3) 100%);
+}
+.title-splash, .title-picker { position: relative; z-index: 1; }
+.title-splash { align-self: end; padding: 2rem 2rem calc(8vh + 4rem); }  /* clear of the 3-line disclaimer */
+.title-name {
+  margin: 0; font-size: clamp(2.2rem, 7vw, 5rem); font-weight: 900; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent);
+  text-shadow: 0 4px 30px rgba(0,0,0,.95), 0 0 60px rgba(255,180,60,.35);
+}
+.title-name-small { font-size: clamp(1.4rem, 3.4vw, 2.2rem); margin-bottom: 1.1rem; }
+.title-tagline { margin-top: .6rem; font-size: clamp(.85rem, 1.8vw, 1.15rem); color: #e4e8f3; letter-spacing: .08em; text-shadow: 0 2px 14px rgba(0,0,0,.95); }
+.title-hint { margin-top: 1.6rem; font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); animation: title-hint 2.2s ease-in-out infinite; }
+@keyframes title-hint { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+.title-disclaimer {
+  position: absolute; left: 0; right: 0; bottom: .9rem; padding: 0 1.5rem; z-index: 2;
+  font-size: .66rem; line-height: 1.4; color: var(--muted); text-align: center; text-shadow: 0 2px 10px rgba(0,0,0,.9);
+  max-width: 70rem; margin: 0 auto;
+}
+.title-picker {
+  background: rgba(20,24,48,.9); border: 1px solid var(--line); border-radius: 14px;
+  padding: 1.6rem 2.2rem; width: min(30rem, 94vw); max-height: 86dvh; overflow-y: auto;
+  box-shadow: 0 24px 90px rgba(0,0,0,.7);
+}
+.title-field { display: block; text-align: left; margin-bottom: .9rem; }
+.title-field-label { display: block; font-size: .66rem; text-transform: uppercase; letter-spacing: .16em; font-weight: 700; color: var(--muted); margin-bottom: .3rem; }
+.title-select { width: 100%; font-size: .92rem; padding: .5rem .65rem; }
+.title-deck-line { display: flex; gap: .4rem; }
+.title-deck-btn { flex: 1; text-align: left; font-size: .95rem; font-weight: 600; padding: .58rem .75rem; background: rgba(255,255,255,.05); border-color: var(--line); display: flex; align-items: center; gap: .3rem; }
+.title-deck-btn:hover { background: rgba(255,255,255,.1); border-color: #5a74c0; }
+.title-deck-btn.is-hidden-deck { color: var(--accent); font-style: italic; }
+.title-deck-dice { padding: .5rem .7rem; font-size: 1.2rem; line-height: 1; background: rgba(255,255,255,.05); border-color: var(--line); }
+.title-start { margin-top: .5rem; width: 100%; background: #3a4f8c; border-color: #5368a8; font-size: 1rem; font-weight: 700; padding: .72rem 1rem; letter-spacing: .05em; }
+.title-start:hover { background: #4760a6; }
+.title-row { display: flex; gap: .5rem; margin-top: .6rem; }
+.title-select-btn { flex: 1; padding: .5rem .8rem; font-size: .88rem; }
+.title-note { font-size: .8rem; color: var(--muted); text-align: left; line-height: 1.45; margin: .3rem 0 .9rem; }
+.deck-inks { display: inline-flex; gap: .2rem; vertical-align: middle; }
+.deck-inks .ink-dot { width: .7rem; height: .7rem; }
+
+.deck-chooser { width: min(62rem, 95vw); }
+.deck-group-label { text-align: left; font-size: .66rem; text-transform: uppercase; letter-spacing: .16em; font-weight: 700; color: var(--muted); margin: 1rem 0 .45rem; }
+.deck-grid { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); }
+.deck-choice { display: flex; flex-direction: column; gap: .2rem; align-items: flex-start; text-align: left; padding: .65rem .8rem; background: rgba(255,255,255,.05); border-color: var(--line); }
+.deck-choice:hover { background: rgba(75,116,184,.28); border-color: #5a74c0; }
+.deck-choice.is-chosen { border-color: var(--accent); background: rgba(255,209,102,.12); }
+.deck-choice-name { font-weight: 700; font-size: .92rem; line-height: 1.2; }
+.deck-choice-meta { font-size: .7rem; color: var(--muted); }
+.deck-chooser-actions { display: flex; gap: .5rem; margin-top: 1.2rem; }
+/* The peek: a deck's key cards at full preview size; scaled inline to fit, so its
+   entrance animates opacity only (a keyframe on transform would outrank the scale). */
+.deck-peek {
+  position: fixed; z-index: 120; pointer-events: none; padding: .7rem; border-radius: 12px;
+  background: rgba(10,12,26,.96); border: 1px solid var(--line); box-shadow: 0 18px 60px rgba(0,0,0,.75);
+  animation: peek-in 140ms ease-out; text-align: left;
+}
+@keyframes peek-in { from { opacity: 0; } to { opacity: 1; } }
+.peek-head { margin-bottom: .6rem; }
+.peek-name { font-weight: 800; font-size: 1.1rem; }
+.peek-meta { font-size: .82rem; color: #cfd6ea; margin-top: .15rem; }
+.peek-src { font-size: .7rem; color: var(--muted); margin-top: .15rem; }
+.peek-cards { display: flex; gap: .5rem; }
+
+/* The wipe: one opaque curtain on <body> (emptying the title screen can't take it down);
+   the screen swap happens at 45% while it covers everything. */
+.title-wipe { position: fixed; inset: 0 100% 0 0; z-index: 95; pointer-events: none; background: linear-gradient(90deg, #080a18 0%, #080a18 92%, #ffd166 100%); }
+.title-wipe.run { animation: title-wipe .9s cubic-bezier(.7,0,.3,1) forwards; }
+@keyframes title-wipe { 0% { inset: 0 100% 0 0; } 45%, 55% { inset: 0; } 100% { inset: 0 0 0 100%; } }
+
+/* ---- deck builder ---- */
+.deck-builder { width: min(96vw, 92rem); height: 92dvh; max-height: 92dvh; display: grid; grid-template-columns: 1fr 22rem; gap: 1rem; text-align: left; padding: 1rem 1.2rem; }
+.db-left { display: flex; flex-direction: column; min-height: 0; }
+.db-top { display: flex; align-items: baseline; gap: 1rem; }
+.db-top .title-name { margin-bottom: .4rem; }
+.db-count { color: var(--muted); font-size: .8rem; }
+.db-filters { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-bottom: .6rem; }
+.db-ink, .db-cost { font-size: .78rem; padding: .3rem .55rem; background: rgba(255,255,255,.04); }
+.db-ink.is-on, .db-cost.is-on { background: #3a4f8c; border-color: #8aa0e0; }
+.db-costs { display: flex; gap: .2rem; }
+.db-type { width: auto; font-size: .8rem; padding: .3rem .5rem; }
+.db-search { flex: 1; min-width: 12rem; background: #0f1328; color: #e4e8f3; border: 1px solid var(--line); border-radius: 6px; padding: .4rem .6rem; font-size: .85rem; }
+.db-grid { flex: 1; min-height: 0; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(8.2rem, 1fr)); gap: .6rem; align-content: start; padding: .2rem; --card-hand-w: 8rem; }
+.db-cell { display: flex; flex-direction: column; align-items: center; gap: .2rem; }
+.db-cell .card { cursor: pointer; }
+.db-cell-ctl { display: flex; gap: .3rem; align-items: center; }
+.db-cell-ctl button, .db-row button { padding: .05rem .5rem; font-size: .9rem; }
+.db-qty { min-width: 1.4rem; text-align: center; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+.db-qty.is-in { color: var(--accent); }
+.db-side { display: flex; flex-direction: column; gap: .5rem; min-height: 0; background: rgba(8,10,22,.6); border: 1px solid var(--line); border-radius: 10px; padding: .8rem; }
+.db-name { background: #0f1328; color: #fff; border: 1px solid var(--line); border-radius: 6px; padding: .45rem .6rem; font-size: 1rem; font-weight: 700; }
+.db-total { font-size: 1.3rem; font-weight: 800; color: #ffcf6b; font-variant-numeric: tabular-nums; }
+.db-total.is-ok { color: #8ee0ac; }
+.db-inks { font-size: .8rem; color: #cfd6ea; display: flex; align-items: center; flex-wrap: wrap; gap: .2rem; }
+.db-inkable { margin-left: auto; color: var(--muted); }
+.db-curve { display: flex; gap: .25rem; height: 5rem; align-items: stretch; }
+.db-bar-col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+.db-bar { width: 100%; background: linear-gradient(to top, #3a4f8c, #7f9be8); border-radius: 3px 3px 0 0; min-height: 1px; }
+.db-bar-n { font-size: .62rem; color: #cfd6ea; }
+.db-bar-x { font-size: .62rem; color: var(--muted); }
+.db-valid { font-size: .76rem; color: #ffcf6b; line-height: 1.35; }
+.db-valid.is-ok { color: #8ee0ac; }
+.db-list { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: .15rem; }
+.db-row { display: flex; align-items: center; gap: .35rem; font-size: .8rem; }
+.db-row .cost-hex { font-size: .8rem; }
+.db-row-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; border-bottom: 0; }
+.db-msg { font-size: .78rem; color: var(--accent); min-height: 1em; opacity: 0; }
+.db-msg.show { animation: flash-msg 3s ease forwards; }
+.db-buttons { display: flex; flex-wrap: wrap; gap: .4rem; }
+.db-buttons select { width: 9rem; font-size: .8rem; }
+
+/* ================= animation layer (js/ui/anim.js) ================= */
+#fx-layer { position: fixed; inset: 0; z-index: 66; pointer-events: none; overflow: hidden; }
+#fx-lock { position: fixed; inset: 0; z-index: 65; display: none; cursor: pointer; background: transparent; }
+#fx-lock.open { display: block; }
+.fx-hidden { visibility: hidden !important; }
+.fx-clone { position: absolute; margin: 0; z-index: 3; will-change: transform, opacity; transform-origin: 50% 50%; box-shadow: 0 14px 30px rgba(0,0,0,.6); }
+.fx-clone:hover { transform: none; }
+.fx-flyer { z-index: 4; }
+.fx-impact {
+  position: absolute; border-radius: 50%; mix-blend-mode: screen; pointer-events: none;
+  background: radial-gradient(circle, #fff 0%, var(--fx, #ffb347) 30%, transparent 68%);
+  animation: fx-impact var(--dur, 460ms) cubic-bezier(.2,.8,.4,1) forwards;
+}
+.fx-impact.fx-smoke { background: radial-gradient(circle, rgba(230,220,255,.9) 0%, rgba(160,140,220,.5) 35%, transparent 70%); animation-duration: calc(var(--dur, 460ms) * 2.4); }
+.fx-impact.fx-heal { background: radial-gradient(circle, rgba(220,255,230,.9) 0%, rgba(110,220,150,.45) 35%, transparent 68%); }
+@keyframes fx-impact {
+  0% { transform: scale(.35); opacity: 0; } 18% { transform: scale(1.05); opacity: 1; } 100% { transform: scale(1.3); opacity: 0; }
+}
+.fx-bolt {
+  position: absolute; height: 6px; border-radius: 999px; transform-origin: 50% 50%; will-change: transform;
+  background: linear-gradient(90deg, transparent 0%, var(--fx) 55%, #fff 92%, #fff 100%);
+  filter: drop-shadow(0 0 6px var(--fx));
+}
+.fx-diamond { position: absolute; width: 36px; height: 36px; color: var(--accent); filter: drop-shadow(0 0 10px rgba(255,209,102,.95)); will-change: transform; }
+.fx-diamond .ico { width: 100%; height: 100%; }
+.fx-note {
+  position: absolute; font-size: 22px; font-weight: 900; pointer-events: none; opacity: 0;
+  text-shadow: 0 0 8px currentColor; animation: fx-note var(--dur, 900ms) ease-out forwards;
+}
+@keyframes fx-note { 0% { opacity: 0; transform: translateY(0) scale(.5); } 20% { opacity: 1; } 100% { opacity: 0; transform: translateY(-70px) scale(1.2); } }
+.fx-hit { animation: fx-hit 420ms cubic-bezier(.3,.6,.4,1) !important; }
+.char-slot.is-exerted > .card.fx-hit { animation-name: fx-hit-ex !important; }
+@keyframes fx-hit {
+  0% { transform: translate(0,0); filter: brightness(1); }
+  15% { transform: translate(-5px,2px) rotate(-2deg); filter: brightness(2.2); }
+  35% { transform: translate(5px,-2px) rotate(2deg); filter: brightness(1.4); }
+  100% { transform: translate(0,0); filter: brightness(1); }
+}
+@keyframes fx-hit-ex {
+  0% { transform: rotate(90deg); filter: brightness(1); }
+  15% { transform: rotate(88deg) translate(-5px,2px); filter: brightness(2.2); }
+  35% { transform: rotate(92deg) translate(5px,-2px); filter: brightness(1.4); }
+  100% { transform: rotate(90deg); filter: brightness(1); }
+}
+.fx-number {
+  position: absolute; transform: translate(-50%, -50%); z-index: 2; font-weight: 900; font-size: 1.8rem; color: #ff5a4a;
+  text-shadow: 0 0 4px #000, 0 2px 8px rgba(0,0,0,.9), 0 0 14px rgba(255,90,74,.7);
+  animation: fx-number var(--dur, 900ms) cubic-bezier(.2,.7,.3,1) forwards; pointer-events: none;
+}
+.fx-number.is-lore { color: var(--accent); text-shadow: 0 0 4px #000, 0 0 16px rgba(255,209,102,.8); }
+.fx-number.is-lore-loss { color: #c9b8ff; }
+.fx-number.is-heal { color: #8ee0ac; }
+.fx-number.is-zero { color: #c9d0e8; font-size: 1.3rem; }
+@keyframes fx-number {
+  0% { transform: translate(-50%,-50%) scale(.5); opacity: 0; } 15% { transform: translate(-50%,-60%) scale(1.25); opacity: 1; }
+  70% { transform: translate(-50%,-150%) scale(1); opacity: 1; } 100% { transform: translate(-50%,-190%) scale(.9); opacity: 0; }
+}
+.fx-received { animation: fx-received 500ms ease-out; }
+@keyframes fx-received { 0% { filter: brightness(1.9); } 100% { filter: brightness(1); } }
+/* The lore-20 finale: layered CSS light, timed off --charge and --boom. */
+.fx-finale { position: absolute; pointer-events: none; }
+.fx-finale > * { position: absolute; inset: 0; margin: auto; border-radius: 50%; mix-blend-mode: screen; opacity: 0; }
+.ff-core { width: 30%; height: 30%; background: radial-gradient(circle, #fff 0%, #ffe9a8 40%, rgba(255,200,80,.4) 70%, transparent 100%);
+  animation: ff-core var(--charge) ease-in forwards, ff-gone var(--boom) ease-out var(--charge) forwards; }
+.ff-flash { width: 90%; height: 90%; background: radial-gradient(circle, #fff 0%, #fff2c4 14%, rgba(255,200,90,.55) 32%, transparent 66%);
+  animation: ff-flash var(--boom) cubic-bezier(.15,.85,.35,1) var(--charge) forwards; }
+.ff-ring { width: 30%; height: 30%; border: 5px solid rgba(255,236,170,.95); box-shadow: 0 0 30px rgba(255,210,120,.95);
+  animation: ff-ring var(--boom) cubic-bezier(.1,.7,.3,1) var(--charge) forwards; }
+.ff-ring-2 { border-color: rgba(180,230,255,.8); animation-delay: calc(var(--charge) + 120ms); }
+.ff-glint { width: 7px; height: 7px; background: radial-gradient(circle, #fff 0%, #ffd166 60%, transparent 100%);
+  animation: ff-glint var(--boom) cubic-bezier(.15,.7,.4,1) var(--charge) forwards; }
+@keyframes ff-core { 0% { opacity: 0; transform: scale(.4); } 100% { opacity: 1; transform: scale(1.2); } }
+@keyframes ff-gone { 0% { opacity: 1; transform: scale(1.2); } 100% { opacity: 0; transform: scale(2.6); } }
+@keyframes ff-flash { 0% { opacity: 0; transform: scale(.2); } 10% { opacity: 1; transform: scale(.85); } 100% { opacity: 0; transform: scale(1.25); } }
+@keyframes ff-ring { 0% { opacity: 0; transform: scale(.3); } 10% { opacity: 1; } 100% { opacity: 0; transform: scale(3.2); border-width: 1px; } }
+@keyframes ff-glint { 0% { opacity: 0; transform: rotate(var(--a)) translateX(0); } 12% { opacity: 1; } 100% { opacity: 0; transform: rotate(var(--a)) translateX(48%) scale(1.6); } }
+
+/* ================= responsive: remove content, don't shrink it ================= */
+@media (max-width: 900px) {
+  .card:not(.card-preview) .traits, .card:not(.card-preview) .card-kw,
+  .card:not(.card-preview) .card-version { display: none; }
+  .card:not(.card-preview) .type-tag { font-size: .46em; letter-spacing: .04em; }
+  .turn-label { font-size: .66rem; letter-spacing: .06em; }
+  .turn-hint { display: none; }
+  .deck-builder { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
+  .db-side { max-height: 40dvh; }
+}
+@media (max-width: 620px) {
+  .preview-sides { display: none; }
+  .card-board .card-type, .card-board .card-plate .card-name { font-size: .62em; }
+  #side-controls { grid-template-columns: 1fr 1fr; }
+  .turn-right { margin-right: 1.6rem; }
+  #turn-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem .8rem; }
+  .turn-left, .turn-right { justify-self: auto; margin-right: 0; }
+  .pop-buttons { min-width: 0; }
+}
+#rotate-hint { display: none; }
+@media (orientation: portrait) and (max-width: 620px) {
+  #rotate-hint { display: block; text-align: center; font-size: .75rem; color: var(--muted); padding: .4rem; font-style: italic; }
+}
+@media (max-width: 420px) {
+  .inspect-body .preview-row { flex-wrap: nowrap; }
+  .inspect-body .card-preview, .pop-body .card-preview { min-height: 0; width: 12rem; font-size: 13px; }
+}
+/* Touch: no hover, so no hover preview (long-press opens the inspector instead), and
+   no overlap slivers too thin for a finger. */
+@media (hover: none) {
+  #preview { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #preview { transition: none; }
+  #spotlight { transition: opacity .25s ease-out !important; }
+  .role-actable, .lore-zone.is-active, .card.is-drying::before, .title-hint { animation: none; }
+  .lore-zone.is-active { box-shadow: 0 0 0 3px rgba(255,209,102,.9); }
+  .attack-arrow { animation: none; stroke-dasharray: none; }
+  .fx-hit { animation: none !important; }
+  .char-slot { transition: none; }
+}

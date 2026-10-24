@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lorecannae</title>
+<link rel="icon" href="art/ui/cardback.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- The board is the whole window. Everything that is not the board is a title screen,
+     the log drawer (an overlay on the right edge) or a centred panel. -->
+<div id="app">
+  <div id="board">
+    <!-- Their hand, face down: the near quarter of each card back, upside down. -->
+    <div id="enemy-hand-bar"><div id="enemy-hand"></div></div>
+    <!-- js/ui/boardart.js draws the table and places each zone on its painted slot
+         from one geometry table; the DOM carries no label text of its own. -->
+    <div id="mat">
+      <div id="enemy-lore" class="mat-zone lore-zone"></div>
+      <div id="enemy-play" class="mat-zone play-zone"></div>
+      <div id="enemy-items" class="mat-zone play-zone items-zone"></div>
+      <div id="enemy-deck" class="mat-zone pile-slot"></div>
+      <div id="enemy-discard" class="mat-zone pile-slot"></div>
+      <div id="enemy-ink" class="mat-zone ink-slot"></div>
+      <div id="my-lore" class="mat-zone lore-zone"></div>
+      <div id="my-play" class="mat-zone play-zone"></div>
+      <div id="my-items" class="mat-zone play-zone items-zone"></div>
+      <div id="my-deck" class="mat-zone pile-slot"></div>
+      <div id="my-discard" class="mat-zone pile-slot"></div>
+      <div id="my-ink" class="mat-zone ink-slot"></div>
+    </div>
+    <!-- Drop variants ("how do you pay?") and board-highlight choice controls. -->
+    <div id="choice-bar"></div>
+    <div id="hand-bar"><div id="hand"></div></div>
+    <!-- Turn actions with no card to hang on: End turn (and why it is disabled). -->
+    <div id="turn-bar"></div>
+    <div id="rotate-hint">Turn your phone sideways for a bigger table. Tap any card to read it.</div>
+  </div>
+  <button id="log-handle" type="button">Log</button>
+  <div id="side">
+    <div id="side-head"><span id="side-title">Log &amp; settings</span><button id="side-close" type="button">&times;</button></div>
+    <div id="side-controls">
+      <button id="mute-btn" type="button"></button>
+      <label class="vol"><span>Volume</span><input id="volume" type="range" min="0" max="100" step="5"></label>
+      <button id="anim-btn" type="button"></button>
+      <button id="help-btn" type="button">How to play</button>
+      <button id="new-game-btn" type="button">New game</button>
+      <button id="concede-btn" type="button">Concede</button>
+      <button id="report-btn" type="button">Save bug report</button>
+    </div>
+    <div id="prompt" class="prompt"></div>
+    <div id="recent-wrap"><div class="side-title">Recently played</div><div id="recent"></div></div>
+    <div class="side-title">Log <span class="side-note">newest first</span></div>
+    <div id="log"></div>
+  </div>
+</div>
+<div id="choice-modal"></div>
+<div id="action-popover"></div>
+<div id="turn-banner" aria-live="polite"></div>
+<div id="curtain"></div>
+<div id="results"></div>
+<div id="help"></div>
+<div id="coach"></div>
+<div id="title-screen"></div>
+
+<!-- engine -->
+<script src="js/ns.js"></script>
+<script src="data/cards.js"></script>
+<script src="data/decks.js"></script>
+<script src="data/defects.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/abilities.js"></script>
+<script src="data/abilities/amber.js"></script>
+<script src="data/abilities/amethyst.js"></script>
+<script src="data/abilities/emerald.js"></script>
+<script src="data/abilities/steel.js"></script>
+<script src="js/ai.js"></script>
+<!-- /engine -->
+<!-- Asset manifests (the asset pipeline writes these). Declared even while empty:
+     a missing MODULE throws at boot; a missing entry falls back per card / sound. -->
+<script src="data/art-manifest.js"></script>
+<script src="data/audio-manifest.js"></script>
+<!-- Dev-only quick start (js/ui/dev-fixture.js), never on the default path. -->
+<script>if (/[?&]fixture\b/.test(location.search)) document.write('<script src="js/ui/dev-fixture.js"><\/script>');</script>
+<!-- UI, in dependency order. Everything under js/ui/ is view layer. -->
+<script src="js/ui/core.js"></script>
+<script src="js/ui/cardview.js"></script>
+<script src="js/ui/boardart.js"></script>
+<script src="js/ui/preview.js"></script>
+<script src="js/ui/logtext.js"></script>
+<script src="js/ui/logpanel.js"></script>
+<script src="js/ui/targeting.js"></script>
+<script src="js/ui/sound.js"></script>
+<script src="js/ui/anim.js"></script>
+<script src="js/ui/hud.js"></script>
+<script src="js/ui/tutorial.js"></script>
+<script src="js/ui/game.js"></script>
+<script src="js/ui/deckbuilder.js"></script>
+<script src="js/ui/title.js"></script>
+<script src="js/ui/main.js"></script>
+</body>
+</html>

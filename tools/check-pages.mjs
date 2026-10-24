@@ -22,7 +22,10 @@ if (fs.existsSync(uiDir)) for (const f of fs.readdirSync(uiDir)) {
   if (!f.endsWith('.js') || f === 'dev-fixture.js') continue;
   const code = fs.readFileSync(path.join(uiDir, f), 'utf8').replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
   if (/if\s*\(\s*!\s*LC\.[A-Za-z_]+\s*\)/.test(code)) fails.push(`js/ui/${f}: silent-fallback guard "if (!LC.x)"`);
-  if (/LC\.[A-Za-z_.]+\s*\|\|\s*\{\s*\}/.test(code)) fails.push(`js/ui/${f}: silent fallback "LC.x || {}"`);
+  // A module creating its own namespace (`LC.anim = LC.anim || {}`) is fine; a read that
+  // substitutes {} for a missing module is not.
+  const reads = code.replace(/(LC\.[A-Za-z_.]+)\s*=\s*\1\s*\|\|\s*\{\s*\}/g, '');
+  if (/LC\.[A-Za-z_.]+\s*\|\|\s*\{\s*\}/.test(reads)) fails.push(`js/ui/${f}: silent fallback "LC.x || {}"`);
 }
 for (const f of fails) console.log('FAIL ' + f);
 console.log(`check-pages: ${fails.length ? fails.length + ' failure(s)' : 'ok'} (${a.length} engine scripts)`);
