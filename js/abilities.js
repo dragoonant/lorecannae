@@ -79,6 +79,8 @@
     };
     x.heal = (t, n) => LC.removeDamage(s, t, n);
     x.banish = (t) => LC.banish(s, t, { by: fromChar() });
+    // "Banish all ..." banishes the group simultaneously (CR 7.4.3).
+    x.banishAll = (list) => LC.banishMany(s, list.map((iid) => ({ iid, by: fromChar(), challenge: false })));
     x.exert = (t) => LC.exert(s, t, 'effect');
     x.ready = (t) => LC.ready(s, t, 'effect');
     x.toHand = (t) => {

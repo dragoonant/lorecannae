@@ -255,7 +255,7 @@
   };
 
   A['raging-storm'] = {
-    action(x) { for (const t of x.characters()) x.banish(t); },
+    action(x) { x.banishAll(x.characters()); },
   };
 
   A['world-s-greatest-criminal-mind'] = {

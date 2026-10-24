@@ -40,6 +40,7 @@
       else if ((m = line.match(/^Sing Together (\d+)/))) kw.SingTogether = +m[1];
       else if ((m = line.match(/^(Singer|Boost|Shift) (\d+)/))) kw[m[1]] = +m[2];
       else if ((m = line.match(/^(Alert|Bodyguard|Evasive|Reckless|Rush|Support|Vanish|Ward)\b/))) kw[m[1]] = true;
+      else if (/^[A-Z][\w ]* Shift \d/.test(line)) kw.UnsupportedShift = line; // Shift variants (CR 8.10.8): not implemented
     }
     // Some lines carry two keywords run together ("Rush (...) WEAKEN THE CAULDRON ...").
     for (const k of d.keywords || []) {
@@ -205,7 +206,9 @@
   LC.inPlay = (s, p) => (p == null ? [...s.players[0].play, ...s.players[1].play] : s.players[p].play.slice());
   LC.characters = (s, p) => LC.inPlay(s, p).filter((i) => LC.isCharacter(def(s, i)));
   LC.items = (s, p) => LC.inPlay(s, p).filter((i) => LC.isItem(def(s, i)));
-  LC.namesMatch = (d, name) => d.name === name || d.name.split(/ and | & /).includes(name);
+  // CR 5.2.6: a card with several names ("Hamish, Hubert & Harris", "Lilo and Stitch") has each.
+  LC.namesOf = (d) => [d.name, ...d.name.split(/,\s*(?:and\s+|&\s+)?|\s+and\s+|\s+&\s+/).map((x) => x.trim()).filter(Boolean)];
+  LC.namesMatch = (d, name) => LC.namesOf(d).includes(name);
   LC.hasNamed = (s, p, name, exceptIid) => LC.characters(s, p).some((i) => i !== exceptIid && LC.namesMatch(def(s, i), name));
 
   // ---------------------------------------------------------------- zone moves (one door)
@@ -232,7 +235,14 @@
         delete s.ti.boosted[iid];
         for (const k of Object.keys(s.ti.once)) if (k.includes(`:${iid}:`)) delete s.ti.once[k];
       }
-      for (const u of c.under.slice()) { removeFromZone(s, u); placeIn(s, u, 'discard', {}); }
+      // CR 8.10.7 / 5.1.1.7: the whole stack moves to the zone the top card goes to, taking
+      // that card's states there (Boost cards stop being facedown unless the zone is the deck).
+      for (const u of c.under.slice()) {
+        removeFromZone(s, u);
+        const uc = s.cards[u];
+        uc.exerted = false; uc.damage = 0; uc.mods = []; uc.dry = false; uc.enteredTurn = null;
+        placeIn(s, u, to, { ...opt, facedown: false });
+      }
       c.under = [];
       c.exerted = false; c.damage = 0; c.mods = []; c.dry = false; c.enteredTurn = null; c.lastHit = null;
     }
@@ -311,6 +321,24 @@
     log(s, s.cards[iid].owner, 'banish', { iid, by: o.by ?? null });
     return leavePlay(s, iid, 'discard', { ...o, banished: true });
   }
+  // CR 7.4.3: cards leaving play together all move first, then every trigger "sees" the
+  // whole group (each banished card is scanned as an extra source).
+  function banishMany(s, list) {
+    list = list.filter((e) => s.cards[e.iid].zone === 'play');
+    for (const e of list) {
+      const d = def(s, e.iid);
+      log(s, s.cards[e.iid].owner, 'banish', { iid: e.iid, by: e.by ?? null });
+      if (LC.isCharacter(d)) s.ti.banishedNames.push(d.name);
+      move(s, e.iid, 'discard');
+    }
+    const extra = list.map((e) => e.iid).concat(list.map((e) => e.by).filter((b) => b != null));
+    for (const e of list) {
+      emit(s, { type: 'leavesPlay', iid: e.iid, to: 'discard', by: e.by ?? null }, extra);
+      emit(s, { type: 'banished', iid: e.iid, by: e.by ?? null, challenge: e.challenge }, extra);
+      if (e.by != null && e.challenge) emit(s, { type: 'banishedInChallenge', iid: e.iid, by: e.by }, extra);
+    }
+  }
+  LC.banishMany = banishMany;
   LC.banish = banish;
   LC.leavePlay = leavePlay;
 
@@ -410,13 +438,10 @@
         for (const i of LC.inPlay(s)) if (s.cards[i].lastHit) s.cards[i].lastHit = null;
         return;
       }
-      for (const i of doomed) {
+      banishMany(s, doomed.map((i) => {
         const hit = s.cards[i].lastHit;
-        const by = hit && hit.turn === s.turn ? hit.by : null;
-        const inChallenge = !!(hit && hit.challenge && hit.turn === s.turn);
-        banish(s, i, { by, challenge: inChallenge });
-        if (by != null && inChallenge) emit(s, { type: 'banishedInChallenge', iid: i, by }, [by]);
-      }
+        return { iid: i, by: hit ? hit.by : null, challenge: !!(hit && hit.challenge) };
+      }));
     }
   }
   function win(s, p, reason) {
@@ -586,7 +611,8 @@
     const d = def(s, iid);
     let delta = 0;
     const a = ABIL(d.id);
-    if (a.selfCost && !alternate) delta += a.selfCost(s, iid, p);
+    // CR 4.3.2.3: payment modifiers apply to the alternate cost too (e.g. Shift).
+    if (a.selfCost) delta += a.selfCost(s, iid, p);
     for (const m of s.players[p].costMods) if (costModApplies(s, m, d)) delta -= m.amount;
     for (const x of s.players[p].play) {
       const ax = ABIL(s.cards[x].id);
@@ -614,12 +640,16 @@
   LC.payInk = payInk;
 
   // ---------------------------------------------------------------- play a card (CR 4.3)
-  function canSing(s, singer, song) {
+  // The one "can this character exert to sing" predicate (sing and Sing Together both use it).
+  function canExertToSing(s, singer) {
     const c = s.cards[singer];
     if (c.zone !== 'play' || c.exerted || !c.dry) return false; // exerting needs a dry character (CR 5.1.1.11)
     const ch = LC.chars(s, singer);
-    if (ch.type !== 'character' || ch.flags.cantSing) return false;
-    return ch.singCost >= def(s, song).cost;
+    return ch.type === 'character' && !ch.flags.cantSing;
+  }
+  LC.canExertToSing = canExertToSing;
+  function canSing(s, singer, song) {
+    return canExertToSing(s, singer) && LC.chars(s, singer).singCost >= def(s, song).cost;
   }
   LC.canSing = canSing;
 
@@ -643,7 +673,7 @@
     else if (pay === 'sing') { paidSingers = [job.singer]; exert(s, job.singer, 'sing'); }
     else if (pay === 'singTogether') {
       const n = LC.printedKeywords(d).SingTogether;
-      const pool = LC.characters(s, p).filter((c) => !s.cards[c].exerted && s.cards[c].dry);
+      const pool = LC.characters(s, p).filter((c) => canExertToSing(s, c));
       paidSingers = x.ask({
         kind: 'cards', who: p, src: iid, from: pool, seen: pool, min: 1, max: pool.length, sumCostMin: n,
         prompt: `Sing Together ${n}: choose characters with total cost ${n} or more to exert and sing this song.`,
@@ -688,8 +718,9 @@
       c.zone = 'play'; c.facedown = false;
       c.exerted = base.exerted; c.damage = base.damage; c.dry = base.dry; c.enteredTurn = base.enteredTurn;
       c.under = [...base.under, o.onto];
+      // CR 8.10.5: the shifted character keeps effects applied to the character it's put on.
+      c.mods = base.mods.slice();
       base.zone = 'under'; base.under = []; base.exerted = false; base.damage = 0; base.mods = []; base.facedown = false;
-      c.mods = [];
       c.shifted = true;
     } else {
       move(s, iid, 'play');
@@ -906,7 +937,7 @@
     if (LC.isSong(d)) {
       for (const c of LC.characters(s, p)) if (canSing(s, c, h)) out.push({ type: 'play', iid: h, pay: 'sing', singer: c });
       if (kw.SingTogether) {
-        const total = LC.characters(s, p).filter((c) => !s.cards[c].exerted && s.cards[c].dry).reduce((n, c) => n + LC.chars(s, c).singCost, 0);
+        const total = LC.characters(s, p).filter((c) => canExertToSing(s, c)).reduce((n, c) => n + LC.chars(s, c).singCost, 0);
         if (total >= kw.SingTogether) out.push({ type: 'play', iid: h, pay: 'singTogether' });
       }
     }
@@ -967,6 +998,13 @@
   LC.apply = function (prev, action) {
     if (prev.winner !== null) throw new Illegal('game is over');
     const s = LC.clone(prev);
+    // CR 2.3.3: a player may concede at any time (not offered by legalActions).
+    if (action.type === 'concede') {
+      if (action.who !== 0 && action.who !== 1) throw new Illegal('concede needs who');
+      s.ask = null; s.pendingJob = null; s.pendingSnap = null; s.queue = []; s.bag = [];
+      win(s, 1 - action.who, 'concede');
+      return s;
+    }
     if (s.ask) {
       if (action.type !== 'answer') throw new Illegal('a decision is pending');
       const a = s.ask;

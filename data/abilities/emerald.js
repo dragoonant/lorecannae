@@ -189,7 +189,7 @@
   A['prince-phillip-vanquisher-of-foes'] = {
     triggers: [{
       name: 'SWIFT AND SURE', on: 'played', when: H.self,
-      run(x) { for (const t of x.characters(x.opp).filter((i) => x.s.cards[i].damage > 0)) x.banish(t); },
+      run(x) { x.banishAll(x.characters(x.opp).filter((i) => x.s.cards[i].damage > 0)); },
     }],
   };
 
@@ -381,13 +381,13 @@
       const t = x.chooseOne(pool, 'Sabotage: choose an item or location to banish, along with all other items or locations with the same name.');
       if (!t) return;
       const name = x.def(t).name;
-      for (const i of [t, ...pool.filter((i) => i !== t && x.def(i).name === name)]) x.banish(i);
+      x.banishAll([t, ...pool.filter((i) => i !== t && x.def(i).name === name)]);
     },
   };
 
   A['freeze-the-vine'] = {
     action(x) {
-      for (const t of locations(x)) x.banish(t);
+      x.banishAll(locations(x));
       x.draw(x.ctrl, 2);
       x.chooseDiscard(x.ctrl, 1, 'Freeze the Vine: choose a card to discard.');
     },

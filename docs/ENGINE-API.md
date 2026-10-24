@@ -47,7 +47,8 @@ s = {
     damage: 0,
     under: [iid, ...],     // cards stacked under this one (Shift base cards faceup, Boost cards facedown)
     facedown: false,       // true for Boost cards under a card and for ink
-    enteredTurn: null,     // turn number the card entered play (drying = enteredTurn === s.turn)
+    enteredTurn: null,     // turn number the card entered play
+    dry: false,            // false while drying; set at the owner's Set step (CR 3.2.2.1). Prefer LC.chars().drying
   }},
   ask: null | Ask,         // a pending decision; when set, only answers are legal
   log: [ LogEntry, ... ],  // append-only, oldest first
@@ -69,6 +70,7 @@ s = {
 {type:'activate', iid, idx}            // idx into LC.chars(s, iid).activated
 {type:'boost', iid}
 {type:'end'}                           // end the turn
+{type:'concede', who}                  // either seat, any time (CR 2.3.3); not in legalActions
 ```
 
 ## Ask (pending decision)
@@ -122,7 +124,7 @@ ability produced the entry (indent it under that card). Types:
 | `mulligan` | `{count}` |
 | `turn` | `{}` turn begins for `who` |
 | `draw` | `{iid}` (UI shows the face only to its owner) |
-| `ink` | `{iid}` (face hidden from the opponent) |
+| `ink` | `{iid}` (the card is REVEALED as it is inked, CR 4.2.1.1: show its face to both players in the log; in the inkwell it is facedown) |
 | `play` | `{iid, pay, singer?, singers?, onto?, cost}` |
 | `ability` | `{iid, name}` an activated/triggered ability starts resolving |
 | `quest` | `{iid, lore}` |

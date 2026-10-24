@@ -41,3 +41,13 @@
     }
   });
 })();
+(function () {
+  const { test, ok } = LC.T;
+  test('content: no pool card uses an unimplemented Shift variant (CR 8.10.8)', () => {
+    for (const d of Object.values(LC.CARDS)) ok(!LC.printedKeywords(d).UnsupportedShift || LC.DEFECTS[d.id], `${d.id}: ${LC.printedKeywords(d).UnsupportedShift}`);
+  });
+  test('CR 5.2.6 multi-name cards have each name', () => {
+    ok(LC.namesMatch(LC.CARDS['hamish-hubert-and-harris-troublemaking-triplets'], 'Hubert'));
+    ok(LC.namesMatch(LC.CARDS['lilo-and-stitch-fun-loving-friends'], 'Stitch'));
+  });
+})();

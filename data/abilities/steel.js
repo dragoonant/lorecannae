@@ -169,6 +169,6 @@
   };
 
   A['i-find-em-i-flatten-em'] = {
-    action(x) { for (const t of x.items()) x.banish(t); },
+    action(x) { x.banishAll(x.items()); },
   };
 })();
