@@ -959,7 +959,7 @@
    "name": "title",
    "aspect": "16:9",
    "megapixels": 2,
-   "prompt": "an enchanted fairy-tale realm seen from a hilltop, a distant castle on a crag, rivers of glowing liquid ink magic swirling through the sky like ribbons of northern lights, at twilight with the first stars appearing, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+   "prompt": "an enchanted moonlit forest clearing where glowing swirls of liquid ink light rise from a still open ink pool and drift up among the trees like ribbons of northern lights, at twilight with the first stars appearing, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
   },
   "board-forest": {
    "name": "board-forest",
@@ -971,7 +971,7 @@
    "name": "board-courtyard",
    "aspect": "16:9",
    "megapixels": 2,
-   "prompt": "a sunlit castle courtyard of pale flagstones with climbing roses on the surrounding walls, on a warm quiet afternoon, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+   "prompt": "a sunlit walled stone courtyard of pale flagstones with climbing roses on the surrounding walls, on a warm quiet afternoon, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
   },
   "board-cavern": {
    "name": "board-cavern",
@@ -995,7 +995,7 @@
    "name": "victory",
    "aspect": "16:9",
    "megapixels": 2,
-   "prompt": "a triumphant golden sunrise over a fairy-tale kingdom, beams of light and swirling sparkles of magic rising into the sky, in the early morning, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+   "prompt": "a triumphant golden sunrise over rolling green hills and a winding river, beams of light and swirling sparkles of magic rising into the sky, in the early morning, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
   },
   "defeat": {
    "name": "defeat",

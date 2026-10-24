@@ -30,6 +30,8 @@ const PHRASES_EXTRA = ['toy story', 'lion king', 'little mermaid', 'sleeping bea
 // Proper nouns from card Names/Versions (kept explicit: common words such as "queen", "fairy", "fire" stay usable).
 const PROPER = ['agustin', 'akood', 'aladdin', 'alan', 'ali', 'angela', 'angel', 'ariel', 'aurora', 'bambi', 'benja', 'bobby', 'broadway', 'camilo', 'canard', 'charming', 'chernabog', 'cheshire', 'christopher', 'dale', 'darkwing', 'david', 'demona', 'diablo', 'dumbo', 'eilonwy', 'elinor', 'elsa', 'emuti', 'eric', 'finnick', 'flynn', 'gaetan', 'gaston', 'genie', 'goof', 'hades', 'hamish', 'hamm', 'hamsterviel', 'harris', 'hubert', 'huntsman', 'horseman', 'incredible', 'inkcaster', 'isis', 'jasmine', 'john', 'jookiba', 'jumba', 'launchpad', 'lee', 'lenny', 'lexington', 'lilo', 'llyr', 'luisa', 'lyle', 'madrigal', 'maleficent', 'max', 'meilin', 'mickey', 'mike', 'milo', 'moliere', 'mowgli', 'mrs', 'mushu', 'nakoma', 'nani', 'ohana', 'omnidroid', 'parr', 'phillip', 'pluto', 'pocahontas', 'rafiki', 'rapunzel', 'robin', 'rourke', 'smolder', 'squeaks', 'stegmutt', 'stitch', 'sven', 'taran', 'thatch', 'thomas', 'tiberius', 'tigger', 'tinker', 'tod', 'ursula', 'vanderchill', 'vanessa', 'vixey', 'wazowski', 'willow', 'woodchuck', 'woody', 'wyvern', 'zimuruski'];
 
+// UI art only: a castle on a hill reads as a famous studio logo (trade dress).
+const UI_BANNED = ['castle', 'castles', 'palace', 'palaces', 'spire', 'spires', 'turret', 'turrets', 'citadel', 'kingdom'];
 const norm = s => ' ' + s.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, ' ').trim() + ' ';
 const phrases = new Set(PHRASES_EXTRA.map(p => norm(p)));
 for (const c of Object.values(C)) {
@@ -88,6 +90,7 @@ export function buildAll() {
   const ui = {};
   for (const [id, e] of Object.entries(UI)) {
     lintText('ui ' + id, e.subject + ' ' + e.set, problems);
+    for (const w of norm(e.subject + ' ' + e.set).trim().split(' ')) if (UI_BANNED.includes(w)) problems.push('ui ' + id + ': "' + w + '" (castle trade-dress risk on UI art)');
     const prompt = e.subject + ', ' + e.set + ', ' + (e.empty ? UI_EMPTY + ', ' : '') + INK[e.ink] + ', ' + STYLE + ', ' + LANDSCAPE;
     if (prompt.length > 900) problems.push('ui ' + id + ': prompt too long');
     ui[id] = { name: id, aspect: '16:9', megapixels: 2, prompt };

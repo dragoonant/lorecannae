@@ -1,0 +1,182 @@
+{
+ "sfx/click": {
+  "gain": 1,
+  "rms": 0.0826,
+  "loop": false
+ },
+ "sfx/card-draw": {
+  "gain": 1,
+  "rms": 0.1523,
+  "loop": false
+ },
+ "sfx/card-play": {
+  "gain": 1,
+  "rms": 0.0899,
+  "loop": false
+ },
+ "sfx/ink-card": {
+  "gain": 0.761,
+  "rms": 0.2102,
+  "loop": false
+ },
+ "sfx/exert": {
+  "gain": 0.946,
+  "rms": 0.1691,
+  "loop": false
+ },
+ "sfx/ready": {
+  "gain": 1,
+  "rms": 0.1587,
+  "loop": false
+ },
+ "sfx/quest": {
+  "gain": 1,
+  "rms": 0.1073,
+  "loop": false
+ },
+ "sfx/lore-tick": {
+  "gain": 1,
+  "rms": 0.1504,
+  "loop": false
+ },
+ "sfx/challenge": {
+  "gain": 1,
+  "rms": 0.1399,
+  "loop": false
+ },
+ "sfx/damage": {
+  "gain": 1,
+  "rms": 0.093,
+  "loop": false
+ },
+ "sfx/banish": {
+  "gain": 1,
+  "rms": 0.1431,
+  "loop": false
+ },
+ "sfx/song": {
+  "gain": 1,
+  "rms": 0.1518,
+  "loop": false
+ },
+ "sfx/item-play": {
+  "gain": 1,
+  "rms": 0.0907,
+  "loop": false
+ },
+ "sfx/shift": {
+  "gain": 0.661,
+  "rms": 0.2422,
+  "loop": false
+ },
+ "sfx/boost": {
+  "gain": 0.729,
+  "rms": 0.2193,
+  "loop": false
+ },
+ "sfx/shuffle": {
+  "gain": 0.799,
+  "rms": 0.2003,
+  "loop": false
+ },
+ "sfx/mulligan": {
+  "gain": 0.863,
+  "rms": 0.1853,
+  "loop": false
+ },
+ "sfx/turn-start": {
+  "gain": 1,
+  "rms": 0.0758,
+  "loop": false
+ },
+ "sfx/hover": {
+  "gain": 1,
+  "rms": 0.0825,
+  "loop": false
+ },
+ "sfx/victory-sting": {
+  "gain": 1,
+  "rms": 0.1583,
+  "loop": false
+ },
+ "sfx/defeat-sting": {
+  "gain": 1,
+  "rms": 0.158,
+  "loop": false
+ },
+ "sfx/glimmer": {
+  "gain": 0.864,
+  "rms": 0.1852,
+  "loop": false
+ },
+ "sfx/error": {
+  "gain": 1,
+  "rms": 0.1496,
+  "loop": false
+ },
+ "sfx/page-turn": {
+  "gain": 1,
+  "rms": 0.1181,
+  "loop": false
+ },
+ "sfx/heal": {
+  "gain": 1,
+  "rms": 0.1082,
+  "loop": false
+ },
+ "sfx/discard": {
+  "gain": 1,
+  "rms": 0.1451,
+  "loop": false
+ },
+ "sfx/bodyguard": {
+  "gain": 1,
+  "rms": 0.1332,
+  "loop": false
+ },
+ "sfx/evasive": {
+  "gain": 1,
+  "rms": 0.1355,
+  "loop": false
+ },
+ "sfx/support": {
+  "gain": 1,
+  "rms": 0.1116,
+  "loop": false
+ },
+ "sfx/ambience": {
+  "gain": 0.989,
+  "rms": 0.1617,
+  "loop": true
+ },
+ "music/menu": {
+  "gain": 0.751,
+  "rms": 0.1332,
+  "loop": true
+ },
+ "music/battle-1": {
+  "gain": 0.963,
+  "rms": 0.1038,
+  "loop": true
+ },
+ "music/battle-2": {
+  "gain": 0.56,
+  "rms": 0.1786,
+  "loop": true
+ },
+ "music/battle-3": {
+  "gain": 0.742,
+  "rms": 0.1348,
+  "loop": true
+ },
+ "music/victory": {
+  "gain": 0.712,
+  "rms": 0.1405,
+  "loop": false
+ },
+ "music/defeat": {
+  "gain": 0.937,
+  "rms": 0.1067,
+  "loop": false
+ }
+}

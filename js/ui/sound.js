@@ -308,6 +308,8 @@
           else if (l.pay === 'shift' || l.pay === 'shiftAlt') tag = 'shift';
           else if (d && U.mainType(d) === 'item') tag = 'item';
         }
+        // Support's keyword trigger has its own clip (rendered by tools/gen-audio.mjs).
+        if (l.type === 'ability' && l.name === 'Support') tag = 'support';
         if (!tag || seen[tag]) return;
         if (animated && ANIM_OWNED[tag]) return;
         seen[tag] = true;
