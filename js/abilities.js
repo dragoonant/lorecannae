@@ -123,7 +123,13 @@
     };
     x.gainLore = (p, n) => LC.gainLore(s, p, n);
     x.loseLore = (p, n) => LC.loseLore(s, p, n);
-    x.reveal = (iids, p) => { if (iids.length) LC.log(s, p == null ? x.ctrl : p, 'reveal', { iids: iids.slice() }); };
+    x.reveal = (iids, p) => {
+      if (!iids.length) return;
+      const who = p == null ? x.ctrl : p;
+      // Hand cards revealed to the other player show face up in the UI while the effect resolves.
+      for (const i of iids) if (s.cards[i].zone === 'hand' && !s.revealed[s.cards[i].owner].includes(i)) s.revealed[s.cards[i].owner].push(i);
+      LC.log(s, who, 'reveal', { iids: iids.slice() });
+    };
 
     // Durations for buffs (see tickDurations in engine.js).
     x.until = {
@@ -149,9 +155,9 @@
     x.usedOnce = (key) => !!s.ti.once[`once:${x.me}:${key}`];
 
     // Play a card without paying its cost ("for free", CR 1.5.5.3).
-    x.playFree = (iid) => {
+    x.playFree = (iid, o = {}) => {
       const from = s.cards[iid].zone;
-      LC.playCard(s, x, iid, { pay: 'free', from });
+      LC.playCard(s, x, iid, { pay: 'free', from, actionTo: o.actionTo });
     };
 
     // "Look at the top N cards of your deck. You may reveal [a card matching F] and put it into

@@ -434,6 +434,8 @@
     const snap = LC.clone(s);
     try {
       execJob(s, job);
+      // CR 6.1.14.2 revealed cards stay revealed only while the effect applies.
+      s.revealed = { 0: [], 1: [] };
     } catch (e) {
       if (!e || !e.__ask) throw e;
       // Keep the partly-resolved state visible (costs paid, card played) while asking; the
@@ -659,7 +661,9 @@
       if (!a.action) throw new Error(`no action script for ${d.id}`);
       x.withSource(iid, () => a.action(x));
       s._via = prevVia;
-      placeIn(s, iid, 'discard', {});
+      // "...instead of into your discard" (e.g. max-goof-chart-topper NUMBER ONE HIT).
+      if (o.actionTo === 'deckBottom') { placeIn(s, iid, 'deck', { pos: 'bottom' }); log(s, p, 'toDeck', { iid, from: 'play', pos: 'bottom' }); }
+      else placeIn(s, iid, 'discard', {});
       emit(s, { type: 'played', iid, p, song: LC.isSong(d), singers: o.singers || [], kind: 'action' });
       for (const sg of o.singers || []) emit(s, { type: 'sings', iid: sg, song: iid });
       return;

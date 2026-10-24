@@ -243,6 +243,7 @@
   };
 
   A['jumba-jookiba-prolific-inventor'] = {
+    audit: '1: 1 less per character = minus the character count',
     selfCost: (s, iid, p) => -LC.characters(s, p).length,
     triggers: [{
       name: 'I AM HELPING', on: 'quest', when: H.self,

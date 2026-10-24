@@ -2,6 +2,8 @@
 //   FAIL - a number in the printed ability text (outside reminder text and keyword lines) does
 //          not appear anywhere in the card's script source (a dropped clause or wrong amount).
 //   WARN - a printed ability NAME (ALL CAPS lead-in) is not used as a name in the script.
+// A script may carry `audit: "<n>: why"` where a printed number lives in a shared helper or is
+// implicit (a per-card count); the note is part of the scanned source.
 // --selftest proves FAIL fires on a known-bad script.
 import { loadPage } from './test.mjs';
 const LC = loadPage('tests.html').LC;
