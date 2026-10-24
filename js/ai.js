@@ -9,7 +9,7 @@
   const LEVELS = {
     easy: { noise: 14, blunder: 0.25, threat: 0.25, sample: 10 },
     normal: { noise: 2, blunder: 0, threat: 0.7, sample: 18 },
-    hard: { noise: 0, blunder: 0, threat: 0.85, sample: 28 },
+    hard: { noise: 0, blunder: 0, threat: 0.7, sample: 28, reply: 3 },
   };
 
   // Lore is the race. Superlinear near 20 because the last points end the game (KB §3: "score
@@ -158,12 +158,73 @@
       scored.push({ a, sc });
     }
     scored.sort((x, y) => y.sc - x.sc);
+    // Hard: one opponent ply. The top few candidates (and ending the turn) are played out
+    // through the rest of our turn and the opponent's whole reply on a determinized copy, and
+    // judged at the start of our next turn. Answers "can they banish it before it quests
+    // again" by playing it, not by a weight (KB LESSONS §3: one ply beat four weight terms).
+    if (w.reply && scored.length) {
+      const cands = scored.slice(0, w.reply).map((x) => x.a);
+      if (end) cands.push(end);
+      let best = null;
+      for (const a of cands) {
+        let s2;
+        try { s2 = settleOwn(LC.apply(s, a), seat, w); } catch (e) { continue; }
+        const sc = rollout(determinize(s2, seat), seat);
+        if (!best || sc > best.sc) best = { a, sc };
+      }
+      if (best) return best.a;
+    }
     // Compare actions to the current position (same horizon, still our turn); end the turn
-    // when nothing improves it. `base` is used only to break ties toward passing.
+    // when nothing improves it.
     if (!scored.length || scored[0].sc <= here + 0.25) return end || acts[0];
     if (w.blunder && rnd < w.blunder && scored.length > 2) return scored[1 + Math.floor(rnd * 2)].a;
     return scored[0].a;
   };
+
+  // The AI may not read the opponent's hand or either deck order (KB LESSONS §1.1): reshuffle
+  // the opponent's hand+deck and our own deck in a copy before looking ahead.
+  function determinize(s, me) {
+    const t = LC.clone(s);
+    let r = (LC.hashSeed('det:' + s.logN + ':' + s.seed) >>> 0) || 1;
+    const rand = (n) => { r = (Math.imul(r, 1103515245) + 12345) >>> 0; return r % n; };
+    const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = rand(i + 1); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+    const op = t.players[1 - me];
+    const pool = shuffle([...op.hand, ...op.deck]);
+    op.hand = pool.slice(0, op.hand.length);
+    op.deck = pool.slice(op.hand.length);
+    for (const i of op.hand) t.cards[i].zone = 'hand';
+    for (const i of op.deck) t.cards[i].zone = 'deck';
+    shuffle(t.players[me].deck);
+    return t;
+  }
+
+  // Play both sides with the normal policy (fewer candidates) until it is our turn again.
+  function rollout(s, me) {
+    const w = { ...LEVELS.normal, noise: 0, sample: 10 };
+    const stopTurn = s.turn + (s.active === me ? 2 : 1);
+    let t = s;
+    for (let n = 0; n < 60 && !LC.isTerminal(t); n++) {
+      const who = LC.whoActs(t);
+      if (t.turn >= stopTurn && who === me && !t.ask) break;
+      t = LC.apply(t, fastChoose(t, who, w));
+    }
+    return AI.evaluate(t, me, w);
+  }
+  function fastChoose(s, seat, w) {
+    if (s.ask) return s.ask.kind === 'mulligan' ? { type: 'answer', value: [] } : bestAnswer(s, seat, w, 2).action;
+    const acts = LC.legalActions(s);
+    const end = acts.find((a) => a.type === 'end');
+    const here = AI.evaluate(s, seat, w);
+    let best = null;
+    for (const a of stride(acts.filter((x) => x.type !== 'end'), 14)) {
+      let s2;
+      try { s2 = LC.apply(s, a); } catch (e) { continue; }
+      while (s2.ask && s2.ask.who === seat) s2 = bestAnswer(s2, seat, w, 3).state;
+      const sc = AI.evaluate(s2, seat, w);
+      if (!best || sc > best.sc) best = { a, sc };
+    }
+    return !best || best.sc <= here + 0.25 ? end || acts[0] : best.a;
+  }
 
   AI.LEVELS = LEVELS;
 })();

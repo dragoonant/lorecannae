@@ -30,6 +30,15 @@ arena is a behaviour check and AI tuner, never a reason to change a card (PLAN D
 | threat 0.95 vs 0.7 | 40.0% | worse |
 | threat 0.5 vs 0.7 | 50.0% | no difference |
 
-Open question: the AI challenges rarely (0.18 per turn) and first-player wins ~60%. A
-reply-search (one opponent ply) for "can they banish it before it quests again" is the likely
-next lever (KB LESSONS §3: one ply of search beat four argued weight terms).
+## Hard: one opponent ply (2026-10-24)
+
+Hard plays its top 3 candidates and "end the turn" through the rest of its turn and the
+opponent's whole reply (normal policy, 10-14 candidates per decision) on a determinized copy
+(opponent hand+deck and our own deck reshuffled: the AI never reads hidden cards), and picks the
+best position at the start of its next turn.
+
+- Hard vs Normal: 21/30 (70.0%, seeds 7700+), holdout 41/60 (68.3%, seeds 12345+); 131-145 ms
+  per decision.
+- 40 Hard-vs-Hard games: 0 errors, first-player wins 52.5% (Normal: 62%), challenges 0.28 per
+  turn (Normal 0.18), empty turns 3.7% (Normal 0.1%) — **watch**: the owner has complained about
+  AI turns where nothing happens; check whether these are deliberate holds or empty-hand turns.
