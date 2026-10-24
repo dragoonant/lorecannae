@@ -88,14 +88,14 @@
   // ---- inline icons for rules text ------------------------------------------
   // Drawn geometry, never generated art. Each is sized in em so it rides the text.
   const ICON = {
-    // {S} strength: a small upright sword.
-    S: '<svg viewBox="0 0 16 16" class="ico ico-s"><path d="M8 1 L10 4 L10 10 L6 10 L6 4 Z" fill="currentColor"/><rect x="3.5" y="10" width="9" height="1.8" rx=".9" fill="currentColor"/><rect x="7" y="11.8" width="2" height="3.4" rx=".6" fill="currentColor"/></svg>',
-    // {W} willpower: a shield.
-    W: '<svg viewBox="0 0 16 16" class="ico ico-w"><path d="M8 1.2 L14 3.4 L13.4 8.6 C12.8 12 10.6 13.8 8 15 C5.4 13.8 3.2 12 2.6 8.6 L2 3.4 Z" fill="currentColor"/></svg>',
-    // {L} lore: the diamond.
-    L: '<svg viewBox="0 0 16 16" class="ico ico-l"><path d="M8 1 L14.5 8 L8 15 L1.5 8 Z" fill="currentColor"/><path d="M8 4 L11.2 8 L8 12 L4.8 8 Z" fill="rgba(0,0,0,.28)"/></svg>',
-    // {I} ink: a hexagon with a drop.
-    I: '<svg viewBox="0 0 16 16" class="ico ico-i"><path d="M8 .8 L14.4 4.4 L14.4 11.6 L8 15.2 L1.6 11.6 L1.6 4.4 Z" fill="currentColor"/><path d="M8 4.2 C9.6 6.6 10.6 7.8 10.6 9.2 A2.6 2.6 0 0 1 5.4 9.2 C5.4 7.8 6.4 6.6 8 4.2 Z" fill="rgba(0,0,0,.35)"/></svg>',
+    // {S} strength: a small gilded sword.
+    S: '<svg viewBox="0 0 16 16" class="ico ico-s"><path d="M8 .8 L9.9 3.6 L9.9 10 L6.1 10 L6.1 3.6 Z" fill="currentColor"/><path d="M3.2 10.1 Q8 8.6 12.8 10.1 L12.8 11.6 Q8 10.5 3.2 11.6 Z" fill="currentColor"/><rect x="7" y="11.4" width="2" height="2.6" rx=".6" fill="currentColor"/><circle cx="8" cy="14.6" r="1.1" fill="currentColor"/></svg>',
+    // {W} willpower: a heart-topped shield.
+    W: '<svg viewBox="0 0 16 16" class="ico ico-w"><path d="M8 2.4 C9.4 .9 12.6 1.2 14 2.8 L13.4 8.6 C12.8 12 10.6 13.8 8 15 C5.4 13.8 3.2 12 2.6 8.6 L2 2.8 C3.4 1.2 6.6 .9 8 2.4 Z" fill="currentColor"/></svg>',
+    // {L} lore: a four-point wishing star (deliberately not the printed lore symbol).
+    L: '<svg viewBox="0 0 16 16" class="ico ico-l"><path d="M8 .4 Q9.1 6.9 15.6 8 Q9.1 9.1 8 15.6 Q6.9 9.1 .4 8 Q6.9 6.9 8 .4 Z" fill="currentColor"/><circle cx="8" cy="8" r="1.6" fill="rgba(255,255,255,.75)"/></svg>',
+    // {I} ink: a drop of ink.
+    I: '<svg viewBox="0 0 16 16" class="ico ico-i"><path d="M8 .8 C10.6 4.8 13 7.4 13 10.4 A5 5 0 0 1 3 10.4 C3 7.4 5.4 4.8 8 .8 Z" fill="currentColor"/><path d="M5.6 10.6 A2.6 2.6 0 0 0 7.6 13" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.1" stroke-linecap="round"/></svg>',
     // {E} exert: a quarter-turn arrow (the card turning sideways).
     E: '<svg viewBox="0 0 16 16" class="ico ico-e"><path d="M3 11 A5.5 5.5 0 1 1 11.4 12.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13.8 9.8 L11.4 13.4 L8.6 10.8 Z" fill="currentColor"/></svg>',
   };
@@ -106,13 +106,18 @@
     return span;
   };
 
-  // The ink-cost hexagon. `inkable` draws the inkwell ring around it (the printed card's
-  // swirl): the one mark that says "this card can go into the inkwell".
-  U.costHex = function (cost, inkable, cls) {
-    const wrap = U.el('span', 'cost-hex' + (inkable ? ' is-inkable' : '') + (cls ? ' ' + cls : ''));
-    wrap.innerHTML = '<svg viewBox="0 0 40 44" aria-hidden="true">' +
-      (inkable ? '<path class="hex-ring" d="M20 1.5 L37.5 11.5 L37.5 32.5 L20 42.5 L2.5 32.5 L2.5 11.5 Z"/>' : '') +
-      '<path class="hex-body" d="M20 5 L34 13 L34 31 L20 39 L6 31 L6 13 Z"/></svg>';
+  // The ink cost: a round jewel in the card's ink colour with a gilded rim. A round gem,
+  // NOT the printed card's hexagon (we never imitate the official frame). `inkable` adds a
+  // twinkling gold ring of dots: "this card can go into the inkwell".
+  U.costGem = function (cost, inkable, cls, ink) {
+    const wrap = U.el('span', 'cost-gem' + (inkable ? ' is-inkable' : '') + (cls ? ' ' + cls : ''));
+    const c = (ink && U.INK[ink]) ? U.INK[ink].dot : '#6a5aa8';
+    const gid = 'gm' + Math.random().toString(36).slice(2, 8);
+    wrap.innerHTML = '<svg viewBox="0 0 40 40" aria-hidden="true"><defs><radialGradient id="' + gid + '" cx="38%" cy="32%" r="70%">' +
+      '<stop offset="0" stop-color="#ffffff" stop-opacity=".85"/><stop offset=".28" stop-color="' + c + '"/>' +
+      '<stop offset="1" stop-color="#140c2a"/></radialGradient></defs>' +
+      (inkable ? '<circle class="gem-ring" cx="20" cy="20" r="18.4"/>' : '') +
+      '<circle class="gem-rim" cx="20" cy="20" r="15"/><circle cx="20" cy="20" r="13" fill="url(#' + gid + ')"/></svg>';
     wrap.appendChild(U.el('span', 'cost-num', String(cost)));
     return wrap;
   };

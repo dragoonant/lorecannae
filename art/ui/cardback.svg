@@ -1,35 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 350">
-  <!-- Original card back for lorecannae: a night-sky storybook pattern (indigo field,
-       teal stars, a gold compass-diamond). Drawn geometry, no lettering, no logo. -->
+  <!-- Original card back for lorecannae: a deep-indigo night with a gilded filigree frame
+       and a wishing-star emblem. Drawn geometry only: no lettering, no logo, nothing
+       from any official card back. -->
   <defs>
-    <radialGradient id="sky" cx="50%" cy="45%" r="70%">
-      <stop offset="0" stop-color="#2b2f6b"/>
-      <stop offset=".55" stop-color="#171a44"/>
-      <stop offset="1" stop-color="#0b0d24"/>
+    <radialGradient id="sky" cx="50%" cy="46%" r="72%">
+      <stop offset="0" stop-color="#3a2a78"/>
+      <stop offset=".5" stop-color="#1e1550"/>
+      <stop offset="1" stop-color="#0e0a2a"/>
     </radialGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fff0b8"/>
-      <stop offset=".5" stop-color="#e2b44d"/>
-      <stop offset="1" stop-color="#9c6f1f"/>
+      <stop offset="0" stop-color="#fff2c4"/>
+      <stop offset=".4" stop-color="#e7c06a"/>
+      <stop offset=".75" stop-color="#a87a2a"/>
+      <stop offset="1" stop-color="#f6da92"/>
     </linearGradient>
-    <pattern id="stars" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M12 6 Q12 12 18 12 Q12 12 12 18 Q12 12 6 12 Q12 12 12 6 Z" fill="#7fe0d6" opacity=".55"/>
-      <circle cx="37" cy="34" r="1.6" fill="#b9f3ec" opacity=".7"/>
-      <circle cx="30" cy="9" r="1" fill="#ffffff" opacity=".5"/>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffe9a8" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="stars" width="46" height="46" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="10" r="1.1" fill="#fff4cc" opacity=".55"/>
+      <circle cx="31" cy="22" r=".8" fill="#ffffff" opacity=".45"/>
+      <circle cx="19" cy="38" r="1.3" fill="#e9d9ff" opacity=".5"/>
+      <path d="M38 6 Q38 9 41 9 Q38 9 38 12 Q38 9 35 9 Q38 9 38 6 Z" fill="#ffe39a" opacity=".6"/>
     </pattern>
+    <g id="corner">
+      <path d="M8 60 C6 40 10 22 22 14 C32 7 46 6 60 8" fill="none" stroke="url(#gold)" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M22 14 C30 16 33 26 26 30 C20 33 16 26 21 23" fill="none" stroke="url(#gold)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M14 34 C10 30 12 24 17 25" fill="none" stroke="url(#gold)" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M34 16 C30 12 24 14 25 19" fill="none" stroke="url(#gold)" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="12" cy="12" r="2.4" fill="#ffe39a"/>
+    </g>
   </defs>
-  <rect width="250" height="350" rx="16" fill="url(#sky)"/>
-  <rect width="250" height="350" rx="16" fill="url(#stars)"/>
-  <rect x="9" y="9" width="232" height="332" rx="11" fill="none" stroke="url(#gold)" stroke-width="4"/>
-  <rect x="17" y="17" width="216" height="316" rx="8" fill="none" stroke="#e2b44d" stroke-width="1.2" opacity=".6"/>
+  <rect width="250" height="350" rx="18" fill="url(#sky)"/>
+  <rect width="250" height="350" rx="18" fill="url(#stars)"/>
+  <rect x="8" y="8" width="234" height="334" rx="13" fill="none" stroke="url(#gold)" stroke-width="3.2"/>
+  <rect x="16" y="16" width="218" height="318" rx="9" fill="none" stroke="#e7c06a" stroke-width="1" opacity=".55"/>
+  <use href="#corner" x="10" y="10"/>
+  <use href="#corner" transform="translate(240 10) scale(-1 1)"/>
+  <use href="#corner" transform="translate(10 340) scale(1 -1)"/>
+  <use href="#corner" transform="translate(240 340) scale(-1 -1)"/>
+  <!-- the emblem: a haloed wishing star inside a scrolled medallion -->
   <g transform="translate(125 175)">
-    <circle r="62" fill="none" stroke="#e2b44d" stroke-width="2" opacity=".55"/>
-    <circle r="48" fill="#12153a" stroke="url(#gold)" stroke-width="3"/>
-    <path d="M0 -78 L14 -14 L78 0 L14 14 L0 78 L-14 14 L-78 0 L-14 -14 Z" fill="url(#gold)" opacity=".9"/>
-    <path d="M0 -40 L24 0 L0 40 L-24 0 Z" fill="#2b2f6b" stroke="#fff0b8" stroke-width="2"/>
-    <path d="M0 -24 L13 0 L0 24 L-13 0 Z" fill="#7fe0d6"/>
-  </g>
-  <g fill="#e2b44d" opacity=".8">
-    <path d="M125 30 l6 10 -6 10 -6 -10z"/><path d="M125 300 l6 10 -6 10 -6 -10z"/>
+    <circle r="78" fill="url(#halo)"/>
+    <circle r="54" fill="#140e3a" stroke="url(#gold)" stroke-width="3"/>
+    <circle r="47" fill="none" stroke="#e7c06a" stroke-width="1" stroke-dasharray="2 5" opacity=".8"/>
+    <path d="M0 -76 C6 -60 6 -58 0 -54 C-6 -58 -6 -60 0 -76 Z M0 76 C6 60 6 58 0 54 C-6 58 -6 60 0 76 Z M-76 0 C-60 6 -58 6 -54 0 C-58 -6 -60 -6 -76 0 Z M76 0 C60 6 58 6 54 0 C58 -6 60 -6 76 0 Z" fill="url(#gold)"/>
+    <path d="M0 -40 Q4 -4 40 0 Q4 4 0 40 Q-4 4 -40 0 Q-4 -4 0 -40 Z" fill="url(#gold)"/>
+    <path d="M0 -22 Q2.4 -2.4 22 0 Q2.4 2.4 0 22 Q-2.4 2.4 -22 0 Q-2.4 -2.4 0 -22 Z" fill="#fff6d8"/>
+    <circle r="4" fill="#ffffff"/>
+    <g fill="#ffe39a">
+      <path d="M30 -30 Q31 -27 34 -26 Q31 -25 30 -22 Q29 -25 26 -26 Q29 -27 30 -30 Z"/>
+      <path d="M-30 30 Q-29 33 -26 34 Q-29 35 -30 38 Q-31 35 -34 34 Q-31 33 -30 30 Z"/>
+      <path d="M-30 -32 Q-29.2 -29.6 -27 -29 Q-29.2 -28.4 -30 -26 Q-30.8 -28.4 -33 -29 Q-30.8 -29.6 -30 -32 Z"/>
+      <path d="M31 27 Q31.8 29.4 34 30 Q31.8 30.6 31 33 Q30.2 30.6 28 30 Q30.2 29.4 31 27 Z"/>
+    </g>
   </g>
 </svg>

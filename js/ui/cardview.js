@@ -297,7 +297,7 @@
       else if (live > def.cost) costCls = 'is-dearer';
       cost = live;
     }
-    const hex = U.costHex(cost, !!def.inkwell, costCls);
+    const hex = U.costGem(cost, !!def.inkwell, costCls, U.inksOf(def)[0]);
     hex.setAttribute('data-tip', (def.inkwell ? 'Ink cost ' + cost + ' · inkable (can go into your inkwell)'
       : 'Ink cost ' + cost + ' · not inkable'));
     corners.appendChild(hex);

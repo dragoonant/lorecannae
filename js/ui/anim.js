@@ -8,8 +8,11 @@
 //     control back. Input is locked under #fx-lock meanwhile; any click or key skips.
 //
 // Lorcana's challenge damage is simultaneous and all of it is melee: every challenge
-// lunges, and both damage numbers land on ONE impact beat. Ability damage is a bolt
-// coloured by the source's ink.
+// lunges, and both damage numbers land on ONE impact beat (a starburst "pow" and a
+// swirl). The look is storybook magic, not sci-fi: quests send a trail of golden
+// sparkles to the lore trail, ability damage is a glittering magic missile in the
+// source's ink colour, a banished card dissolves into motes that drift to its discard,
+// inking is an ink-splash swirl, songs throw musical notes, a lore-20 win is fireworks.
 (function () {
   'use strict';
   const LC = globalThis.LC;
@@ -21,13 +24,14 @@
     lunge: 480, recoil: 380,
     travel: 520,     // a bolt in the air
     impact: 460,
-    diamond: 680,    // quest diamond flying to the lore track
+    diamond: 720,    // quest sparkle flying to the lore trail
+    inkSplash: 560,  // the ink-splash swirl on the inkwell
     beatGap: 180,
     banishHold: 320, banishFly: 850,
     discardFly: 650,
     spotWait: 700,   // let a spotlight land before anything fires from it
     sparkle: 900,
-    finaleCharge: 700, finaleBoom: 1300, finaleHold: 1000,
+    finaleCharge: 600, finaleBoom: 1700, finaleHold: 1000,
   };
   const RATE = { full: 1, quick: 0.45, off: 0 };
 
@@ -60,6 +64,9 @@
         }
         case 'quest':
           if (wasInPlay(prev, l.iid)) steps.push({ kind: 'quest', iid: l.iid, lore: l.lore, who: l.who });
+          break;
+        case 'ink':
+          steps.push({ kind: 'ink', who: l.who, color: inkColor(prev, next, l.iid) });
           break;
         case 'challenge': {
           const st = { kind: 'challenge', iid: l.iid, target: l.target, hits: [] };
@@ -203,11 +210,81 @@
     const s = el('div', 'fx-impact ' + (cls || ''));
     s.style.left = (c.x - size / 2) + 'px'; s.style.top = (c.y - size / 2) + 'px';
     s.style.width = size + 'px'; s.style.height = size + 'px';
-    s.style.setProperty('--fx', color || '#ffb347');
+    s.style.setProperty('--fx', color || '#ffd36b');
     s.style.setProperty('--dur', ms(D.impact) + 'ms');
     layer().appendChild(s);
     job.trash.push(s);
     later(ms(D.impact) + 40, function () { s.remove(); });
+  }
+  const JEWELS = ['#ffd36b', '#fff4c2', '#c4a2ef', '#6fd39a', '#f0828a', '#7fbdf0'];
+  // Sparkle motes: n particles from (x, y) flung by (spread) with a drift, each a soft dot
+  // or a four-point twinkle. opts: {colors, spread, up, size, dur}.
+  function motes(x, y, n, opts) {
+    opts = opts || {};
+    const cols = opts.colors || ['#ffd36b', '#fff4c2'];
+    const spread = opts.spread || 60, up = opts.up || 0, size = opts.size || 9, dur = opts.dur || 800;
+    for (let i = 0; i < n; i++) {
+      const star = i % 3 === 0;
+      const m = el('div', 'fx-mote' + (star ? ' is-star' : ''));
+      if (star) m.textContent = '✦';
+      const a = Math.random() * Math.PI * 2, r = spread * (0.35 + Math.random() * 0.65);
+      m.style.left = x + 'px'; m.style.top = y + 'px';
+      m.style.setProperty('--dx', (Math.cos(a) * r).toFixed(1) + 'px');
+      m.style.setProperty('--dy', (Math.sin(a) * r - up).toFixed(1) + 'px');
+      m.style.setProperty('--c', cols[i % cols.length]);
+      m.style.setProperty('--sz', (size * (0.6 + Math.random() * 0.8)).toFixed(1) + 'px');
+      m.style.setProperty('--dur', ms(dur * (0.75 + Math.random() * 0.5)) + 'ms');
+      layer().appendChild(m);
+      job.trash.push(m);
+    }
+  }
+  // A curved flight from a to b along a CSS offset-path (linear timing, so the sparkle
+  // trail spawned along the same curve stays under the flyer). Returns the duration.
+  function arcPath(a, b, lift) {
+    const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2 - lift;
+    return { d: 'M 0 0 Q ' + (mx - a.x).toFixed(1) + ' ' + (my - a.y).toFixed(1) + ' ' + (b.x - a.x).toFixed(1) + ' ' + (b.y - a.y).toFixed(1),
+      at: function (t) { const u = 1 - t; return { x: u * u * a.x + 2 * u * t * mx + t * t * b.x, y: u * u * a.y + 2 * u * t * my + t * t * b.y }; } };
+  }
+  function flyer(node, a, b, lift, dur, trailColors, cb) {
+    const path = arcPath(a, b, lift);
+    // Keyframes sampled from the same curve the trail uses (Web Animations, linear), so
+    // the glitter is always laid down under the flyer.
+    node.style.left = '0px'; node.style.top = '0px';
+    const frames = [];
+    for (let k = 0; k <= 16; k++) {
+      const q = path.at(k / 16);
+      frames.push({ transform: 'translate(' + q.x.toFixed(1) + 'px,' + q.y.toFixed(1) + 'px) translate(-50%,-50%) rotate(' + (k * 22) + 'deg)' });
+    }
+    node.style.transform = frames[0].transform;
+    layer().appendChild(node);
+    job.trash.push(node);
+    if (node.animate) node.animate(frames, { duration: Math.max(1, dur), easing: 'linear', fill: 'forwards' });
+    const n = Math.max(4, Math.round(dur / 45));
+    for (let k = 1; k <= n; k++) {
+      later(Math.round(dur * k / (n + 1)), function () {
+        const q = path.at(k / (n + 1));
+        motes(q.x, q.y, 2, { colors: trailColors, spread: 14, up: -10, size: 7, dur: 600 });
+      });
+    }
+    later(dur, function () { node.remove(); cb(); });
+  }
+  // The challenge's "pow": a gilded starburst with a magic swirl ring behind it.
+  function pow(node, color) {
+    const c = centre(node);
+    const size = Math.max(c.w, c.h) * 1.25;
+    const ring = el('div', 'fx-swirlring');
+    const star = el('div', 'fx-pow');
+    [ring, star].forEach(function (n, i) {
+      const sz = i ? size : size * 1.3;
+      n.style.left = (c.x - sz / 2) + 'px'; n.style.top = (c.y - sz / 2) + 'px';
+      n.style.width = sz + 'px'; n.style.height = sz + 'px';
+      n.style.setProperty('--fx', color || '#ffd36b');
+      n.style.setProperty('--dur', ms(D.impact + 160) + 'ms');
+      layer().appendChild(n);
+      job.trash.push(n);
+    });
+    motes(c.x, c.y, 14, { colors: JEWELS.slice(0, 3), spread: size * 0.7, size: 10, dur: 700 });
+    later(ms(D.impact + 200), function () { ring.remove(); star.remove(); });
   }
   // The quarter-turn: the slot widens and the card turns, exactly as the redraw will
   // show it, so the action that exerted it reads as one continuous motion.
@@ -253,7 +330,7 @@
       later(ms(D.lunge), function () {
         // ONE impact beat: both sides' damage lands together (simultaneous, CR 4.6).
         sfx('hit');
-        burst(to, '#ffb347', 'fx-slash');
+        pow(to, '#ffd36b');
         step.hits.forEach(function (h) { hitLand(h, next); });
         LC.arrow.clear();
         clone.style.transition = 'transform ' + ms(D.recoil) + 'ms cubic-bezier(.2,.7,.4,1)';
@@ -263,37 +340,30 @@
     });
   }
 
+  // Ability damage: a glittering magic missile in the source's ink colour, arcing from
+  // the card (or the spotlit action) to its target.
   function playBolt(step, next, cb) {
     const toNode = cardNode(step.to);
     if (!toNode) { cb(); return; }
     const fromNode = step.from != null ? (cardNode(step.from) || $('spotlight')) : $('spotlight');
     const land = function () {
       sfx('hit');
-      burst(toNode, step.color, step.put ? 'fx-put' : '');
+      const c = centre(toNode);
+      burst(toNode, step.color, step.put ? 'fx-put' : 'fx-magic');
+      motes(c.x, c.y, 12, { colors: [step.color, '#ffffff'], spread: c.w * 0.8, size: 9, dur: 700 });
       hitLand({ iid: step.to, amount: step.amount }, next);
       later(ms(D.impact), cb);
     };
     if (!fromNode || fromNode === toNode) { land(); return; }
     const a = centre(fromNode), b = centre(toNode);
-    const dx = b.x - a.x, dy = b.y - a.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const ang = Math.atan2(dy, dx) * 180 / Math.PI;
-    const bolt = el('div', 'fx-bolt');
-    bolt.style.setProperty('--fx', step.color);
-    const len = Math.min(150, Math.max(80, a.w * 1.2));
-    bolt.style.width = len + 'px';
-    bolt.style.left = (a.x - len / 2) + 'px'; bolt.style.top = (a.y - 3) + 'px';
-    bolt.style.transform = 'rotate(' + ang + 'deg)';
-    layer().appendChild(bolt);
-    job.trash.push(bolt);
+    const orb = el('div', 'fx-orb');
+    orb.style.setProperty('--fx', step.color);
     sfx('ability');
-    void bolt.getBoundingClientRect();
-    const t = ms(D.travel);
-    bolt.style.transition = 'transform ' + t + 'ms cubic-bezier(.5,0,.9,.6)';
-    bolt.style.transform = 'rotate(' + ang + 'deg) translateX(' + (dist - b.w * 0.2) + 'px)';
-    later(t, function () { bolt.remove(); land(); });
+    flyer(orb, a, b, Math.min(160, Math.abs(b.x - a.x) * 0.3 + 60), ms(D.travel), [step.color, '#ffffff'], land);
   }
 
+  // Questing: the card exerts, then a golden sparkle flies to the next star on the lore
+  // trail, leaving glitter behind it; the star lights as it lands.
   function playQuest(step, next, cb) {
     const node = cardNode(step.iid);
     const dest = zone(step.who, 'lore');
@@ -301,27 +371,41 @@
     const exerted = exertNow(step.iid);
     later(exerted ? ms(D.exert) + 40 : 0, function () {
       const a = centre(node);
-      const mark = dest.querySelector('.lore-marker') || dest;
+      const mark = LC.ui.loreStarNode(dest, next.players[step.who].lore);
       const b = centre(mark);
       const gem = el('div', 'fx-diamond');
       gem.innerHTML = U.iconHTML('L');
-      gem.style.left = (a.x - 18) + 'px'; gem.style.top = (a.y - 18) + 'px';
-      layer().appendChild(gem);
-      job.trash.push(gem);
       sfx('quest');
       floatText(node, '+' + step.lore, 'is-lore');
-      void gem.getBoundingClientRect();
-      gem.style.transition = 'transform ' + ms(D.diamond) + 'ms cubic-bezier(.45,0,.25,1), opacity ' + ms(D.diamond) + 'ms ease-in';
-      gem.style.transform = 'translate(' + (b.x - a.x) + 'px,' + (b.y - a.y) + 'px) scale(.7) rotate(180deg)';
-      later(ms(D.diamond), function () {
-        gem.remove();
+      motes(a.x, a.y, 10, { colors: ['#ffd36b', '#fff4c2'], spread: a.w * 0.6, up: 20, size: 9, dur: 700 });
+      flyer(gem, a, b, 120, ms(D.diamond), ['#ffd36b', '#fff4c2', '#ffe9a8'], function () {
         sfx('lore');
         patchLore(step.who, next);
+        motes(b.x, b.y, 14, { colors: ['#ffd36b', '#ffffff'], spread: 46, size: 10, dur: 700 });
         dest.classList.remove('fx-received'); void dest.offsetWidth; dest.classList.add('fx-received');
         floatText(mark, '+' + step.lore, 'is-lore');
         later(ms(380), cb);
       });
     });
+  }
+
+  // Inking: an ink-splash swirl over the inkwell in the inked card's colour.
+  function playInk(step, next, cb) {
+    const z = zone(step.who, 'ink');
+    if (!z) { cb(); return; }
+    const fan = z.querySelector('.res-fan');
+    const last = fan && fan.lastElementChild;
+    const c = centre(last || z);
+    const sz = Math.max(c.w, c.h) * 1.6;
+    const sp = el('div', 'fx-splash');
+    sp.style.left = (c.x - sz / 2) + 'px'; sp.style.top = (c.y - sz / 2) + 'px';
+    sp.style.width = sz + 'px'; sp.style.height = sz + 'px';
+    sp.style.setProperty('--fx', step.color);
+    sp.style.setProperty('--dur', ms(D.inkSplash) + 'ms');
+    layer().appendChild(sp);
+    job.trash.push(sp);
+    motes(c.x, c.y, 10, { colors: [step.color, '#ffffff'], spread: sz * 0.45, size: 8, dur: 600 });
+    later(ms(D.inkSplash), function () { sp.remove(); cb(); });
   }
 
   function playSing(step, next, cb) {
@@ -374,18 +458,36 @@
     });
   }
 
+  // Banishing: the card dissolves into sparkles and ink motes, and what is left of it
+  // drifts into its owner's discard pile.
   function playBanish(step, next, cb) {
     const node = cardNode(step.iid);
     if (!node) { cb(); return; }
     sfx('banish');
     shake(node);
-    burst(node, '#c9b8ff', 'fx-smoke');
+    const r = node.getBoundingClientRect();
     later(ms(D.banishHold), function () {
-      const r = node.getBoundingClientRect();
-      node.classList.add('fx-hidden');
+      node.classList.add('fx-dissolve');
+      node.style.setProperty('--dur', ms(D.banishFly * 0.7) + 'ms');
       job.unhide.push(node);
-      flyTo(node, { left: r.left, top: r.top, width: node.offsetWidth, height: node.offsetHeight },
-        zone(step.owner, 'discard'), ms(D.banishFly), cb);
+      for (let k = 0; k < 4; k++) {
+        later(ms(k * 110), function () {
+          motes(r.left + Math.random() * r.width, r.top + Math.random() * r.height, 6,
+            { colors: ['#c4a2ef', '#ffd36b', '#9fc8ff', '#ffffff'], spread: r.width * 0.5, up: 40, size: 10, dur: 900 });
+        });
+      }
+      const dest = zone(step.owner, 'discard');
+      later(ms(D.banishFly * 0.45), function () {
+        node.classList.add('fx-hidden');
+        if (!dest) { later(ms(300), cb); return; }
+        const a = { x: r.left + r.width / 2, y: r.top + r.height / 2 }, b = centre(dest);
+        const orb = el('div', 'fx-orb is-ink');
+        orb.style.setProperty('--fx', '#b48cff');
+        flyer(orb, a, b, 60, ms(D.banishFly * 0.55), ['#c4a2ef', '#ffffff'], function () {
+          dest.classList.remove('fx-received'); void dest.offsetWidth; dest.classList.add('fx-received');
+          cb();
+        });
+      });
     });
   }
 
@@ -405,7 +507,7 @@
     const z = zone(step.who, 'lore');
     if (!z) { cb(); return; }
     patchLore(step.who, next);
-    floatText(z.querySelector('.lore-marker') || z, '−' + step.amount, 'is-lore-loss');
+    floatText(LC.ui.loreStarNode(z, next.players[step.who].lore + step.amount), '−' + step.amount, 'is-lore-loss');
     sfx('fizzle');
     later(ms(600), cb);
   }
@@ -420,33 +522,39 @@
     later(ms(D.impact), cb);
   }
 
-  // The lore-20 finale: a burst of light and glimmers over the winner's tracker, then a
-  // second of quiet before the results panel. The hold is NOT scaled by speed: it is a
-  // pause to let the picture land, not part of the picture.
+  // The lore-20 finale: fireworks of jewel-coloured sparkles bursting over the winner's
+  // lore trail and across the table, then a second of quiet before the results panel.
+  // The hold is NOT scaled by speed: a pause to let the picture land, not part of it.
   function playFinale(step, next, cb) {
     const z = zone(step.who, 'lore');
     const charge = ms(D.finaleCharge), boom = ms(D.finaleBoom);
     const after = charge + boom + D.finaleHold;
     if (!z) { later(after, cb); return; }
     patchLore(step.who, next);
-    const c = centre(z.querySelector('.lore-marker') || z);
-    const size = Math.max(c.w, c.h) * 3.2;
-    const wrap = el('div', 'fx-finale');
-    wrap.style.left = (c.x - size / 2) + 'px'; wrap.style.top = (c.y - size / 2) + 'px';
-    wrap.style.width = size + 'px'; wrap.style.height = size + 'px';
-    wrap.style.setProperty('--charge', charge + 'ms');
-    wrap.style.setProperty('--boom', boom + 'ms');
-    ['ff-core', 'ff-flash', 'ff-ring', 'ff-ring ff-ring-2'].forEach(function (k) { wrap.appendChild(el('div', k)); });
-    for (let i = 0; i < 14; i++) {
-      const sh = el('div', 'ff-glint');
-      sh.style.setProperty('--a', (i * (360 / 14) + (i % 3) * 9) + 'deg');
-      wrap.appendChild(sh);
-    }
-    layer().appendChild(wrap);
-    job.trash.push(wrap);
+    const goal = centre(LC.ui.loreStarNode(z, 20));
+    const glow = el('div', 'fx-finale-glow');
+    const gs = Math.max(goal.w, goal.h) * 6;
+    glow.style.left = (goal.x - gs / 2) + 'px'; glow.style.top = (goal.y - gs / 2) + 'px';
+    glow.style.width = gs + 'px'; glow.style.height = gs + 'px';
+    glow.style.setProperty('--dur', (charge + boom) + 'ms');
+    layer().appendChild(glow);
+    job.trash.push(glow);
     sfx('lore');
-    later(charge, function () { sfx('win'); });
-    later(after, function () { wrap.remove(); cb(); });
+    const mat = $('mat').getBoundingClientRect();
+    const spots = [goal,
+      { x: mat.left + mat.width * 0.35, y: mat.top + mat.height * 0.3 },
+      { x: mat.left + mat.width * 0.65, y: mat.top + mat.height * 0.25 },
+      { x: mat.left + mat.width * 0.5, y: mat.top + mat.height * 0.5 },
+      { x: mat.left + mat.width * 0.25, y: mat.top + mat.height * 0.65 },
+      { x: mat.left + mat.width * 0.75, y: mat.top + mat.height * 0.6 }];
+    spots.forEach(function (p, k) {
+      later(charge + Math.round(boom * k / (spots.length + 1)), function () {
+        if (k === 0) sfx('win');
+        const cols = [JEWELS[k % JEWELS.length], JEWELS[(k + 2) % JEWELS.length], '#ffffff'];
+        motes(p.x, p.y, 26, { colors: cols, spread: Math.min(220, mat.width * 0.16), up: -30, size: 12, dur: 1300 });
+      });
+    });
+    later(after, function () { glow.remove(); cb(); });
   }
 
   function finish() {
@@ -482,6 +590,7 @@
         case 'challenge': playChallenge(s, next, nxt); break;
         case 'bolt': playBolt(s, next, nxt); break;
         case 'quest': playQuest(s, next, nxt); break;
+        case 'ink': playInk(s, next, nxt); break;
         case 'sing': playSing(s, next, nxt); break;
         case 'banish': playBanish(s, next, nxt); break;
         case 'handDiscard': playHandDiscard(s, next, nxt); break;

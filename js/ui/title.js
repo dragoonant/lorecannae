@@ -125,8 +125,10 @@
 
   function splash() {
     const wrap = el('div', 'title-splash');
+    wrap.appendChild(el('div', 'title-once', 'Once upon a time…'));
     wrap.appendChild(el('h1', 'title-name', 'Lorecannae'));
-    wrap.appendChild(el('div', 'title-tagline', 'A storybook duel of ink and lore — first to 20 wins'));
+    wrap.appendChild(el('div', 'title-flourish'));
+    wrap.appendChild(el('div', 'title-tagline', 'a duel of ink and lore — the first to gather 20 lore wins'));
     wrap.appendChild(el('div', 'title-hint', 'Click to continue'));
     return wrap;
   }
@@ -260,13 +262,25 @@
   }
 
   // One opaque curtain on <body> sweeping across; the swap happens while it covers all.
+  // The scene change: a sparkle iris. A night-sky circle with a gilded, glittering rim
+  // closes over the screen from the centre, the screen is swapped while it covers
+  // everything, then it opens again. Lives on <body> so emptying the title screen cannot
+  // take it down; under reduced motion it is a plain short fade.
   function wipe(then) {
-    const bar = el('div', 'title-wipe');
-    document.body.appendChild(bar);
-    void bar.offsetWidth;
-    bar.classList.add('run');
+    const iris = el('div', 'title-wipe');
+    const rim = el('div', 'title-wipe-rim');
+    for (let i = 0; i < 16; i++) {
+      const sp = el('span', 'wipe-spark', '✦');
+      sp.style.setProperty('--a', (i * 22.5) + 'deg');
+      sp.style.animationDelay = (i % 4) * 40 + 'ms';
+      rim.appendChild(sp);
+    }
+    document.body.appendChild(iris);
+    document.body.appendChild(rim);
+    void iris.offsetWidth;
+    iris.classList.add('run'); rim.classList.add('run');
     setTimeout(then, WIPE_MS * 0.45);
-    setTimeout(function () { bar.remove(); }, WIPE_MS + 60);
+    setTimeout(function () { iris.remove(); rim.remove(); }, WIPE_MS + 60);
   }
   LC.title.wipe = wipe;
 

@@ -139,7 +139,7 @@
       .forEach(function (c) {
         const d = LC.CARDS[c[0]];
         const r = el('div', 'db-row');
-        r.appendChild(U.costHex(d.cost, d.inkwell));
+        r.appendChild(U.costGem(d.cost, d.inkwell, null, U.inksOf(d)[0]));
         const n = el('span', 'db-row-name card-ref', LC.fullName(d));
         n.dataset.cardId = d.id;
         r.appendChild(n);

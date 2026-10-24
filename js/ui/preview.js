@@ -308,7 +308,9 @@
     // Start state flushed with a forced LAYOUT READ, not rAF: rAF does not fire in a
     // background tab and would strand the card in the middle of the screen.
     void box.getBoundingClientRect();
-    box.style.transform = 'translate(-50%,-50%) scale(1)';
+    // On a short window the preview-size card would overflow: land it scaled to fit.
+    const fit = Math.min(1, (window.innerHeight - 24) / Math.max(1, box.offsetHeight), (window.innerWidth - 24) / Math.max(1, box.offsetWidth));
+    box.style.transform = 'translate(-50%,-50%) scale(' + fit.toFixed(3) + ')';
     box.style.opacity = '1';
     clearTimeout(fadeTimer);
     spotTimer = setTimeout(function () { finishSpot(box, false); }, Math.round((TRAVEL_MS + (opts.short ? HOLD_MS * 0.5 : HOLD_MS)) * k));

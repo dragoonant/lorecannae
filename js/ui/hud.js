@@ -35,11 +35,18 @@
   }
 
   // ---- banner -------------------------------------------------------------------------
+  // An unfurling gold ribbon across the middle: "Your turn · Turn 4".
   function showBanner(main, sub) {
     const node = $('turn-banner');
     node.textContent = '';
-    node.appendChild(el('div', 'turn-banner-main', main));
-    if (sub) node.appendChild(el('div', 'turn-banner-sub', sub));
+    const ribbon = el('div', 'ribbon');
+    ribbon.appendChild(el('span', 'ribbon-end ribbon-end-l'));
+    const band = el('div', 'ribbon-band');
+    band.appendChild(el('span', 'turn-banner-main', main));
+    if (sub) band.appendChild(el('span', 'turn-banner-sub', sub));
+    ribbon.appendChild(band);
+    ribbon.appendChild(el('span', 'ribbon-end ribbon-end-r'));
+    node.appendChild(ribbon);
     node.classList.remove('show');
     void node.offsetWidth;                  // restart the keyframes on a node mid-fade
     node.classList.add('show');
@@ -176,9 +183,11 @@
     const vs = ui.mode === 'ai' || ui.mode === 'tutorial';
     const box = el('div', 'results-box');
     const won = s.winner;
-    const title = vs ? (won === 0 ? 'Victory!' : 'Defeat') : ui.names[won] + ' wins!';
+    // Storybook endings: a win is "happily ever after"; a loss is only the end of this tale.
+    const title = vs ? (won === 0 ? 'Happily Ever After' : 'The End\u2026 for now') : ui.names[won] + ' wins the tale!';
     const art = LC.uiArtUrl(vs ? (won === 0 ? 'victory' : 'defeat') : 'victory');
     if (art) box.style.setProperty('--results-art', 'url("' + art + '")');
+    box.appendChild(el('div', 'results-kicker', vs && won !== 0 ? 'and so the story closes' : 'and they all lived'));
     box.appendChild(el('div', 'results-title' + (vs && won !== 0 ? ' is-loss' : ''), title));
     const why = { lore: 'reached 20 lore', deckout: 'won when the other deck ran out', concede: 'won by concession' }[s.endReason] || '';
     box.appendChild(el('div', 'results-sub', (vs ? (won === 0 ? 'You ' : 'The opponent ') : ui.names[won] + ' ') + why + ' on turn ' + s.turn + '.'));

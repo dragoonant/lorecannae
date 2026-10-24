@@ -460,17 +460,22 @@
 
   // The lore track's marker and number. Shared with js/ui/anim.js so a quest's diamond
   // lands on exactly the spot the redraw will use.
+  // The lore trail: twenty stars along the winding path drawn by js/ui/boardart.js. Every
+  // star up to the current lore is lit gold; the newest lit star glows (the "you are here"
+  // mark); 16-19 sparkle; 20 is the wishing star. Shared with js/ui/anim.js so a quest's
+  // sparkle trail lands on exactly the star the redraw will light.
   UI.placeLoreMarker = function (zoneNode, lore) {
-    const T = LC.boardLayout.loreTrack;
-    const f = T.from + (T.to - T.from) * Math.min(20, Math.max(0, lore)) / 20;
-    const mark = zoneNode.querySelector('.lore-marker');
-    const theirs = zoneNode.id.indexOf('enemy') === 0;
-    if (mark) {
-      mark.style.top = theirs ? (f * 100) + '%' : ((1 - f) * 100) + '%';
-      mark.classList.toggle('is-warm', lore >= 16);
-    }
+    const L = Math.min(20, Math.max(0, lore));
+    zoneNode.querySelectorAll('.lore-star').forEach(function (st) {
+      const i = Number(st.dataset.i);
+      st.classList.toggle('is-lit', i <= L);
+      st.classList.toggle('is-current', i === L && L > 0);
+    });
     const n = zoneNode.querySelector('.lore-num');
     if (n) { n.textContent = String(lore); n.classList.toggle('is-warm', lore >= 16); n.classList.toggle('is-won', lore >= 20); }
+  };
+  UI.loreStarNode = function (zoneNode, lore) {
+    return zoneNode.querySelector('.lore-star[data-i="' + Math.max(1, Math.min(20, lore)) + '"]') || zoneNode;
   };
 
   function renderLore(node, s, seat, isMine, acts) {
@@ -478,16 +483,29 @@
     const P = s.players[seat];
     const active = !LC.isTerminal(s) && s.active === seat && s.phase === 'main';
     node.classList.toggle('is-active', active);
-    if (active) node.style.animationDelay = U.animationPhase(1900);
     const count = el('div', 'lore-count');
     count.appendChild(el('div', 'lore-num', String(P.lore)));
-    // While it is this side's turn the caption under the number says so (the active-player
-    // marker); a separate pill here would sit on the track's first steps.
+    // While it is this side's turn a glowing star and the caption say so (the active-player
+    // marker); the banner announces the turn once, this keeps saying it.
     count.appendChild(el('div', 'lore-label' + (active ? ' is-turn' : ''), active ? (isMine && (UI.mode === 'ai' || UI.mode === 'tutorial') ? 'your turn' : 'turn') : 'lore'));
     node.appendChild(count);
-    const mark = el('div', 'lore-marker');
-    mark.innerHTML = U.iconHTML('L');
-    node.appendChild(mark);
+    if (active) {
+      const a = el('div', 'lore-active-star');
+      a.innerHTML = U.iconHTML('L');
+      a.style.animationDelay = U.animationPhase(1900);
+      node.appendChild(a);
+    }
+    const theirs = node.id.indexOf('enemy') === 0;
+    for (let i = 1; i <= 20; i++) {
+      const q = LC.boardLayout.loreStar(i, theirs);
+      const st = el('div', 'lore-star' + (i >= 16 && i < 20 ? ' is-near' : '') + (i === 20 ? ' is-goal' : ''));
+      st.dataset.i = String(i);
+      st.innerHTML = U.iconHTML('L');
+      st.style.left = (q.x * 100) + '%';
+      st.style.top = (q.y * 100) + '%';
+      if (i >= 16) st.style.animationDelay = U.animationPhase(1400 + i * 37);
+      node.appendChild(st);
+    }
     node.setAttribute('data-tip', (UI.mode === 'ai' || UI.mode === 'tutorial' ? (seat === 0 ? 'Your' : 'Opponent’s') : UI.names[seat] + '’s') +
       ' lore: ' + P.lore + ' of 20. First to 20 wins.' + (isMine ? ' Drag a ready character here to quest.' : ''));
     UI.placeLoreMarker(node, P.lore);

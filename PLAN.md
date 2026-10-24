@@ -8,7 +8,7 @@ This file owns every decision. Other files point here; none restates a decision.
 |---|---|---|---|
 | D1 | 2026-10-24 | **Regime: reproduction.** Rules fidelity is the product; printed rules text is shown verbatim; a divergence from the printed card or the Comprehensive Rules is a defect, never a design choice. No BALANCE.md. | owner (kickoff) |
 | D2 | 2026-10-24 | **Names and text:** real Lorcana card names and rules text, from one generated file (`data/cards.js`), the withdrawal lever. | owner |
-| D3 | 2026-10-24 | **Art:** 100% original, painterly storybook style. Never Disney character designs, logos, frames or trade dress; no franchise, studio, film or artist names in any prompt; characters are drawn as original archetypes that fit the card. | owner |
+| D3 | 2026-10-24 | ~~**Art:**~~ SUPERSEDED by D17. 100% original, painterly storybook style. Never Disney character designs, logos, frames or trade dress; no franchise, studio, film or artist names in any prompt; characters are drawn as original archetypes that fit the card. | owner |
 | D4 | 2026-10-24 | **Card pool:** every card in 20 decklists from the Disney Lorcana Challenge North American Championship (Fanfinity, 2026-08-29, Set 13 Core, 136 players), picked for archetype spread. 136 unique cards. Source and picks: `kb/README.md`, `data/raw/nacc-decks.txt`. | owner + default |
 | D5 | 2026-10-24 | **Modes:** vs AI, deck builder, hot-seat 2-player, AI-vs-AI spectate, tutorial. | owner |
 | D6 | 2026-10-24 | **Deploy:** public GitHub Pages, `dragoonant/lorecannae`, served from `main` root, no build step. | owner |
@@ -21,6 +21,7 @@ This file owns every decision. Other files point here; none restates a decision.
 | D13 | 2026-10-24 | **Dev server port 8231** (`node tools/serve.mjs`). | default |
 | D14 | 2026-10-24 | **Locations are not implemented:** no location card is in the pool. Effects that mention locations find no targets. | default |
 | D15 | 2026-10-24 | **AI levels:** easy = one ply with noise; normal = one opponent ply (top 2, 1 world); hard = one opponent ply (top 4, 3 worlds). Measurements in docs/ai.md. | default |
+| D17 | 2026-10-24 | **Art (owner, after the first batch):** every card shows its ACTUAL character, recognisable ("Darkwing Duck not being a duck is really bad"), in **MGSD proportions** (about 2.5 heads tall, big head, short stubby limbs, detailed) with a **Disney-animation art direction**. Concern stated once to the owner (Disney enforcement; Pixelborn precedent); owner's call. Still never: official card images, frames, logos, or tracing/img2img of an official illustration. Style picked from an audition. | owner |
 | D16 | 2026-10-24 | **No castles in screen art** (Disney castle-logo trade dress); the UI prompt lint refuses castle words. | default |
 
 ## Cut order if time runs short
