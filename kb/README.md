@@ -8,6 +8,7 @@ card and board games on this machine (EVILAEGIS). Read this file first; follow l
 | [LESSONS-DIGEST.md](LESSONS-DIGEST.md) | CARD-GAME-LESSONS 1–6, the three UI specs, MALLET-42K-LESSONS and the FAB/Magic handoffs, deduplicated by topic. **MUST** marks lessons learned painfully. Ends with "Applies to Lorcana". |
 | [CROSS-PROJECT-LESSONS.md](CROSS-PROJECT-LESSONS.md) | Projects after Oct 3 (MythosForge, ChampionsForge, Mallet-42k, wh40k-murder-squad, Fell-in, …): project skeleton, owner feedback, overnight practice, IP posture, what changed since the card KB. |
 | [ASSET-PIPELINE.md](ASSET-PIPELINE.md) | Local image (Flux Studio / FLUX.2 klein, SDXL fallback) and audio (Audio Studio: Stable Audio Open + ACE-Step) generation: commands, scripts to copy, overnight budget, risks. |
+| [LORCANA-LESSONS.md](LORCANA-LESSONS.md) | What this project learned overnight: parallel agents, independent reviewers, CR 6.2.4/1.8.1/8.10.7/7.4.3 traps, rollout AI with common random numbers, the shared-GPU reservation lock. |
 | [PRESENTATION-REFERENCE.md](PRESENTATION-REFERENCE.md) | Teardown of Starbound Legions' UI (owner's favourite presentation) and how it maps onto Lorcana's board. |
 
 Canonical full-text originals: `../MANAFORGE/` (card KB, Oct 3), `../wh40k-murder-squad/docs/knowledge-base/` (newest cross-project digest, Oct 17).

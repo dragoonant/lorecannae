@@ -15,11 +15,13 @@ This file owns every decision. Other files point here; none restates a decision.
 | D7 | 2026-10-24 | **Presentation:** emulate Starbound Legions (`kb/PRESENTATION-REFERENCE.md`) where it fits. | owner |
 | D8 | 2026-10-24 | **Rules source:** Comprehensive Rules 2.2.0 (effective 2026-07-09), cited by section number in `docs/rules.md` and engine comments. | default |
 | D9 | 2026-10-24 | **Abilities are authored per card as small JS functions over engine doors** (`data/abilities/*.js`), not compiled from text. 136 heterogeneous texts do not justify a grammar; each card gets a behaviour test asserting side effects, and the auditor checks every printed keyword/number appears in the authored data. A card that can't be implemented faithfully is listed in `data/defects.js` and kept out of decks. | default |
-| D10 | 2026-10-24 | **Choices use the replay model:** an effect runs on a copy; a needed decision throws `Ask`, the copy is discarded, and the answer re-runs it from the pre-effect state. No auto-pick: one option or fifty, the player is asked (except "this card", "all", and zero-option windows). | default (KB) |
+| D10 | 2026-10-24 | **Choices use the replay model:** a job that needs a decision throws `Ask`; the partly-resolved state stays on screen (costs paid, card played) with a snapshot of the pre-job state, and the answer re-runs the job from that snapshot with every answer so far. No auto-pick: one option or fifty, the player is asked (except "this card", "all", and zero-option windows). | default (KB) |
 | D11 | 2026-10-24 | **Exerted cards turn 90° on the board** (the iconic Lorcana read), inside a slot that widens; the hover preview is always upright. Ink cards use the small tilt. | default |
 | D12 | 2026-10-24 | **Assets generated locally** on this PC: Flux Studio (FLUX.2 klein 4B) for art; Audio Studio (Stable Audio Open SFX, ACE-Step music); a procedural Web Audio kit as the floor. Cloud keys are dead (401). | default |
 | D13 | 2026-10-24 | **Dev server port 8231** (`node tools/serve.mjs`). | default |
 | D14 | 2026-10-24 | **Locations are not implemented:** no location card is in the pool. Effects that mention locations find no targets. | default |
+| D15 | 2026-10-24 | **AI levels:** easy = one ply with noise; normal = one opponent ply (top 2, 1 world); hard = one opponent ply (top 4, 3 worlds). Measurements in docs/ai.md. | default |
+| D16 | 2026-10-24 | **No castles in screen art** (Disney castle-logo trade dress); the UI prompt lint refuses castle words. | default |
 
 ## Cut order if time runs short
 
@@ -30,5 +32,9 @@ prompts that say what they are about.
 
 ## Status
 
-**2026-10-24 (overnight run, in progress).** Repo started; KB in `kb/`; 20 decks and 136 cards
-generated from Lorcast; engine contract in `docs/ENGINE-API.md`.
+**2026-10-24 04:00 HST (end of the overnight run).** Playable and deployed:
+https://dragoonant.github.io/lorecannae/. All 136 pool cards scripted with behaviour tests (150
+tests, auditor 0 FAIL); modes vs AI / hot-seat / spectate / tutorial / deck builder; original art
+(136 cards + 8 plates) and generated audio (30 SFX + 6 tracks, not verified by ear); AI levels
+easy / normal / hard (one opponent ply, docs/ai.md). Owner questions and open items:
+HANDOFF.md.
