@@ -49,7 +49,7 @@
 
   A['stitch-carefree-surfer'] = {
     triggers: [{
-      name: 'OHANA', on: 'played', when: (s, me, ev) => ev.iid === me && otherChars(s, me) >= 2,
+      name: 'OHANA', on: 'played', when: H.self, // CR 6.2.4: the 'if' is checked on resolution
       run(x) {
         if (otherChars(x.s, x.me) < 2) return;
         if (x.may('Ohana: you have 2 or more other characters in play. You may draw 2 cards.', 'Draw 2', 'Decline')) x.draw(x.ctrl, 2);
@@ -109,7 +109,7 @@
 
   A['stitch-carefree-snowboarder'] = {
     triggers: [{
-      name: 'BRING YOUR FRIENDS', on: 'quest', when: (s, me, ev) => ev.iid === me && otherChars(s, me) >= 2,
+      name: 'BRING YOUR FRIENDS', on: 'quest', when: H.self, // CR 6.2.4
       run(x) {
         if (otherChars(x.s, x.me) < 2) return;
         if (x.may('Bring Your Friends: you have 2 or more other characters in play. You may draw a card.', 'Draw 1', 'Decline')) x.draw(x.ctrl, 1);
@@ -177,7 +177,7 @@
   const calmingOk = (s, me, ev) => ev.shifted && !s.ti.challenged[owner(s, me)];
   A['pocahontas-peacekeeper'] = {
     triggers: [{
-      name: 'CALMING WORDS', on: 'played', when: (s, me, ev) => ev.iid === me && calmingOk(s, me, ev),
+      name: 'CALMING WORDS', on: 'played', when: H.self, // CR 6.2.4
       run(x, ev) {
         if (!calmingOk(x.s, x.me, ev)) return;
         x.effect({ kind: 'noChallenge', ...x.until.myNextTurn() });

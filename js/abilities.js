@@ -181,7 +181,7 @@
   // another chosen character's {S} this turn."
   LC.keywordSupport = function (x) {
     const str = Math.max(0, x.chars(x.me).str);
-    const others = x.characters(x.ctrl).filter((c) => c !== x.me);
+    const others = x.characters().filter((c) => c !== x.me); // "another chosen character": any
     const t = x.chooseOne(others, `Support: you may give another character +${str} strength this turn.`, { optional: true });
     if (t) x.buff(t, { str }, x.until.eot(), `+${str} strength this turn (Support)`);
   };

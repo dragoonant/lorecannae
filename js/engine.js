@@ -227,6 +227,11 @@
     const from = c.zone;
     removeFromZone(s, iid);
     if (from === 'play' && to !== 'play') {
+      // A card that leaves play is a new object: per-turn "once" and Boost marks don't follow it.
+      if (s.ti) {
+        delete s.ti.boosted[iid];
+        for (const k of Object.keys(s.ti.once)) if (k.includes(`:${iid}:`)) delete s.ti.once[k];
+      }
       for (const u of c.under.slice()) { removeFromZone(s, u); placeIn(s, u, 'discard', {}); }
       c.under = [];
       c.exerted = false; c.damage = 0; c.mods = []; c.dry = false; c.enteredTurn = null; c.lastHit = null;
@@ -269,7 +274,9 @@
     if (o.challenge && ch.flags.noChallengeDamage) n = 0;
     if (n > 0) {
       c.damage += n;
-      if (o.from != null) c.lastHit = { by: o.from, challenge: !!o.challenge, turn: s.turn };
+      // CR 1.8.1: a banish is credited to a character only for damage it dealt since the last
+      // game state check; any other damage overwrites the record (gsc clears it afterwards).
+      c.lastHit = { by: o.from ?? null, challenge: !!o.challenge, turn: s.turn };
     }
     log(s, o.from != null ? s.cards[o.from].owner : s.active, 'damage', { iid: target, amount: n, from: o.from ?? null, challenge: !!o.challenge, put: !!o.put });
     if (n > 0) emit(s, { type: 'damaged', iid: target, amount: n, from: o.from ?? null, challenge: !!o.challenge });
@@ -399,7 +406,10 @@
         if (!LC.isCharacter(d) && !LC.isLocation(d)) return false;
         return s.cards[i].damage >= LC.chars(s, i).wp; // CR 1.8.1.4
       });
-      if (!doomed.length) return;
+      if (!doomed.length) {
+        for (const i of LC.inPlay(s)) if (s.cards[i].lastHit) s.cards[i].lastHit = null;
+        return;
+      }
       for (const i of doomed) {
         const hit = s.cards[i].lastHit;
         const by = hit && hit.turn === s.turn ? hit.by : null;

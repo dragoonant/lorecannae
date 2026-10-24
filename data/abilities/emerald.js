@@ -25,7 +25,7 @@
   A['elinor-renowned-diplomat'] = {
     audit: '3: threeExerted() counts 3 or more exerted characters',
     triggers: [{
-      name: 'COORDINATED EFFORTS', on: 'turnEnd', when: (s, me, ev) => H.mine(s, me, ev) && threeExerted(s, s.cards[me].owner),
+      name: 'COORDINATED EFFORTS', on: 'turnEnd', when: H.mine, // CR 6.2.4: the 'if' is checked on resolution
       run(x) {
         if (!threeExerted(x.s, x.ctrl)) return;
         const t = x.chooseOne(x.characters(x.opp), 'Coordinated Efforts: choose an opposing character to deal 1 damage to.');
@@ -81,7 +81,7 @@
   const oppMoreCards = (s, p) => s.players[1 - p].hand.length > s.players[p].hand.length;
   A['mushu-stealthy-dragon'] = {
     triggers: [{
-      name: 'TIP THE SCALES', on: 'quest', when: (s, me, ev) => ev.iid === me && oppMoreCards(s, s.cards[me].owner),
+      name: 'TIP THE SCALES', on: 'quest', when: H.self, // CR 6.2.4
       run(x) {
         if (!oppMoreCards(x.s, x.ctrl)) return;
         if (x.may('Tip the Scales: draw a card?', 'Draw', 'Decline')) x.draw(x.ctrl, 1);
@@ -151,7 +151,7 @@
     triggers: [
       { name: 'EYE FOR VALUE', on: 'played', when: H.self, run(x) { mayLoot(x, 'Eye for Value'); } },
       {
-        name: 'DIRTY TRICKS', on: 'turnEnd', when: (s, me, ev) => H.mine(s, me, ev) && twoToDiscard(s, ev.p),
+        name: 'DIRTY TRICKS', on: 'turnEnd', when: H.mine, // CR 6.2.4
         run(x) { if (twoToDiscard(x.s, x.ctrl)) x.loseLore(x.opp, 1); },
       },
     ],
@@ -180,7 +180,7 @@
     triggers: [
       { name: "SCHOLAR'S GAMBIT", on: 'played', when: H.self, run: discardToBounce("Scholar's Gambit") },
       {
-        name: 'PRACTICAL KNOWLEDGE', on: 'turnEnd', when: (s, me, ev) => H.mine(s, me, ev) && twoToDiscard(s, ev.p),
+        name: 'PRACTICAL KNOWLEDGE', on: 'turnEnd', when: H.mine, // CR 6.2.4
         run(x) { if (twoToDiscard(x.s, x.ctrl)) x.draw(x.ctrl, 1); },
       },
     ],
