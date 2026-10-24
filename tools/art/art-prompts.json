@@ -1,0 +1,1007 @@
+{
+ "style": "luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled",
+ "prompts": {
+  "agustin-madrigal-exceptionally-kind": {
+   "name": "Agustin Madrigal - Exceptionally Kind",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a gentle kindly middle-aged man with a round face, round spectacles, a bushy grey moustache and a striped apron, cheerfully carrying a big basket of warm flatbreads, a little clumsy, a bee buzzing near his nose, along a desert oasis path with palm trees, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "akood-et-emuti": {
+   "name": "Akood et Emuti",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "towering glowing blue crystals pulsing with light to the rhythm of a chant, small hooded chanters seen from behind with hands raised toward them, in a sunken city of ancient carved stone glowing underwater, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "aladdin-and-genie-mischievous-pals": {
+   "name": "Aladdin & Genie - Mischievous Pals",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lean nimble young street acrobat with a long dark ponytail, a sleeveless rust-orange tunic, loose teal trousers and a woven sash together with a jovial towering djinn of swirling amber smoke with a braided beard and jewelled earrings, his lower body a curl of smoke, laughing together as the djinn conjures a whirl of sparkling illusions around the acrobat, on a moonlit palace rooftop under a starry desert sky, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "aladdin-doing-his-part": {
+   "name": "Aladdin - Doing His Part",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lean nimble young street acrobat with a long dark ponytail, a sleeveless rust-orange tunic, loose teal trousers and a woven sash, vaulting over a market stall to knock a strange cursed trinket out of reach, in a quiet desert courtyard of spice sacks and silk awnings, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "aladdin-prince-ali": {
+   "name": "Aladdin - Prince Ali",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lean nimble young street acrobat with a long dark ponytail, a sleeveless rust-orange tunic, loose teal trousers and a woven sash, riding in grand procession in a jewelled turquoise-and-white coat atop a richly decorated camel, through a golden palace avenue showered with petals, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "alan-a-dale-loyal-bard": {
+   "name": "Alan-a-Dale - Loyal Bard",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lanky grey heron minstrel in a patched green feathered cap, a lute slung across his body, strumming his lute and singing to lift the spirits of weary friends, around a campfire in a greenwood forest at dusk, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "angel-experiment-624": {
+   "name": "Angel - Experiment 624",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lithe alien creature like a sleek golden-scaled gecko with a frilled coral head-fin and long feathery antennae, taking aim with a glowing alien blaster, head-fin flared, eyes narrowed, in a sleek starship corridor of glowing blue lights, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "angel-siren-singer": {
+   "name": "Angel - Siren Singer",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lithe alien creature like a sleek golden-scaled gecko with a frilled coral head-fin and long feathery antennae, singing a hypnotic siren song, rings of shimmering sound spiralling out from her, on a moonlit beach rock beside a glowing tide pool, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "angela-night-warrior": {
+   "name": "Angela - Night Warrior",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a young winged warrior woman with sandstone-tan stone skin, short silver hair, feathered wings and a bronze spear, leaping from a cliff edge with wings spread and spear raised, shadows swirling at her feet, above a moonlit forest at night, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "ariel-ethereal-voice": {
+   "name": "Ariel - Ethereal Voice",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a translucent spectral young mermaid with a cloud of jet-black curls and an iridescent violet-and-gold koi-like tail, singing as glowing ribbons of light spiral from her lips, in a sunken shipwreck lit by shafts of blue light, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "aurora-holding-court": {
+   "name": "Aurora - Holding Court",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a gracious young princess with dark brown hair in a crown of braids and a moss-green and gold gown, warmly greeting guests with open arms, her gown glittering, in a sunlit garden pavilion hung with roses and silk ribbons, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "bambi-ethereal-fawn": {
+   "name": "Bambi - Ethereal Fawn",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a young stag calf made of drifting translucent starlight, tiny antler buds wreathed in blossoms, stepping lightly through the air, hooves leaving trails of glowing petals, in a twilight spring forest of blossoming trees, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "battering-ram": {
+   "name": "Battering Ram",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a heavy iron-capped oak log swinging on chains, smashing into a castle gate in a burst of splinters, at a fortress wall at dusk, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "benja-guardian-of-the-dragon-gem": {
+   "name": "Benja - Guardian of the Dragon Gem",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a calm proud king with a close-cropped grey beard and a deep-indigo wrap robe trimmed in gold, holding up a glowing blue orb in both hands, his gaze steady and solemn, in a rain-forest temple of carved stone and waterfalls, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "besties-assemble": {
+   "name": "Besties, Assemble!",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a rag-tag gang of young animal friends piling together in a joyful leaping group hug, on a flowery hilltop under a bright morning sky, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "bobby-zimuruski-spray-cheese-kid": {
+   "name": "Bobby Zimuruski - Spray Cheese Kid",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a scruffy hyper teenage ferret with messy orange hair and a backwards cap, squirting a can of spray cheese to stack a wobbly tower of crackers, grinning wildly, at a messy picnic table beside a campervan, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "broadway-sturdy-and-strong": {
+   "name": "Broadway - Sturdy and Strong",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a hulking winged guardian with mossy green-grey stone hide, short curled horns and a broad gentle face, spreading his great wings as a shield over small companions huddled behind him, on a stone rooftop parapet at dusk, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "buzz-s-arm": {
+   "name": "Buzz's Arm",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a detached tin toy robot arm with a clamp hand lying among springs and screws, on a workbench in a cosy attic workshop, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "camilo-madrigal-prankster": {
+   "name": "Camilo Madrigal - Prankster",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lanky grinning young trickster with a shaved head, freckles and a patchwork cloak, mid-shapeshift, his face rippling into a mirror copy of someone else, grinning mischievously, in a colourful courtyard of a hillside family house, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "chernabog-unnatural-force": {
+   "name": "Chernabog - Unnatural Force",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a colossal brooding titan formed of black thunderclouds, eyes like twin pale moons, enormous cloud hands, sweeping his enormous cloud hands across the land as ghostly lights swirl up from the earth, over a moonlit mountain valley at midnight, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "cheshire-cat-inexplicable": {
+   "name": "Cheshire Cat - Inexplicable",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a sly lanky lynx with tufted ears and smoky grey fur dappled with silver spots, a wide mysterious smile, half fading into mist, lounging on thin air, his body dissolving into curls of smoke from the tail up, in a twisting forest of giant mushrooms and crooked paths, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "christopher-robin-joining-the-fun": {
+   "name": "Christopher Robin - Joining the Fun",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a cheerful small boy with tousled dark curls, a chunky knitted cardigan, wool scarf and mittens, winding up to throw a snowball with a huge grin, in a snowy woodland on a crisp clear morning, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "circle-of-life": {
+   "name": "Circle of Life",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "animals of the plains gathering at dawn around a great glowing baobab tree, new shoots and flowers bursting from the earth, on a vast golden savanna at sunrise, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "dale-ready-for-his-shot": {
+   "name": "Dale - Ready for His Shot",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a scrappy grinning little dormouse wearing home-made armour of spiky chestnut burrs, puffing out his chest in his spiky burr armour, ready to charge, on a garden fence top beside a giant sunflower, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "darkwing-duck-crime-fighter": {
+   "name": "Darkwing Duck - Crime Fighter",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a swaggering masked badger vigilante in a charcoal trench coat, a long crimson scarf and a wide slouch hat, striking a dramatic pose with his scarf billowing as a cloud of smoke curls around him, on a rain-slick city rooftop beside a water tower at night, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "darkwing-duck-shadowy-superhero": {
+   "name": "Darkwing Duck - Shadowy Superhero",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a swaggering masked badger vigilante in a charcoal trench coat, a long crimson scarf and a wide slouch hat, springing out of the shadows with a grappling gun, catching a startled crook by surprise, in a fog-filled cobbled alley between brick walls, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "david-protective-snowboarder": {
+   "name": "David - Protective Snowboarder",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a laid-back tall young man with a sun-bleached blond buzzcut in a padded orange snow jacket, holding his snowboard up like a shield to guard his friends from a spray of snowballs, on a snowy slope beside an icy lake, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "demona-betrayer-of-the-clan": {
+   "name": "Demona - Betrayer of the Clan",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a fierce winged sorceress with granite-grey stone skin, amber eyes, a mane of white hair and slate bat-like wings, lunging forward with claws bared and wings flared in a furious attack, among the moonlit spires of a gothic cathedral roof, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "demona-scourge-of-the-wyvern-clan": {
+   "name": "Demona - Scourge of the Wyvern Clan",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a fierce winged sorceress with granite-grey stone skin, amber eyes, a mane of white hair and slate bat-like wings, chanting a spell with claws raised, green spell-fire turning her foes to grey stone as the sun rises, on a ruined castle battlement above the sea at dawn, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "diablo-stone-servant": {
+   "name": "Diablo - Stone Servant",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a large sharp-eyed magpie familiar with glossy blue-black and white plumage and ember-bright eyes, carved from weathered grey stone, perched with wings half-spread, eyes glowing like embers, on a broken pillar in a ruined thorn-covered castle, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "dr-hamsterviel-evil-observer": {
+   "name": "Dr. Hamsterviel - Evil Observer",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a tiny pompous chinchilla scientist with silvery fur, a monocle and a high-collared lab coat, peering through a huge brass telescope with a sinister little smirk, in a cluttered spaceship laboratory with a round porthole onto the stars, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "dumbo-ninth-wonder-of-the-universe": {
+   "name": "Dumbo - Ninth Wonder of the Universe",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small shaggy woolly mammoth calf with russet fur, huge gentle eyes and broad feathered owl-like wings, performing a dazzling loop in a spotlight beam while a crowd gasps, high under a grand striped big-top tent strung with lanterns, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "dumbo-the-flying-elephant": {
+   "name": "Dumbo - The Flying Elephant",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small shaggy woolly mammoth calf with russet fur, huge gentle eyes and broad feathered owl-like wings, soaring with wings spread wide, a small delighted songbird riding in his fur, over moonlit rolling hills and a little circus tent far below, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "education-or-elimination": {
+   "name": "Education or Elimination",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a stern old owl professor pointing a long cane at a nervous young pupil, in a candlelit stone lecture hall of an old academy, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "eilonwy-princess-of-llyr": {
+   "name": "Eilonwy - Princess of Llyr",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a spirited young princess with short curly chestnut hair in a practical forest-green travelling dress, holding up a small floating orb of golden light, offering a hand to follow her, in a dark underground passage of ancient stone, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "elinor-renowned-diplomat": {
+   "name": "Elinor - Renowned Diplomat",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a poised elder queen with braided silver hair and a thin circlet, in a deep burgundy velvet gown with a fur-trimmed mantle, raising a calm hand to settle a quarrel between rival chieftains at a long feast table, in a great timbered hall with a roaring hearth, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "elsa-exploring-the-unknown": {
+   "name": "Elsa - Exploring the Unknown",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a regal young snow sorceress with short tousled jet-black hair, a long hooded cloak of white fur and frost feathers over deep plum winter robes, walking curiously through the trees, frost blooming on the leaves at each step, in a misty autumn forest of red and gold, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "elsa-spirit-of-winter": {
+   "name": "Elsa - Spirit of Winter",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a regal young snow sorceress with short tousled jet-black hair, a long hooded cloak of white fur and frost feathers over deep plum winter robes, rising into the air with arms outstretched, unleashing a vast spiralling blizzard, above an ice-locked fjord under swirling green northern lights, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "enigmatic-inkcaster": {
+   "name": "Enigmatic Inkcaster",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a curious bronze contraption of spinning rings and nozzles dripping luminous swirling ink, on the desk of an abandoned wizard study, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "finnick-tiny-terror": {
+   "name": "Finnick - Tiny Terror",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a tiny fierce desert jerboa with enormous ears, a deep scowl and long kangaroo-like hind legs, leaping out from behind a crate with a ferocious snarl to scare off a bigger creature, among sand dunes and crates at a desert camp at sunset, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "flynn-rider-spectral-scoundrel": {
+   "name": "Flynn Rider - Spectral Scoundrel",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a roguish lanky thief with a shaved head, gold hoop earrings, a neat black goatee and a patched plum leather jerkin, drifting as a glowing translucent ghost, slyly pocketing a jewelled crown with a wink, in a haunted moonlit castle gallery, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "freeze-the-vine": {
+   "name": "Freeze the Vine",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a wall of knotted glowing purple vines freezing solid under a blast of swirling frost, around the towers of a hillside village, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "gaetan-moliere-clever-burrower": {
+   "name": "Gaetan Moliere - Clever Burrower",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a stout tunnelling expert, a short bristly man with mud-caked goggles, a huge bushy black beard and a dirt-stained canvas coat, bursting out of a tunnel in a spray of earth, sniffing the air, in a vast underground cavern of glowing crystals, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "gaston-superior-archer": {
+   "name": "Gaston - Superior Archer",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a vain strapping archer with a blond curled moustache, a lavish green-and-gold doublet and a plumed hat, drawing a longbow with a smug grin, an arrow already splitting a distant target, in an autumn hunting meadow beside a timbered village, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "grandmother-willow-ancient-advisor": {
+   "name": "Grandmother Willow - Ancient Advisor",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "an ancient gnarled oak spirit, a kindly old face formed in mossy bark, branches hung with firefly lanterns, leaning her branches low to whisper counsel to a small traveller kneeling at her roots, beside a misty river pool in an old forest, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "hades-looking-for-a-deal": {
+   "name": "Hades - Looking for a Deal",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a slick grinning underworld lord with ash-grey skin, a pointed black goatee, a tall crown of obsidian spikes and a cloak of smoke-grey and ember-red, leaning in with a sly grin, holding out a glowing golden coin as an offer, in a gloomy underworld cavern beside a misty green river, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "hamish-hubert-and-harris-troublemaking-triplets": {
+   "name": "Hamish, Hubert & Harris - Troublemaking Triplets",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a gang of identical little mischievous boys with tousled black curls and moss-green tunics, swinging from rafters and scampering away with stolen pastries, giggling, in a castle kitchen full of flour clouds and toppled pots, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "hamm-piggy-bank": {
+   "name": "Hamm - Piggy Bank",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a plump glazed porcelain toad money-box with a coin slot in its back and a smug grin, shaking loose a shower of gleaming gold coins from the slot in its back, on a toy-strewn bedroom shelf lit by a nightlight, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "he-hurled-his-thunderbolt": {
+   "name": "He Hurled His Thunderbolt",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a towering storm deity with a bronze beard hurling a crackling thunderbolt down from the clouds, above a rocky mountain peak lashed by lightning, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "i-find-em-i-flatten-em": {
+   "name": "I Find ’Em, I Flatten ’Em",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a hulking armoured brute smashing a heap of contraptions and trinkets flat with a huge hammer, in a wrecked inventor workshop full of flying gears, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "inscrutable-map": {
+   "name": "Inscrutable Map",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a weathered leather sheet painted with swirling coloured rivers and mountains, held open by a puzzled stout bearded traveller in a patched wool cloak, at a jungle campsite by lantern light, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "isis-vanderchill-ice-queen-of-st-canard": {
+   "name": "Isis Vanderchill - Ice Queen of St. Canard",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a haughty snowy-owl sorceress in a high-collared cloak of frost feathers and an icicle tiara, sweeping a wing forward to blast a jet of frost that freezes a fleeing figure mid-stride, atop an icy city rooftop under a cold full moon, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "jasmine-fearless-princess": {
+   "name": "Jasmine - Fearless Princess",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a fearless young princess with a cropped mane of curly copper hair, a scarlet-and-gold riding tunic and a flowing sash, leaping boldly between palace rooftops, sash streaming behind her, over a domed desert city at sunset, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "john-silver-alien-pirate": {
+   "name": "John Silver - Alien Pirate",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a towering lizard-skinned pirate captain from the stars with a neck frill, a tricorn hat and a long brass-buttoned crimson coat, roaring a command with cutlass raised as his crew scrambles behind him, on the deck of a sailing ship flying through a nebula of stars, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "jumba-jookiba-prolific-inventor": {
+   "name": "Jumba Jookiba - Prolific Inventor",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a hulking good-natured alien inventor with mossy-orange hide, small curling horns, a big goggle-lens over one eye and a tool belt of gadgets, tinkering happily with a sparking gadget, healing light pouring from it onto a bandaged friend, in a messy alien laboratory full of bubbling vats, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "junior-woodchuck-guidebook": {
+   "name": "Junior Woodchuck Guidebook",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a thick closed leather tome with brass clasps glowing with golden light, held up proudly by a young scout in a green neckerchief, at a forest campsite beside a tent and a crackling campfire, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "launchpad-trusty-sidekick": {
+   "name": "Launchpad - Trusty Sidekick",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a tall gangly friendly pelican aviator in a battered leather flight jacket and brass goggles, giving an eager thumbs-up from the cockpit of a battered little biplane in a steep nosedive, above a city skyline at sunset, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "lenny-toy-binoculars": {
+   "name": "Lenny - Toy Binoculars",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a little wind-up tin toy telescope painted red and cream, with spindly clockwork legs and a winding key in its back, standing on tiptoe on the windowsill, lens extended, spying on something far away, in a sunny child bedroom full of scattered toys, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "lexington-small-in-stature": {
+   "name": "Lexington - Small in Stature",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small wiry winged youngster with sandy-ochre stone hide and webbed glider wings, tinkering with a gadget, gliding swiftly between chimneys, eyes sharp, tools jangling at his belt, over a twilight city of rooftops and smoke, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "lilo-and-stitch-fun-loving-friends": {
+   "name": "Lilo & Stitch - Fun-Loving Friends",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a spirited little girl with curly auburn hair in two puffs and a sunflower-yellow sundress together with a small mischievous alien creature like a plump peach-orange and cream axolotl with a wide flat head, branching coral-red feathery gill stalks along each side of its head, a long finned tail, stubby legs and a wide toothy grin, hugging each other and laughing as they splash through the shallows together, on a sunlit tropical shoreline with palm trees and a pink sunset sky, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "lilo-best-explorer-ever": {
+   "name": "Lilo - Best Explorer Ever",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a spirited little girl with curly auburn hair in two puffs and a sunflower-yellow sundress, charging ahead with a stick held high like a sword, shouting her friends forward, through a lush jungle trail toward a hidden waterfall, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "look-at-this-family": {
+   "name": "Look at This Family",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a big joyful family of grandparents, parents and children gathered on the steps of a colourful house, glowing butterflies swirling around them, on a sunny hillside village in the mountains, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "luisa-madrigal-confident-climber": {
+   "name": "Luisa Madrigal - Confident Climber",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a broad-shouldered powerfully muscled young woman with a long copper braid and freckles, in a rust-orange leather mountaineer tunic with rolled sleeves, climbing a sheer cliff one-handed with a heavy pack of supplies on her back, grinning, on a towering crag above a sea of clouds, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "luisa-madrigal-pushing-through": {
+   "name": "Luisa Madrigal - Pushing Through",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a broad-shouldered powerfully muscled young woman with a long copper braid and freckles, in a rust-orange leather mountaineer tunic with rolled sleeves, hauling a long rope with gritted teeth, dragging a cart of weary friends up a steep slope, on a windswept mountain trail at dawn, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "lyle-tiberius-rourke-adventurer-for-hire": {
+   "name": "Lyle Tiberius Rourke - Adventurer for Hire",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a sly lean mercenary adventurer with a long black ponytail, a scar across one eye, a long dust-coloured coat and a bandolier, flipping a gold coin with a calculating smile, a rifle slung over his shoulder, at an expedition camp in a vast glowing cavern, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "maleficent-and-diablo-evil-incarnate": {
+   "name": "Maleficent & Diablo - Evil Incarnate",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a tall gaunt thorn witch with a crown of black briar thorns, long silver hair and a cloak of deep crimson and charcoal, thorny vines curling from her fingers together with a large sharp-eyed magpie familiar with glossy blue-black and white plumage and ember-bright eyes, standing together in a whirlwind of thorns and emerald fire, the bird perched on her raised arm, on a jagged clifftop under a stormy green sky, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "maleficent-exultant-spellcaster": {
+   "name": "Maleficent - Exultant Spellcaster",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a tall gaunt thorn witch with a crown of black briar thorns, long silver hair and a cloak of deep crimson and charcoal, thorny vines curling from her fingers, laughing in triumph with arms flung wide as thorny vines erupt across the land, atop a crag overlooking a valley swallowed by vines, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "malicious-mean-and-scary": {
+   "name": "Malicious, Mean, and Scary",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a rowdy crowd of scarred brutish thugs sneering and snarling over tankards, in a smoky lantern-lit tavern of rough timber, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "max-goof-chart-topper": {
+   "name": "Max Goof - Chart Topper",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lanky teenage otter with a shaggy dyed-teal fringe, a loose mustard hoodie and headphones around his neck, belting into a microphone with one fist raised, spotlights blazing, on a concert stage under swirling coloured lights and a cheering crowd, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "max-goof-rebellious-teen": {
+   "name": "Max Goof - Rebellious Teen",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lanky teenage otter with a shaggy dyed-teal fringe, a loose mustard hoodie and headphones around his neck, skateboarding fast down a steep hill with arms out and a cheeky grin, down a steep leafy country lane in summer, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "meilin-lee-losing-control": {
+   "name": "Meilin Lee - Losing Control",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "an excitable teenage girl with wild purple-dyed curls in a chunky knitted jumper, bursting in a puff of glowing pink smoke into a huge fluffy silver-furred badger-like beast, horrified and embarrassed, in a bathroom with fogged mirrors and a toppled stool, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "mickey-mouse-expedition-leader": {
+   "name": "Mickey Mouse - Expedition Leader",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a jaunty plucky young meerkat with a sandy coat and a bright teal scarf, leading the way with a lantern raised high, pointing toward a secret path, into a mysterious jungle ruin overgrown with vines, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "mickey-mouse-snowboard-ace": {
+   "name": "Mickey Mouse - Snowboard Ace",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a jaunty plucky young meerkat with a sandy coat and a bright teal scarf, flying off a snowy ramp on a snowboard in a spectacular spinning trick, above a sunny alpine ski slope, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "mike-wazowski-heroic-climber": {
+   "name": "Mike Wazowski - Heroic Climber",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small stubby friendly monster with shaggy tangerine fur, a pair of googly eyes on stalks and stubby horns, scaling an icy rock wall with a pickaxe, reaching a hand down to help a friend, on an icy mountain face in a swirling snowfall, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "milo-thatch-getting-his-hands-dirty": {
+   "name": "Milo Thatch - Getting His Hands Dirty",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a lanky earnest young explorer-scholar with a shock of white-blond hair, square brass goggles and oil-stained canvas overalls, up to his elbows repairing a humming crystal-powered engine, a wrench in his teeth, in the engine bay of a great submarine, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "mowgli-man-cub": {
+   "name": "Mowgli - Man Cub",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a wiry wild jungle boy with matted sandy hair, a wrap of woven leaves and a vine sash, crouched on a high branch peering curiously through the leaves, in a dense tropical jungle canopy at dawn, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "mrs-incredible-super-stretchy": {
+   "name": "Mrs. Incredible - Super Stretchy",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a confident athletic woman with a long dark ponytail and a quilted navy flight jacket, stretching her arms impossibly long like ribbons to snatch a falling child out of the air, over a canal lined with tall old townhouses at noon, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "mushu-stealthy-dragon": {
+   "name": "Mushu - Stealthy Dragon",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small sly bronze-scaled dragonling, moth-like wings and a curling whiskered snout, creeping on tiptoe with a sneaky grin, peering between the stalks, through a misty bamboo grove at dusk, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "my-adventure-book": {
+   "name": "My Adventure Book",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "an old explorer satchel spilling treasured keepsakes, a pressed flower, a brass compass, a toy airship and faded photographs, on a cosy armchair by a sunny window, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "nakoma-waiting-out-the-storm": {
+   "name": "Nakoma - Waiting Out the Storm",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a warm-hearted young woman with short black hair in a quilted wool parka with a fur-lined hood, sitting by a crackling campfire, beckoning a shivering friend to come and warm up, in a snug rock shelter while a blizzard howls outside, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "nani-stage-manager": {
+   "name": "Nani - Stage Manager",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a capable young woman with a messy bun of hennaed curls and a utility apron full of tools, directing a backstage crew with a raised lantern and a pointing hand, behind the velvet curtains of a small seaside theatre, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "ohana-means-family": {
+   "name": "Ohana Means Family",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a little girl with curly auburn hair, her older sister and a plump peach-orange axolotl-like alien pet with branching coral-red gill stalks and a long finned tail wrapped in a tight warm embrace, a soft healing glow mending their scrapes, on a quiet moonlit beach beside a driftwood fire, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "omnidroid-v-8": {
+   "name": "Omnidroid - V.8",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a towering brass clockwork automaton shaped like a crab with snapping claws and a glowing amber eye, rising from a burning crater with claws snapping, its eye blazing, in a jungle volcano island at night, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "piercing-attack": {
+   "name": "Piercing Attack",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a gleaming spear point punching straight through a raised wooden shield in a burst of splinters, on a dusty battlefield at sunset, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "pluto-friendly-pooch": {
+   "name": "Pluto - Friendly Pooch",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "an eager scruffy grey wolfhound puppy with floppy ears, a wagging tail and a red bandana, bounding to the garden gate with tongue lolling to welcome new friends, in front of a cheerful cottage with a picket fence, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "pocahontas-guiding-the-tribe": {
+   "name": "Pocahontas - Guiding the Tribe",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a calm courageous young woman with a long chestnut braid and a hooded cloak of woven leaves fastened with river stones, leading a line of companions through a narrow path, pushing aside thick glowing vines, in a deep forest choked with strange purple vines, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "pocahontas-peacekeeper": {
+   "name": "Pocahontas - Peacekeeper",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a calm courageous young woman with a long chestnut braid and a hooded cloak of woven leaves fastened with river stones, standing between two angry camps with one palm raised, swirling leaves and wind calming the crowd, in a forest clearing beside a wide river, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "potion-of-malice": {
+   "name": "Potion of Malice",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a crooked glass flask of seething crimson potion, wisps of angry red smoke curling from its cork, on a witch workbench of jars and candles, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "prince-charming-protector-of-the-realm": {
+   "name": "Prince Charming - Protector of the Realm",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a steadfast young prince with a cropped auburn beard, dark-bronze plate armour, a crimson cloak and a kite shield, standing firm with his shield raised against a rain of arrows, guarding the people behind him, at a castle gate under a stormy sky, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "prince-eric-noble-swordsman": {
+   "name": "Prince Eric - Noble Swordsman",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a dashing young prince with curly sandy-blond hair and a sea-green doublet, drawing an ornate sword from a glittering heap of sunken treasure, in a sea cave filled with shimmering blue light, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "prince-phillip-vanquisher-of-foes": {
+   "name": "Prince Phillip - Vanquisher of Foes",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a gallant young prince in midnight-blue enamelled armour with a silver-plumed helm and a long sword, charging on a winged white horse with sword held high, over a dark forest of giant thorns toward a burning castle, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "put-that-thing-back": {
+   "name": "Put That Thing Back",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a panicky shaggy monster shoving a strange glowing trinket back through a wardrobe doorway into a swirl of light, in a dim bedroom at night, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "rafiki-mystical-fighter": {
+   "name": "Rafiki - Mystical Fighter",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a wiry old grey-furred lemur sage with a long ringed tail, ochre face paint and a knotted driftwood staff, spinning his staff in a whirling fighting stance as leaves fly around him, on a rocky outcrop above a golden savanna at sunset, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "raging-storm": {
+   "name": "Raging Storm",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a howling tempest of lightning and towering waves crashing over a tiny island village, under a black churning sky, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "rapunzel-tower-defender": {
+   "name": "Rapunzel - Tower Defender",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a fierce young woman with immensely long silver-lilac hair braided with ribbons, coiled around her like rope, swinging a broom fiercely at an intruder climbing through the window, hair whipping around her, in a round tower room high above the forest, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "retro-evolution-device": {
+   "name": "Retro Evolution Device",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a strange brass ray-gun contraption with glowing green tubes zapping a small lizard so it swells into a huge dinosaur, in a cluttered inventor laboratory, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "sabotage": {
+   "name": "Sabotage",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a sneaky saboteur in a dark hood sawing through the wheel axle of a gilded royal carriage, in a palace stable yard at night, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "safety-rope": {
+   "name": "Safety Rope",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a coil of sturdy braided rope with an iron grappling hook, one end lashed around a rock, a hand reaching to grab hold, at the edge of a misty cliff, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "second-star-to-the-right": {
+   "name": "Second Star to the Right",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "silhouetted children flying hand in hand across the night sky toward a brilliant shining star, high above moonlit rooftops and chimneys, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "squeaks-cozy-caterpillar": {
+   "name": "Squeaks - Cozy Caterpillar",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a plump fuzzy caterpillar with lavender-and-cream stripes wrapped in a tiny knitted scarf, curled up snug and sleepy in its scarf on a fallen leaf, in a frosty winter hedgerow dusted with snow, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "stegmutt-clumsy-dinosaur": {
+   "name": "Stegmutt - Clumsy Dinosaur",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a huge clumsy gentle ankylosaur with rust-orange armoured hide, a club tail and a sheepish smile, stumbling through a laboratory, his club tail smashing shelves of gadgets, in a cluttered science lab of sparking machines, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "stitch-carefree-snowboarder": {
+   "name": "Stitch - Carefree Snowboarder",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small mischievous alien creature like a plump peach-orange and cream axolotl with a wide flat head, branching coral-red feathery gill stalks along each side of its head, a long finned tail, stubby legs and a wide toothy grin, carving down a powder slope on a snowboard, spraying a glittering arc of snow, on a snowy mountainside with a log cabin glowing below, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "stitch-carefree-surfer": {
+   "name": "Stitch - Carefree Surfer",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small mischievous alien creature like a plump peach-orange and cream axolotl with a wide flat head, branching coral-red feathery gill stalks along each side of its head, a long finned tail, stubby legs and a wide toothy grin, riding a towering curling wave on a little wooden surfboard, tongue out with glee, off a tropical beach at golden hour, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "stitch-protector-of-frogs": {
+   "name": "Stitch - Protector of Frogs",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small mischievous alien creature like a plump peach-orange and cream axolotl with a wide flat head, branching coral-red feathery gill stalks along each side of its head, a long finned tail, stubby legs and a wide toothy grin, crouched protectively over a tiny frog cupped in his paws, glaring fiercely at the rain, in a lush rainy garden of giant leaves, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "stitch-rock-star": {
+   "name": "Stitch - Rock Star",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a small mischievous alien creature like a plump peach-orange and cream axolotl with a wide flat head, branching coral-red feathery gill stalks along each side of its head, a long finned tail, stubby legs and a wide toothy grin, shredding a glowing electric guitar with wild abandon, sparks of music bursting around him, on a beachside stage of tiki torches and fairy lights at night, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "strange-things": {
+   "name": "Strange Things",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "toys caught in odd poses across a bedroom floor as an eerie green light spills through the window, in a child bedroom at midnight, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "strength-of-a-raging-fire": {
+   "name": "Strength of a Raging Fire",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a calm young warrior woman in sparring robes standing tall amid a roaring ring of flame, fire bursting from her clenched fists, in a bamboo training yard at night, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "strike-a-good-match": {
+   "name": "Strike a Good Match",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "an elderly stern matchmaker inspecting a nervous young woman in an elaborate silk gown, a teacup tipping over, in a lantern-lit pavilion with plum blossoms, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "sven-leaping-reindeer": {
+   "name": "Sven - Leaping Reindeer",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a big shaggy chestnut elk with broad palmate antlers wrapped in woven red ribbons, leaping across a wide icy chasm in a single mighty bound, hooves trailing sparkling frost, in a dreamlike glacier valley under the northern lights, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "taran-magically-armed": {
+   "name": "Taran - Magically Armed",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a determined young shepherd boy with curly black hair and a patched blue-grey tunic, charging forward with a glowing enchanted sword trailing streaks of light, through a dark misty marsh toward a looming fortress, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "the-horseman-strikes": {
+   "name": "The Horseman Strikes!",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a headless rider in a tattered black cloak on a rearing coal-black stallion, hurling a flaming jack-o-lantern, at a covered wooden bridge in a misty autumn hollow at midnight, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "the-huntsman-on-the-queen-s-orders": {
+   "name": "The Huntsman - On the Queen's Orders",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a grim forest hunter with a braided grey beard and a mossy hooded cloak, a hunting knife at his belt, standing grim and torn, his hunting knife lowered, a dark forest closing in behind him, in a shadowy pine wood with twisted roots, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "the-queen-devious-disguise": {
+   "name": "The Queen - Devious Disguise",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a crooked old crone in a ragged moss-brown hooded cloak with a hooked nose and gleaming eyes, holding out a single glowing golden pear with a sly gleaming smile, at the door of a woodland cottage in a dark forest, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "the-queen-regal-monarch": {
+   "name": "The Queen - Regal Monarch",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a cold imperious sorceress queen with sharp cheekbones, ash-blonde hair swept up under a tall silver thorn crown and an emerald gown with a spiked collar, seated upright on a tall throne, chin raised, a cold glare demanding obedience, in a vast dark throne room of black marble and violet candles, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "the-terror-that-flaps-in-the-night": {
+   "name": "The Terror That Flaps in the Night",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a masked badger vigilante in a charcoal trench coat and crimson scarf swooping down out of a cloud of purple smoke onto a startled thug, on a moonlit city rooftop, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "thomas-wide-eyed-recruit": {
+   "name": "Thomas - Wide-Eyed Recruit",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a wide-eyed young soldier recruit with a mop of sandy hair in an oversized padded winter coat, gazing in awe at the sparkling winter landscape, breath steaming, at the edge of a pristine snowfield under a pale blue sky, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "tigger-bouncing-all-the-way": {
+   "name": "Tigger - Bouncing All the Way",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "an exuberant lanky kangaroo with cinnamon fur and a long knitted striped scarf, bouncing sky-high on his tail through drifting snowflakes, arms flung wide in delight, over a snowy woodland clearing with frosted pines, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "tinker-bell-generous-fairy": {
+   "name": "Tinker Bell - Generous Fairy",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a tiny fairy with short spiky indigo hair, dragonfly wings of amber glass and a tunic of stitched russet autumn leaves, sprinkling glittering golden dust over a heap of wild berries for her friends, in a tiny hollow-tree home lit by glow-worms, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "tinker-bell-giant-fairy": {
+   "name": "Tinker Bell - Giant Fairy",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a tiny fairy with short spiky indigo hair, dragonfly wings of amber glass and a tunic of stitched russet autumn leaves, grown to towering size, stamping through the shallows and rocking a small pirate ship with one foot, in a turquoise lagoon beside a jungle island, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "to-wither-a-flower": {
+   "name": "To Wither a Flower",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a cloaked hand trailing dark smoke, withering a bed of red roses into grey ash, in a once-lush walled garden under a sickly moon, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "tod-all-alone": {
+   "name": "Tod - All Alone",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a slender young silver fox with charcoal fur, a white-tipped tail and bright clever eyes, curled up small and forlorn, looking back over his shoulder with big hopeful eyes, at the edge of a rainy autumn forest beside an empty farm fence, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "tod-clever-fox": {
+   "name": "Tod - Clever Fox",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a slender young silver fox with charcoal fur, a white-tipped tail and bright clever eyes, nimbly chewing through a tangle of creeping vines with a cunning sidelong look, in an overgrown garden swallowed by glowing purple vines, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "under-the-sea": {
+   "name": "Under the Sea",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a joyful reef carnival of tropical fish, turtles, crabs and sea horses dancing in swirling bubbles and sunbeams, in a bright coral garden beneath the waves, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "ursula-deceiver": {
+   "name": "Ursula - Deceiver",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a scheming sea sorceress with deep green scaled skin, a venomous lionfish-fin mane, a long eel tail and strings of black pearls, reaching a clawed hand into a shimmering bubble that holds a captured golden melody, in her shadowy grotto of coral and bones deep beneath the sea, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "ursula-s-shell-necklace": {
+   "name": "Ursula's Shell Necklace",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a pale rose spiral conch-shell pendant on a gold chain, glowing with a captured golden melody, resting on a velvet cushion in an underwater grotto, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "ursula-vanessa": {
+   "name": "Ursula - Vanessa",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a sleek beautiful woman with sea-glass green eyes and a silver-streaked bob in a pearl-grey gown, a spiral shell pendant glowing at her throat, singing a hypnotic melody as her shell pendant glows and spins golden threads of voice, on a seaside castle balcony at twilight, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "ursula-whisper-of-vanessa": {
+   "name": "Ursula - Whisper of Vanessa",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a scheming sea sorceress with deep green scaled skin, a venomous lionfish-fin mane, a long eel tail and strings of black pearls, rising as a translucent ghostly spirit, her smile cruel, swirling dark water around her, over a moonlit ship deck in a stormy sea, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "violet-parr-force-field-practice": {
+   "name": "Violet Parr - Force Field Practice",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a shy determined teenage girl with a short choppy sandy-blonde bob, a sleek dark-green adventurer bodysuit and a hooded short cape, kneeling with both hands thrust out as a glowing violet sphere of force expands around her, on a quiet street in front of a modern house, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "violet-parr-learning-new-powers": {
+   "name": "Violet Parr - Learning New Powers",
+   "ink": "Amethyst",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a shy determined teenage girl with a short choppy sandy-blonde bob, a sleek dark-green adventurer bodysuit and a hooded short cape, shimmering half-transparent as she conjures a wobbly glowing bubble between her hands, startled and amazed, in a suburban backyard at twilight, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "violet-parr-super-resilient": {
+   "name": "Violet Parr - Super Resilient",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a shy determined teenage girl with a short choppy sandy-blonde bob, a sleek dark-green adventurer bodysuit and a hooded short cape, holding up a glowing dome of force as a huge boulder crashes against it, jaw set, in a collapsing rocky canyon, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "vixey-forest-friend": {
+   "name": "Vixey - Forest Friend",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a dainty pale-golden fox with cream paws and a sprig of wildflowers tucked behind one ear, peeking playfully out from behind a mossy log with a shy smile, in a sun-dappled spring meadow at the edge of the woods, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "white-rabbit-late-again": {
+   "name": "White Rabbit - Late Again",
+   "ink": "Emerald",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a fretful brown hare in a mustard-yellow waistcoat and spectacles clutching a brass pocket watch, dashing along at full tilt, staring at his pocket watch in panic, down a winding root tunnel into a topsy-turvy wonderland, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "woody-helping-a-friend": {
+   "name": "Woody - Helping a Friend",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a floppy hand-sewn cloth rag doll come to life, a round stitched fabric face with black button eyes, yarn hair and visible seams, wearing a patched corduroy coat and a felt aviator cap, reaching down to haul a little wind-up tin robot toy up onto a ledge with a determined stitched grin, on top of a cluttered toy shelf in a child bedroom, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "woody-waiting-for-a-friend": {
+   "name": "Woody - Waiting for a Friend",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a floppy hand-sewn cloth rag doll come to life, a round stitched fabric face with black button eyes, yarn hair and visible seams, wearing a patched corduroy coat and a felt aviator cap, sitting on a huge vine, gazing wistfully over the treetops, above a sprawling jungle at sunset, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "world-s-greatest-criminal-mind": {
+   "name": "World's Greatest Criminal Mind",
+   "ink": "Amber",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a portly gleeful villain in an opera cloak raising a toast while his henchmen cheer, in a lavish candlelit underground lair of stolen treasures, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  },
+  "you-broke-my-smolder": {
+   "name": "You Broke My Smolder",
+   "ink": "Steel",
+   "aspect": "2:3",
+   "megapixels": 1,
+   "prompt": "a vain dashing rogue mid-pose, his smug smirk collapsing as a bucket of water splashes over his head, in a cluttered round tower room full of paintings, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+  }
+ },
+ "ui": {
+  "title": {
+   "name": "title",
+   "aspect": "16:9",
+   "megapixels": 2,
+   "prompt": "an enchanted fairy-tale realm seen from a hilltop, a distant castle on a crag, rivers of glowing liquid ink magic swirling through the sky like ribbons of northern lights, at twilight with the first stars appearing, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+  },
+  "board-forest": {
+   "name": "board-forest",
+   "aspect": "16:9",
+   "megapixels": 2,
+   "prompt": "a moonlit forest glade of ancient mossy trees and ferns around a soft open clearing, at night with gentle silver moonlight and drifting fireflies, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with dappled green forest light and sly flickering wisps, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+  },
+  "board-courtyard": {
+   "name": "board-courtyard",
+   "aspect": "16:9",
+   "megapixels": 2,
+   "prompt": "a sunlit castle courtyard of pale flagstones with climbing roses on the surrounding walls, on a warm quiet afternoon, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+  },
+  "board-cavern": {
+   "name": "board-cavern",
+   "aspect": "16:9",
+   "megapixels": 2,
+   "prompt": "a vast crystal cavern with glowing gemstone clusters along the walls and a smooth still floor, lit by soft inner crystal light, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with clear blue crystalline light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+  },
+  "board-harbour": {
+   "name": "board-harbour",
+   "aspect": "16:9",
+   "megapixels": 2,
+   "prompt": "a starry harbour of calm water with moored sailing ships and lantern-lit quays along the far shore, under a deep blue night sky full of stars, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+  },
+  "deck-chooser": {
+   "name": "deck-chooser",
+   "aspect": "16:9",
+   "megapixels": 2,
+   "prompt": "a grand enchanted vaulted hall of tall arched windows and marble columns, floating motes of glowing ink and swirling colour, in warm candlelight, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with drifting violet arcane mist, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+  },
+  "victory": {
+   "name": "victory",
+   "aspect": "16:9",
+   "megapixels": 2,
+   "prompt": "a triumphant golden sunrise over a fairy-tale kingdom, beams of light and swirling sparkles of magic rising into the sky, in the early morning, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with warm honey-gold glowing light, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+  },
+  "defeat": {
+   "name": "defeat",
+   "aspect": "16:9",
+   "megapixels": 2,
+   "prompt": "a misty rain-soaked moor with a lone bare tree, the last embers of magic fading into grey drifting fog, at dusk under heavy clouds, an empty place with a calm open centre, soft muted tones, detail fading gently toward the edges, accented with a cold silver metallic sheen, luminous painterly fairy-tale illustration in gouache and watercolour, soft glowing magic, swirling ink-splash flourishes of liquid colour, rich jewel colours, expressive character acting, one clear focal subject, full-bleed picture edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition"
+  }
+ }
+}
