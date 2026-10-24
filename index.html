@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lorecannae</title>
 <link rel="icon" href="art/ui/cardback.svg">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=33555eb694">
 </head>
 <body>
 <!-- The board is the whole window. Everything that is not the board is a title screen,
@@ -65,39 +65,39 @@
 <div id="title-screen"></div>
 
 <!-- engine -->
-<script src="js/ns.js"></script>
-<script src="data/cards.js"></script>
-<script src="data/decks.js"></script>
-<script src="data/defects.js"></script>
-<script src="js/engine.js"></script>
-<script src="js/abilities.js"></script>
-<script src="data/abilities/amber.js"></script>
-<script src="data/abilities/amethyst.js"></script>
-<script src="data/abilities/emerald.js"></script>
-<script src="data/abilities/steel.js"></script>
-<script src="js/ai.js"></script>
+<script src="js/ns.js?v=e35a5903a1"></script>
+<script src="data/cards.js?v=8549144d95"></script>
+<script src="data/decks.js?v=39a4faeb50"></script>
+<script src="data/defects.js?v=9c6533da1d"></script>
+<script src="js/engine.js?v=13409d709c"></script>
+<script src="js/abilities.js?v=81521a5421"></script>
+<script src="data/abilities/amber.js?v=af97736bfb"></script>
+<script src="data/abilities/amethyst.js?v=d85ec5ebb0"></script>
+<script src="data/abilities/emerald.js?v=a9cbb87d5b"></script>
+<script src="data/abilities/steel.js?v=208e428c47"></script>
+<script src="js/ai.js?v=2579ff130a"></script>
 <!-- /engine -->
 <!-- Asset manifests (the asset pipeline writes these). Declared even while empty:
      a missing MODULE throws at boot; a missing entry falls back per card / sound. -->
-<script src="data/art-manifest.js"></script>
-<script src="data/audio-manifest.js"></script>
+<script src="data/art-manifest.js?v=74653a6412"></script>
+<script src="data/audio-manifest.js?v=c7fb110a7e"></script>
 <!-- Dev-only quick start (js/ui/dev-fixture.js), never on the default path. -->
-<script>if (/[?&]fixture\b/.test(location.search)) document.write('<script src="js/ui/dev-fixture.js"><\/script>');</script>
+<script>if (/[?&]fixture\b/.test(location.search)) document.write('<script src="js/ui/dev-fixture.js?v=7eedd1127a"><\/script>');</script>
 <!-- UI, in dependency order. Everything under js/ui/ is view layer. -->
-<script src="js/ui/core.js"></script>
-<script src="js/ui/cardview.js"></script>
-<script src="js/ui/boardart.js"></script>
-<script src="js/ui/preview.js"></script>
-<script src="js/ui/logtext.js"></script>
-<script src="js/ui/logpanel.js"></script>
-<script src="js/ui/targeting.js"></script>
-<script src="js/ui/sound.js"></script>
-<script src="js/ui/anim.js"></script>
-<script src="js/ui/hud.js"></script>
-<script src="js/ui/tutorial.js"></script>
-<script src="js/ui/game.js"></script>
-<script src="js/ui/deckbuilder.js"></script>
-<script src="js/ui/title.js"></script>
-<script src="js/ui/main.js"></script>
+<script src="js/ui/core.js?v=acc8487d97"></script>
+<script src="js/ui/cardview.js?v=fe593bf44a"></script>
+<script src="js/ui/boardart.js?v=2a23aa01e1"></script>
+<script src="js/ui/preview.js?v=d47ae71bb1"></script>
+<script src="js/ui/logtext.js?v=e4a9b66909"></script>
+<script src="js/ui/logpanel.js?v=ecb890b51b"></script>
+<script src="js/ui/targeting.js?v=0cd98bc11c"></script>
+<script src="js/ui/sound.js?v=5b9647950a"></script>
+<script src="js/ui/anim.js?v=683b056e32"></script>
+<script src="js/ui/hud.js?v=09773f454e"></script>
+<script src="js/ui/tutorial.js?v=94abc50ae4"></script>
+<script src="js/ui/game.js?v=d2bf43a221"></script>
+<script src="js/ui/deckbuilder.js?v=b10a8ca07c"></script>
+<script src="js/ui/title.js?v=fc0b40a8a6"></script>
+<script src="js/ui/main.js?v=7543a711bd"></script>
 </body>
 </html>

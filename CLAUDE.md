@@ -37,6 +37,7 @@ node tools/test.mjs --quiet     # headless tests (runs tests.html's script list 
 node tools/sim.mjs --games 50   # AI-vs-AI / random games with invariants after every step
 node tools/build-cards.mjs      # regenerate data/cards.js + data/decks.js from scratch/ dumps
 node tools/gate.mjs             # every gate, one line each
+node tools/stamp-assets.mjs     # re-stamp index.html ?v= hashes before every deploy commit
 ```
 
 ## Layout

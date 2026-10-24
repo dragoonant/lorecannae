@@ -3,6 +3,9 @@ import { spawnSync } from 'node:child_process';
 const steps = [
   ['tests', ['tools/test.mjs', '--quiet']],
   ['check-pages', ['tools/check-pages.mjs']],
+  ['stamp-assets', ['tools/stamp-assets.mjs', '--check']],
+  ['audit', ['tools/audit-cards.mjs']],
+  ['replay selftest', ['tools/replay-report.mjs', '--selftest']],
   ['sim random', ['tools/sim.mjs', '--games', '30', '--policy', 'random']],
   ['sim ai', ['tools/sim.mjs', '--games', '10']],
 ];
