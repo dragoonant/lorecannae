@@ -23,6 +23,7 @@ This file owns every decision. Other files point here; none restates a decision.
 | D15 | 2026-10-24 | **AI levels:** easy = one ply with noise; normal = one opponent ply (top 2, 1 world); hard = one opponent ply (top 4, 3 worlds). Measurements in docs/ai.md. | default |
 | D17 | 2026-10-24 | **Art (owner, after the first batch):** every card shows its ACTUAL character, recognisable ("Darkwing Duck not being a duck is really bad"), in **MGSD proportions** (about 2.5 heads tall, big head, short stubby limbs, detailed) with a **Disney-animation art direction**. Concern stated once to the owner (Disney enforcement; Pixelborn precedent); owner's call. Still never: official card images, frames, logos, or tracing/img2img of an official illustration. Style picked from an audition. | owner |
 | D16 | 2026-10-24 | **No castles in screen art** (Disney castle-logo trade dress); the UI prompt lint refuses castle words. | default |
+| D18 | 2026-10-27 | **Touch: a tap reads, a drag commits, a hold peeks** (owner: "the hearthstone treatment on mobile … I can't zoom in on cards and tapping on cards automatically plays"). A tap opens the card full height with its actions as buttons (or, during a question, picks it; on touch even a single pick waits for Confirm). A drag onto the play area, inkwell, lore track or a rival commits. A hold shows the card until the finger lifts. On a phone (coarse pointer, short side ≤ 540 px): the hand rests as a fan of card tops along the bottom edge and a tap raises it; recent plays run down the left edge; End turn is a round button on the right, gold while something can still act and green when nothing can; portrait shows a "turn sideways" gate; Add to Home Screen opens it full-screen and landscape (`manifest.webmanifest`). Desktop behaviour is unchanged. Same model in grandline and manaforge. `js/ui/touch.js`. | owner |
 
 ## Cut order if time runs short
 
@@ -32,6 +33,11 @@ deck-builder polish → animation beyond spotlight/lunge/banish → music tiers.
 prompts that say what they are about.
 
 ## Status
+
+**2026-10-27 — the touch model (D18).** Checked under phone emulation (844×390 landscape, touch
+events): splash, two-column picker, chooser, opening hand fits, tap raises the hand, tap reads a
+card with its buttons, ink by button, play by dragging from the resting hand, hold to peek, a
+character's quest/challenge buttons, history column, drawer, portrait gate; desktop unchanged.
 
 **2026-10-24 04:00 HST (end of the overnight run).** Playable and deployed:
 https://dragoonant.github.io/lorecannae/. All 136 pool cards scripted with behaviour tests (150

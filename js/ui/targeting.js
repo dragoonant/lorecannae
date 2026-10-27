@@ -42,6 +42,12 @@
   function nameOf(s, iid) { const c = s.cards[iid]; return c ? LC.fullName(LC.CARDS[c.id]) : '?'; }
 
   // Is every card this ask is about already drawn on the board, face up?
+  // How to answer a board question, in the words of the pointer in use.
+  function boardHow(a) {
+    const t = LC.touch.active();
+    if (a.max > 1) return (t ? ' Tap' : ' Click') + ' the highlighted cards, then Confirm.';
+    return t ? ' Tap a highlighted card, then Confirm.' : ' Click a highlighted card.';
+  }
   function onBoard(s, ask) {
     const seen = (ask.seen && ask.seen.length) ? ask.seen : (ask.from || []);
     if (!seen.length) return false;
@@ -64,14 +70,15 @@
     },
     isPicked: function (iid) { return picks.indexOf(iid) >= 0; },
     // A click on a candidate (board or panel). Single-pick asks with min 1 answer on the
-    // click itself — the click IS the player's choice, nothing was assumed.
+    // click itself — the click IS the player's choice, nothing was assumed. A finger is
+    // less sure than a mouse, so on touch the pick waits for Confirm (PLAN.md D18).
     toggle: function (s, iid, answer) {
       const a = s.ask;
       syncPicks(a);
       if (!LC.asks.isCandidate(s, iid)) return;
       const at = picks.indexOf(iid);
       if (at >= 0) { picks.splice(at, 1); LC.ui.render(); return; }
-      if (a.max === 1 && a.min === 1 && a.kind !== 'mulligan') { picks = []; peekedKey = null; answer([iid]); return; }
+      if (a.max === 1 && a.min === 1 && a.kind !== 'mulligan' && !LC.touch.active()) { picks = []; peekedKey = null; answer([iid]); return; }
       if (picks.length >= a.max) {
         if (a.max === 1) picks = [iid];      // swap the single pick rather than refuse
         else { flash('Already ' + a.max + ' selected — click one to unselect it.'); return; }
@@ -90,7 +97,7 @@
         const src = srcName(s, a);
         let text = withSrc(src, a.prompt);
         const m = LC.asks.mode(s);
-        if (m === 'board') text += a.max > 1 ? ' Click highlighted cards, then Confirm.' : ' Click a highlighted card.';
+        if (m === 'board') text += boardHow(a);
         else if (m === 'panel') text += a.max > 1 || a.kind === 'mulligan' ? ' Pick from the cards shown, then Confirm.' : ' Pick one of the cards shown.';
         return { text: text, cls: 'asking' };
       }
@@ -239,7 +246,7 @@
     if (a.kind === 'mulligan') confirmLabel = picks.length ? 'Put ' + picks.length + ' on the bottom and draw ' + picks.length : 'Keep this hand';
     else if (a.kind === 'order') confirmLabel = 'Confirm this order';
     else if (picks.length === 0 && a.min === 0) confirmLabel = null;
-    if (a.max > 1 || a.kind === 'mulligan' || a.kind === 'order' || (a.max === 1 && a.min === 0 && picks.length)) {
+    if (a.max > 1 || a.kind === 'mulligan' || a.kind === 'order' || (a.max === 1 && picks.length)) {
       if (confirmLabel) {
         const ok = el('button', 'action-btn choice-confirm', confirmLabel);
         ok.disabled = picks.length < a.min || picks.length > a.max || (a.sumCostMin && sumCost() < a.sumCostMin);
@@ -282,8 +289,8 @@
       bar.dataset.owner = 'ask';
       const src = srcName(s, a);
       bar.appendChild(el('span', 'choice-bar-prompt', withSrc(src, a.prompt) +
-        (a.max > 1 ? ' Click the highlighted cards, then Confirm.' : ' Click a highlighted card.')));
-      const needs = a.max > 1 || a.min === 0;
+        boardHow(a)));
+      const needs = a.max > 1 || a.min === 0 || picks.length > 0;
       if (needs) bar.appendChild(pickControls(s, a, answer, true));
       bar.appendChild(el('span', 'choice-flash', '')).id = 'choice-flash';
       bar.classList.add('open');

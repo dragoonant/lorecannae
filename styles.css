@@ -1211,12 +1211,86 @@ body.drawer-open #log-handle { opacity: 0; pointer-events: none; }
 @media (hover: none) {
   #preview { display: none !important; }
 }
+/* ================= phones: the touch model (PLAN.md D18, js/ui/touch.js) =================
+   A tap reads, a drag commits, a hold peeks. html.is-phone is a coarse pointer on a small
+   screen; the table takes the height, the hand rests as a fan of card tops along the
+   bottom edge (a tap raises it), recent plays run down the left edge, End turn is a round
+   button on the right. Portrait shows the "turn sideways" gate instead of a second layout. */
+html { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+#history, #hand-scrim, #rotate-gate { display: none; }
+.end-turn.is-ready { background: linear-gradient(180deg, #c9f7d6, #44c17b 60%, #2a8a52); border-color: #1f6b3f; color: #062a17; box-shadow: 0 0 16px rgba(70,220,130,.55), inset 0 1px 0 rgba(255,255,255,.6); }
+html.is-phone { --card-hand-w: 4.4rem; }
+html.is-phone #board { padding: 0 78px 0 60px; }
+html.is-phone #enemy-hand-bar { height: 12px; margin: 0; }
+html.is-phone #enemy-hand-bar.has-revealed { height: 40px; }
+html.is-phone #enemy-hand { --card-hand-w: 3rem; }
+html.is-phone #hand-bar { height: calc(var(--card-hand-h) * .42); padding: 0; overflow: visible; align-items: flex-start; position: relative; z-index: 30; }
+html.is-phone #hand { align-items: flex-start; padding-top: 2px; overflow: visible; }
+html.is-phone #hand .card:hover { transform: none; }
+html.is-phone body.hand-raised #hand { position: fixed; left: 60px; right: 78px; bottom: 6px; z-index: 61; align-items: flex-end; overflow: visible;
+  --card-hand-w: min(7.4rem, calc((100dvh - 3.5rem) / 1.4)); }
+html.is-phone body.hand-raised #hand-bar { z-index: 61; }
+html.is-phone body.hand-raised #hand .card .card-plate { visibility: visible !important; }
+html.is-phone body.hand-raised #hand .card.is-unaffordable { opacity: 1; filter: saturate(.55) brightness(.8); }
+html.is-phone body.hand-raised #hand-scrim { display: block; position: fixed; inset: 0; z-index: 60; background: rgba(8,5,24,.6); }
+html.is-phone #turn-bar { position: fixed; right: 4px; top: 6px; width: 70px; z-index: 45; display: flex; flex-direction: column; align-items: center; gap: .3rem; min-height: 0; padding: 0; text-align: center; }
+html.is-phone .turn-left { justify-self: auto; }
+html.is-phone .turn-label { font-size: .58rem; letter-spacing: .03em; line-height: 1.25; }
+html.is-phone .turn-hint, html.is-phone .turn-why, html.is-phone .turn-wait { display: none; }
+html.is-phone .turn-right { margin-right: 0; }
+html.is-phone .end-turn, html.is-phone #turn-bar .turn-left + .action-btn { position: fixed; right: 7px; top: 50%; transform: translateY(-50%); width: 64px; height: 64px; border-radius: 50%; padding: 0; font-size: .7rem; line-height: 1.1; white-space: normal; z-index: 46; }
+html.is-phone .end-turn:disabled { opacity: .55; }
+html.is-phone #log-handle { top: auto; bottom: 8px; transform: none; padding: .7rem .3rem; font-size: .62rem; }
+html.is-phone #history { display: flex; flex-direction: column; gap: 5px; position: fixed; left: 5px; top: 6px; bottom: calc(var(--card-hand-h) * .42 + 6px); width: 48px; z-index: 20; overflow: hidden; --card-board-w: 46px; }
+.history-card { flex: none; border-radius: 6px; cursor: pointer; }
+.history-card .card { width: 46px; font-size: calc(46px / 5.6); border-width: 2px; }
+.history-card .card-plate, .history-card .card-stats { display: none; }
+.history-card.mine .card { border-color: #e7c06a; }
+.history-card.theirs .card { border-color: #c3bdf0; }
+html.is-phone #choice-bar { bottom: calc(var(--card-hand-h) * .42 + 4px); max-width: calc(100vw - 150px); padding: .35rem .7rem; gap: .4rem; }
+html.is-phone .choice-bar-prompt { font-size: .76rem; }
+html.is-phone .choice-modal-content { max-height: calc(100dvh - 8px); max-width: calc(100vw - 150px); padding: .5rem .8rem; }
+html.is-phone .choice-modal-prompt { font-size: .82rem; margin-bottom: .1rem; }
+html.is-phone .choice-modal-hint, html.is-phone .choice-zone { display: none; }
+html.is-phone .choice-modal-cards { flex-wrap: nowrap; overflow-x: auto; justify-content: safe center; gap: .45rem; margin: .25rem 0 .35rem; padding: 7px 6px; --card-hand-w: 4.5rem; }
+html.is-phone .choice-modal-controls { position: sticky; bottom: 0; margin-top: 0; }
+html.is-phone .choice-source .card { --card-board-w: 6rem; width: 6rem; font-size: 1.05rem; }
+/* The inspector and the action panel: the card as tall as the screen, its notes and its
+   buttons beside it. */
+html.is-phone .card-preview { --card-preview-w: calc((100dvh - 2.6rem) / 1.4); width: var(--card-preview-w); min-height: calc(100dvh - 2.6rem); font-size: 12px; }
+html.is-phone .preview-side { width: 12.5rem; max-height: calc(100dvh - 2.6rem); font-size: .78rem; }
+html.is-phone .preview-row { flex-wrap: nowrap; }
+html.is-phone .inspect-body { flex-direction: row; align-items: flex-start; max-height: 100dvh; max-width: 100vw; padding: 6px; }
+html.is-phone .pop-box { padding: .5rem .7rem; max-height: calc(100dvh - 8px); max-width: calc(100vw - 8px); }
+html.is-phone .pop-title { display: none; }
+html.is-phone .pop-body { flex-wrap: nowrap; gap: .6rem; }
+html.is-phone .pop-buttons { min-width: 11rem; max-width: 16rem; max-height: calc(100dvh - 2rem); overflow-y: auto; }
+html.is-phone .pop-buttons .action-btn { font-size: .8rem; padding: .5rem .6rem; }
+/* The peek: the card for as long as the finger stays down; it takes no touches. */
+/* The picker in two columns: a phone's height holds two fields, not four. */
+html.is-phone .title-picker:not(.deck-chooser) { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1.2rem; width: min(46rem, 96vw); padding: .7rem 1.3rem .8rem; max-height: calc(100dvh - 3.2rem); margin-bottom: 2.6rem; }
+html.is-phone .title-picker:not(.deck-chooser) > .title-name, html.is-phone .title-start, html.is-phone .title-row, html.is-phone .title-picker .title-note { grid-column: 1 / -1; }
+html.is-phone .title-name-small { font-size: 1.5rem; margin: 0 0 .3rem; }
+html.is-phone .title-field { margin-bottom: .45rem; }
+html.is-phone .title-start { margin-top: .2rem; padding: .5rem 1rem; }
+html.is-phone .title-row { margin-top: .4rem; }
+html.is-phone .title-disclaimer { font-size: .56rem; line-height: 1.3; }
+html.is-phone .deck-chooser { max-height: calc(100dvh - 8px); padding: .7rem 1rem; }
+#inspector.is-peek { z-index: 70; pointer-events: none; background: rgba(10,6,30,.5); backdrop-filter: none; }
+#rotate-gate { position: fixed; inset: 0; z-index: 200; place-items: center; text-align: center; padding: 2rem;
+  background: radial-gradient(circle at 50% 40%, #2c1f62 0%, #0e0a26 70%); color: #fff0c0; font-family: var(--font-display); }
+html.is-phone.is-portrait #rotate-gate { display: grid; }
+.rotate-phone { width: 46px; height: 78px; margin: 0 auto 1.2rem; border: 3px solid #e7c06a; border-radius: 10px; box-shadow: 0 0 18px rgba(231,192,106,.45); animation: rotate-hint 2.6s ease-in-out infinite; }
+.rotate-text { font-size: 1.1rem; letter-spacing: .04em; }
+@keyframes rotate-hint { 0%, 25% { transform: rotate(0); } 55%, 100% { transform: rotate(-90deg); } }
+
 @media (prefers-reduced-motion: reduce) {
   body::before { animation: none; }
   #preview { transition: none; }
   #spotlight { transition: opacity .25s ease-out !important; }
   .role-actable, .lore-active-star, .lore-star.is-near.is-lit, .card.is-drying::before, .title-hint, .bz-inkswirl, .wipe-spark { animation: none; }
   .attack-arrow { animation: none; }
+  .rotate-phone { animation: none; transform: rotate(-90deg); }
   .fx-hit { animation: none !important; }
   .char-slot { transition: none; }
   #turn-banner.show .ribbon { animation: none; }

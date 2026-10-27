@@ -1,0 +1,12 @@
+{
+  "name": "Lorecannae",
+  "short_name": "Lorecannae",
+  "description": "An unofficial, non-commercial fan reproduction of a trading card game's rules, played in the browser.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0e0a26",
+  "theme_color": "#0e0a26",
+  "icons": [{ "src": "art/ui/cardback.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

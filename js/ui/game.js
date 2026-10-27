@@ -136,6 +136,7 @@
     if (LC.anim.busy()) return;
     const seat = LC.whoActs(UI.state);
     if (seat == null || !UI.isHuman(seat) || seat !== UI.viewSeat) return;
+    LC.touch.lowerHand();                 // a phone's raised hand settles once the move is made
     LC.sound.sfx('click');
     applyFrom(seat, action, 'human');
   };
@@ -287,7 +288,7 @@
     function justDragged() { return Date.now() - lastDragEnd < CLICK_GRACE_MS; }
     function begin(node, e, spec) {
       if (live) finish(false);            // a fresh press proves the old gesture is over
-      live = { node: node, spec: spec, startX: e.clientX, startY: e.clientY, moved: false };
+      live = { node: node, spec: spec, startX: e.clientX, startY: e.clientY, moved: false, touch: e.pointerType !== 'mouse' };
       // Set at PRESS time: by the 8px threshold the browser has already begun selecting.
       document.documentElement.classList.add('is-dragging');
       const sel = window.getSelection && window.getSelection();
@@ -307,6 +308,7 @@
         if (!live.spec.targets.length) return;           // undraggable stays tappable
         markTargets(true);
         if (live.spec.kind === 'hand') {
+          LC.touch.lowerHand();            // the drop targets are under a raised hand
           const clone = live.node.cloneNode(true);
           clone.classList.add('drag-clone');
           clone.removeAttribute('data-card-id');
@@ -355,7 +357,12 @@
       if (L.clone) L.clone.remove();
       if (L.arrow) LC.arrow.clear();
       document.querySelectorAll('.drop-ok, .drop-hot').forEach(function (n) { n.classList.remove('drop-ok', 'drop-hot'); });
-      if (wasTap && !L.moved && L.spec.onTap) L.spec.onTap(L.node);
+      if (wasTap && !L.moved && L.spec.onTap) {
+        // A finger's tap is followed by a click hit-tested where the finger WAS: on the
+        // panel or scrim the tap just opened, which would close it again at once.
+        if (L.touch) armClickSwallow();
+        L.spec.onTap(L.node);
+      }
     }
     function markTargets(on) {
       document.querySelectorAll('.drop-ok, .drop-hot').forEach(function (n) { n.classList.remove('drop-ok', 'drop-hot'); });
@@ -434,6 +441,7 @@
     // cards being chosen.
     LC.asks.renderEcho(p.text, p.cls === 'asking' && !panelShowing && LC.asks.mode(s) !== 'board' && !!m && m.classList.contains('peek'));
     LC.logPanel.render(s, p);
+    LC.touch.renderHistory(s);
     LC.hud.render(s, viewer);
     if (UI.mode === 'tutorial') LC.tutorial.onRender(s, acts);
   };
@@ -626,6 +634,9 @@
         Drag.begin(card, e, {
           kind: 'hand', iid: iid, targets: myMain ? spec.targets : [],
           onTap: function () {
+            // A phone's resting hand is a fan of corners: the first tap lifts it to read.
+            if (LC.touch.phone() && !LC.touch.handRaised()) { LC.touch.raiseHand(); return; }
+            LC.touch.lowerHand();
             if (UI.state.ask && LC.asks.isCandidate(UI.state, iid) && acting(UI.state) === UI.viewSeat) { LC.asks.toggle(UI.state, iid, UI.answer); return; }
             if (myMain) { LC.hud.openActions(iid); return; }
             LC.inspector.open(c.id, iid);
@@ -782,6 +793,8 @@
         const actable = {};
         left2.forEach(function (a) { actable[a.iid] = 1; });
         const n = Object.keys(actable).length;
+        // Amber while something can still act, green when nothing is left to do.
+        btn.classList.add(n ? 'has-plays' : 'is-ready');
         if (n) mid.appendChild(el('span', 'turn-hint', n + ' card' + (n === 1 ? '' : 's') + ' can still act'));
       } else {
         btn.disabled = true;

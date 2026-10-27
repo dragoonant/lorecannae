@@ -1,6 +1,6 @@
 // js/ui/preview.js — the enlargements (PRESENTATION-REFERENCE A4): hover preview,
-// inspector (tap / long-press), spotlight of every played card, and the read-only zone
-// browser. Deliberately not interchangeable: the preview follows the pointer, the
+// inspector (tap), the peek (a touch hold: the inspector for as long as the finger stays
+// down, PLAN.md D18), spotlight of every played card, and the read-only zone browser. Deliberately not interchangeable: the preview follows the pointer, the
 // inspector is a place you go, the spotlight is the game telling you something.
 //
 // The hover preview is ONE delegated listener on the document keyed on data-card-id
@@ -160,9 +160,10 @@
   // A press starts a gesture; the preview must not sit over the drop targets.
   document.addEventListener('pointerdown', function () { Preview.hide(); }, true);
 
-  // ---- long press: the touch stand-in for hover -----------------------------------
-  // Touch/pen only, distance beats time: drift past the slop hands the gesture back to
-  // the drag (which is the one that can commit an action).
+  // ---- hold to peek: the touch stand-in for hover ----------------------------------
+  // Touch/pen only, distance beats time: drift past the slop before the hold lands hands
+  // the gesture back to the drag (which is the one that can commit an action). Once the
+  // peek is up it stays until the finger lifts, and the lift answers nothing.
   let pressTimer = null;
   document.addEventListener('pointerdown', function (e) {
     if (e.pointerType === 'mouse') return;
@@ -170,7 +171,9 @@
     if (!t) return;
     clearTimeout(pressTimer);
     const sx = e.clientX, sy = e.clientY;
+    let peeking = false;
     function moved(ev) {
+      if (peeking) return;
       const dx = ev.clientX - sx, dy = ev.clientY - sy;
       if (Math.sqrt(dx * dx + dy * dy) > LONG_PRESS_SLOP_PX) end();
     }
@@ -179,17 +182,18 @@
       document.removeEventListener('pointermove', moved, true);
       document.removeEventListener('pointerup', end, true);
       document.removeEventListener('pointercancel', end, true);
+      if (peeking) LC.inspector.close();
     }
     document.addEventListener('pointermove', moved, true);
     document.addEventListener('pointerup', end, true);
     document.addEventListener('pointercancel', end, true);
     pressTimer = setTimeout(function () {
-      end();
       // The finger is still down: take the gesture off the drag and swallow the click
-      // that follows, so the release cannot also play the card that was being read.
-      if (LC.drag) { LC.drag.cancel(); LC.drag.swallowClick(); }
+      // that follows, so the release cannot also play or pick the card being read.
+      LC.drag.cancel(); LC.drag.swallowClick();
       const iid = t.dataset.iid != null ? (isNaN(t.dataset.iid) ? t.dataset.iid : Number(t.dataset.iid)) : null;
-      LC.inspector.open(t.dataset.cardId, iid);
+      peeking = true;
+      LC.inspector.peek(t.dataset.cardId, iid);
     }, LONG_PRESS_MS);
   }, true);
   document.addEventListener('contextmenu', function (e) {
@@ -202,6 +206,7 @@
     open: function (cardId, iid, extra) {
       Preview.hide();
       const box = ensure('inspector');
+      box.classList.remove('is-peek');
       box.textContent = '';
       const body = el('div', 'inspect-body');
       body.addEventListener('click', function (e) { e.stopPropagation(); });
@@ -215,9 +220,20 @@
       box.onclick = LC.inspector.close;
       document.addEventListener('keydown', escClose, true);
     },
+    // The card alone, no buttons, gone when the finger lifts (the hold above closes it).
+    peek: function (cardId, iid) {
+      Preview.hide();
+      const box = ensure('inspector');
+      box.textContent = '';
+      const body = el('div', 'inspect-body');
+      body.appendChild(buildRow(cardId, iid, liveState()).row);
+      box.appendChild(body);
+      box.classList.add('open', 'is-peek');
+      box.onclick = null;
+    },
     close: function () {
       const box = document.getElementById('inspector');
-      if (box) box.classList.remove('open');
+      if (box) box.classList.remove('open', 'is-peek');
       document.removeEventListener('keydown', escClose, true);
     },
   };
