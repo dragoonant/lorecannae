@@ -1,5 +1,5 @@
 {
- "style": "super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition",
+ "style": "detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition",
  "uiStyle": "classic feature-animation background painting, clean appealing shapes, bright saturated colours, polished soft shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition",
  "model": "dev",
  "prompts": {
@@ -8,357 +8,357 @@
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Agustin Madrigal, a kind gentle man with round glasses, short dark hair and a blue vest over a white shirt, cheerfully serving freshly baked arepas, in a warm sunlit kitchen, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Agustin Madrigal, a kind gentle man with round glasses, short dark hair and a blue vest over a white shirt, cheerfully serving freshly baked arepas, in a warm sunlit kitchen, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "akood-et-emuti": {
    "name": "Akood et Emuti",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Angel, the pink alien girlfriend of Stitch, a small alien just like Stitch but pink, with a pair of long curling antennae on her head and big notched ears, singing joyfully while sliding through swirling snow, on a snowy hill, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Angel, the pink alien girlfriend of Stitch, a small alien just like Stitch but pink, with a pair of long curling antennae on her head and big notched ears, singing joyfully while sliding through swirling snow, on a snowy hill, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "aladdin-and-genie-mischievous-pals": {
    "name": "Aladdin & Genie - Mischievous Pals",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Aladdin, a lean young street hero with messy black hair, a short purple vest, a red fez and baggy cream trousers, together with the Genie, a huge jolly blue genie with a black goatee and ponytail, gold wrist cuffs and a wispy blue smoke tail, laughing together as glowing magic sparkles swirl around a lamp, inside a colourful desert tent, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Aladdin, a lean young street hero with messy black hair, a short purple vest, a red fez and baggy cream trousers, together with the Genie, a huge jolly blue genie with a black goatee and ponytail, gold wrist cuffs and a wispy blue smoke tail, laughing together as glowing magic sparkles swirl around a lamp, inside a colourful desert tent, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "aladdin-doing-his-part": {
    "name": "Aladdin - Doing His Part",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Aladdin, a lean young street hero with messy black hair, a short purple vest, a red fez and baggy cream trousers, swinging a long pole to knock away a strange glowing gadget, in a desert palace hall full of treasure, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Aladdin, a lean young street hero with messy black hair, a short purple vest, a red fez and baggy cream trousers, swinging a long pole to knock away a strange glowing gadget, in a desert palace hall full of treasure, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "aladdin-prince-ali": {
    "name": "Aladdin - Prince Ali",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Aladdin dressed as a prince in a white-and-gold robe with a jewelled white turban topped with a feather, riding proudly in a royal parade, waving to the crowd, through a golden desert city street showered with confetti, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Aladdin dressed as a prince in a white-and-gold robe with a jewelled white turban topped with a feather, riding proudly in a royal parade, waving to the crowd, through a golden desert city street showered with confetti, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "alan-a-dale-loyal-bard": {
    "name": "Alan-a-Dale - Loyal Bard",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Alan-a-Dale, a lanky rooster minstrel with a feathered cap, playing a lute, strumming his lute and singing happily, perched on a twisting green vine in a jungle, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Alan-a-Dale, a lanky rooster minstrel with a feathered cap, playing a lute, strumming his lute and singing happily, perched on a twisting green vine in a jungle, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "angel-experiment-624": {
    "name": "Angel - Experiment 624",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Angel, the pink alien girlfriend of Stitch, a small alien just like Stitch but pink, with a pair of long curling antennae on top of her head, big notched ears with dark tips, a pale pink chest and long eyelashes, leaping with antennae flying, firing a pink plasma blaster, on a snowy hill under a starry sky, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Angel, the pink alien girlfriend of Stitch, a small alien just like Stitch but pink, with a pair of long curling antennae on top of her head, big notched ears with dark tips, a pale pink chest and long eyelashes, leaping with antennae flying, firing a pink plasma blaster, on a snowy hill under a starry sky, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "angel-siren-singer": {
    "name": "Angel - Siren Singer",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Angel, the pink alien girlfriend of Stitch, a small alien just like Stitch but pink, with a pair of long curling antennae on top of her head, big notched ears with dark tips, a pale pink chest and long eyelashes, singing a hypnotic siren song with her eyes closed, glowing pink sound rings radiating from her mouth, on a colourful beach at sunset, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Angel, the pink alien girlfriend of Stitch, a small alien just like Stitch but pink, with a pair of long curling antennae on top of her head, big notched ears with dark tips, a pale pink chest and long eyelashes, singing a hypnotic siren song with her eyes closed, glowing pink sound rings radiating from her mouth, on a colourful beach at sunset, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "angela-night-warrior": {
    "name": "Angela - Night Warrior",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Angela, a young female gargoyle warrior whose skin is lavender purple all over her face and body, pointed ears, long flowing black hair, large lavender bat wings and a long tail, in a pale tunic, gliding through the night sky with wings spread, ready for battle, among the stars over a dark sea, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Angela, a young female gargoyle warrior whose skin is lavender purple all over her face and body, pointed ears, long flowing black hair, large lavender bat wings and a long tail, in a pale tunic, gliding through the night sky with wings spread, ready for battle, among the stars over a dark sea, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "ariel-ethereal-voice": {
    "name": "Ariel - Ethereal Voice",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Ariel, a young mermaid with long red hair, a purple seashell top and a green tail, as a glowing spirit, singing with golden light pouring from her voice, in a swirling deep blue ocean, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Ariel, a young mermaid with long red hair, a purple seashell top and a green tail, as a glowing spirit, singing with golden light pouring from her voice, in a swirling deep blue ocean, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "aurora-holding-court": {
    "name": "Aurora - Holding Court",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Princess Aurora, a graceful princess with long wavy golden hair, a gold tiara and a flowing pink gown, seated gracefully, welcoming guests with a warm smile, in a palace garden full of roses, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Princess Aurora, a graceful princess with long wavy golden hair, a gold tiara and a flowing pink gown, seated gracefully, welcoming guests with a warm smile, in a palace garden full of roses, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "bambi-ethereal-fawn": {
    "name": "Bambi - Ethereal Fawn",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Bambi, a young white-tailed fawn with white spots, big brown eyes and long legs, as a glowing translucent spirit fawn leaping with trails of light, through a twilight winter forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Bambi, a young white-tailed fawn with white spots, big brown eyes and long legs, as a glowing translucent spirit fawn leaping with trails of light, through a twilight winter forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "battering-ram": {
    "name": "Battering Ram",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "chibi soldiers in round helmets pushing a huge iron-capped log battering ram on wheels into a splintering wooden gate, in snowy weather, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "stocky soldiers in round helmets pushing a huge iron-capped log battering ram on wheels into a splintering wooden gate, in snowy weather, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "benja-guardian-of-the-dragon-gem": {
    "name": "Benja - Guardian of the Dragon Gem",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Chief Benja, a calm noble chief with black hair in a topknot, a short goatee and teal-and-gold layered robes, holding a curved sword with calm resolve as a blue dragon gem glows, in an ancient stone temple hall, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Chief Benja, a calm noble chief with black hair in a topknot, a short goatee and teal-and-gold layered robes, holding a curved sword with calm resolve as a blue dragon gem glows, in an ancient stone temple hall, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "besties-assemble": {
    "name": "Besties, Assemble!",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Meilin Lee and her best friends cheering together with fluffy red panda ear headbands, at a colourful party with confetti, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Meilin Lee and her best friends cheering together with fluffy red panda ear headbands, at a colourful party with confetti, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "bobby-zimuruski-spray-cheese-kid": {
    "name": "Bobby Zimuruski - Spray Cheese Kid",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Bobby Zimuruski, a lanky goofy teenage cartoon dog with shaggy orange hair, blue sunglasses and a white shirt, spraying a can of cheese into a wobbly tower with wild delight, at a colourful party with balloons and streamers, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Bobby Zimuruski, a lanky goofy teenage cartoon dog with shaggy orange hair, blue sunglasses and a white shirt, spraying a can of cheese into a wobbly tower with wild delight, at a colourful party with balloons and streamers, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "broadway-sturdy-and-strong": {
    "name": "Broadway - Sturdy and Strong",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Broadway, a big heavyset teal gargoyle with leathery bat wings, small horns, a round belly and a friendly face, wearing a loincloth and belt, crouching protectively with wings spread wide, on a stone rooftop over a glowing night city, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Broadway, a big heavyset teal gargoyle with leathery bat wings, small horns, a round belly and a friendly face, wearing a loincloth and belt, crouching protectively with wings spread wide, on a stone rooftop over a glowing night city, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "buzz-s-arm": {
    "name": "Buzz's Arm",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Woody the cowboy toy proudly holding up a detached white space-ranger toy arm with a green band and a purple glove hand, in a jungle clearing, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Woody the stitched cloth cowboy figure proudly holding up a detached white space-ranger figure arm with a green band and a purple glove hand, in a jungle clearing, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "camilo-madrigal-prankster": {
    "name": "Camilo Madrigal - Prankster",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Camilo Madrigal, a lanky grinning teenage shapeshifter with curly black hair and a yellow ruana poncho, mid shapeshift with a mischievous grin, swirling pink magic, in a colourful family courtyard, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Camilo Madrigal, a lanky grinning teenage shapeshifter with curly black hair and a yellow ruana poncho, mid shapeshift with a mischievous grin, swirling pink magic, in a colourful family courtyard, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "chernabog-unnatural-force": {
    "name": "Chernabog - Unnatural Force",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Chernabog, a colossal black winged demon with great horns, glowing yellow eyes and enormous clawed hands, spreading his huge wings as ghostly green spirits swirl around him, atop a dark mountain over a sleeping village at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Chernabog, a colossal black winged demon with great horns, glowing yellow eyes and enormous clawed hands, spreading his huge wings as ghostly green spirits swirl around him, atop a dark mountain over a sleeping village at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "cheshire-cat-inexplicable": {
    "name": "Cheshire Cat - Inexplicable",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "the Cheshire Cat, a round pink-and-purple striped cat with a huge toothy crescent grin and yellow eyes, partly fading into swirls, floating upside down, grinning wide as his body fades into swirling pink mist, in a twisting magical wonderland forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "the Cheshire Cat, a round pink-and-purple striped cat with a huge toothy crescent grin and yellow eyes, partly fading into swirls, floating upside down, grinning wide as his body fades into swirling pink mist, in a twisting magical wonderland forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "christopher-robin-joining-the-fun": {
    "name": "Christopher Robin - Joining the Fun",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Christopher Robin, a small boy with tousled reddish-brown hair in a grey jumper, blue shorts and wellington boots, throwing a snowball with a big smile, in a snowy wood, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Christopher Robin, a small boy with tousled reddish-brown hair in a grey jumper, blue shorts and wellington boots, throwing a snowball with a big smile, in a snowy wood, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "circle-of-life": {
    "name": "Circle of Life",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Rafiki, a wise old mandrill baboon shaman with grey fur, a white beard and a colourful blue-and-red face, standing on a high rocky outcrop lifting a newborn lion cub toward the sun, animals gathered below, on the savanna at golden sunrise, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Rafiki, a wise old mandrill baboon shaman with grey fur, a white beard and a colourful blue-and-red face, standing on a high rocky outcrop lifting a newborn lion cub toward the sun, animals gathered below, on the savanna at golden sunrise, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "dale-ready-for-his-shot": {
    "name": "Dale - Ready for His Shot",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Dale, a chipmunk with a big red nose, a gap between his buck teeth and a goofy grin, wearing a round armour suit bristling with long green chestnut-husk spikes, his red nose and buck teeth poking out in a cheeky grin, ready for action, in a sunny garden, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Dale, a chipmunk with a big red nose, a gap between his buck teeth and a goofy grin, wearing a round armour suit bristling with long green chestnut-husk spikes, his red nose and buck teeth poking out in a cheeky grin, ready for action, in a sunny garden, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "darkwing-duck-crime-fighter": {
    "name": "Darkwing Duck - Crime Fighter",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Darkwing Duck, a white cartoon duck hero with an orange bill, a purple domino mask, a purple gangster-style fedora hat with a pinched creased crown and a wide floppy brim (a fedora, rounded on top), a long purple cape lined in pink and a plain teal turtleneck, bursting heroically out of a cloud of smoke, on top of a frosty city bridge tower at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Darkwing Duck, a white cartoon duck hero with an orange bill, a purple domino mask, a purple gangster-style fedora hat with a pinched creased crown and a wide floppy brim (a fedora, rounded on top), a long purple cape lined in pink and a plain teal turtleneck, bursting heroically out of a cloud of smoke, on top of a frosty city bridge tower at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "darkwing-duck-shadowy-superhero": {
    "name": "Darkwing Duck - Shadowy Superhero",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Darkwing Duck, a white cartoon duck hero with an orange bill, a purple domino mask, a purple gangster-style fedora hat with a pinched creased crown and a wide floppy brim (a fedora, rounded on top), a long purple cape lined in pink and a plain teal turtleneck, leaping out of the shadows with a gas gun raised and a confident grin, in a misty night alley with a glowing streetlamp, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Darkwing Duck, a white cartoon duck hero with an orange bill, a purple domino mask, a purple gangster-style fedora hat with a pinched creased crown and a wide floppy brim (a fedora, rounded on top), a long purple cape lined in pink and a plain teal turtleneck, leaping out of the shadows with a gas gun raised and a confident grin, in a misty night alley with a glowing streetlamp, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "david-protective-snowboarder": {
    "name": "David - Protective Snowboarder",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "David, a friendly young Hawaiian man with short black hair in a puffy blue snow jacket, holding a yellow snowboard like a shield against flying snowballs, on a snowy slope, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "David, a friendly young Hawaiian man with short black hair in a puffy blue snow jacket, holding a yellow snowboard like a shield against flying snowballs, on a snowy slope, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "demona-betrayer-of-the-clan": {
    "name": "Demona - Betrayer of the Clan",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Demona, a fierce female gargoyle with lavender-blue skin, a long mane of red hair, golden armbands, large leathery bat wings and a long tail, gliding fiercely on her wings with a glowing energy blaster, through a stormy night sky over city rooftops, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Demona, a fierce female gargoyle with lavender-blue skin, a long mane of red hair, golden armbands, large leathery bat wings and a long tail, gliding fiercely on her wings with a glowing energy blaster, through a stormy night sky over city rooftops, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "demona-scourge-of-the-wyvern-clan": {
    "name": "Demona - Scourge of the Wyvern Clan",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Demona, a fierce female gargoyle with lavender-blue skin, a long mane of red hair, golden armbands, large leathery bat wings and a long tail, chanting a spell with glowing green magic swirling around her claws, on a castle battlement at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Demona, a fierce female gargoyle with lavender-blue skin, a long mane of red hair, golden armbands, large leathery bat wings and a long tail, chanting a spell with glowing green magic swirling around her claws, on a castle battlement at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "diablo-stone-servant": {
    "name": "Diablo - Stone Servant",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Diablo, a black raven with cracked stone feathers glowing with molten orange fire between them, spreading his burning wings menacingly, on a ruined stone pillar, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Diablo, a black raven with cracked stone feathers glowing with molten orange fire between them, spreading his burning wings menacingly, on a ruined stone pillar, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "dr-hamsterviel-evil-observer": {
    "name": "Dr. Hamsterviel - Evil Observer",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Dr. Hamsterviel, a tiny white gerbil-like alien villain with huge ears, a sneer and a red cape with a high collar, peering down with an evil smirk from a high-tech control chair, in a spaceship command room with round windows onto space, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Dr. Hamsterviel, a tiny white gerbil-like alien villain with huge ears, a sneer and a red cape with a high collar, peering down with an evil smirk from a high-tech control chair, in a spaceship command room with round windows onto space, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "dumbo-ninth-wonder-of-the-universe": {
    "name": "Dumbo - Ninth Wonder of the Universe",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Dumbo, a baby circus elephant with enormous floppy ears, big blue eyes and a tiny yellow cap, wearing a red-and-gold ruffled show collar, a tiny mouse in a red bandleader jacket riding on his head, soaring proudly in a spotlight, under the big top of a circus tent full of cheering crowds, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Dumbo, a baby circus elephant with enormous floppy ears, big blue eyes and a tiny yellow cap, wearing a red-and-gold ruffled show collar, a tiny mouse in a red bandleader jacket riding on his head, soaring proudly in a spotlight, under the big top of a circus tent full of cheering crowds, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "dumbo-the-flying-elephant": {
    "name": "Dumbo - The Flying Elephant",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Dumbo, a baby circus elephant with enormous floppy ears, big blue eyes and a tiny yellow cap, flying happily by flapping his huge ears, over a starry night sky with circus lights below, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Dumbo, a baby circus elephant with enormous floppy ears, big blue eyes and a tiny yellow cap, flying happily by flapping his huge ears, over a starry night sky with circus lights below, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "education-or-elimination": {
    "name": "Education or Elimination",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a wise old owl lecturing a startled young red fox cub, little birds fluttering around, in a windy autumn forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "a wise old owl lecturing a startled young red fox cub, little birds fluttering around, in a windy autumn forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "eilonwy-princess-of-llyr": {
    "name": "Eilonwy - Princess of Llyr",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Princess Eilonwy, a young princess with long golden hair in a pink dress, holding a small floating glowing bauble, holding up her glowing bauble to light the way, in a dark mysterious cave, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Princess Eilonwy, a young princess with long golden hair in a pink dress, holding a small floating glowing bauble, holding up her glowing bauble to light the way, in a dark mysterious cave, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "elinor-renowned-diplomat": {
    "name": "Elinor - Renowned Diplomat",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Queen Elinor, a regal queen with very long dark brown hair, a gold circlet and a dark green gown with gold Celtic trim, standing tall with calm authority, holding a royal sceptre, in a grand Scottish great hall with green drapes, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Queen Elinor, a regal queen with very long dark brown hair, a gold circlet and a dark green gown with gold Celtic trim, standing tall with calm authority, holding a royal sceptre, in a grand Scottish great hall with green drapes, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "elsa-exploring-the-unknown": {
    "name": "Elsa - Exploring the Unknown",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Queen Elsa, a young snow queen with a long platinum-blonde side braid and blue eyes, in a shimmering pale blue ice gown with a sheer sparkling cape, gently conjuring sparkling ice crystals with a curious smile, in an enchanted misty forest at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Queen Elsa, a young snow queen with a long platinum-blonde side braid and blue eyes, in a shimmering pale blue ice gown with a sheer sparkling cape, gently conjuring sparkling ice crystals with a curious smile, in an enchanted misty forest at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "elsa-spirit-of-winter": {
    "name": "Elsa - Spirit of Winter",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Elsa, a young snow queen with long flowing loose platinum-blonde hair and blue eyes, in a shimmering white ice gown with a long sheer sparkling cape, arms raised to conjure a swirling blizzard of glowing snowflakes, above an ice-locked fjord at night under green northern lights, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Elsa, a young snow queen with long flowing loose platinum-blonde hair and blue eyes, in a shimmering white ice gown with a long sheer sparkling cape, arms raised to conjure a swirling blizzard of glowing snowflakes, above an ice-locked fjord at night under green northern lights, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "enigmatic-inkcaster": {
    "name": "Enigmatic Inkcaster",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a still life of an ornate golden magical staff with curling hooks, floating upright by itself above a pool of swirling glowing blue ink, in a mysterious enchanted chamber, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "a still life of an ornate golden magical staff with curling hooks, floating upright by itself above a pool of swirling glowing blue ink, in a mysterious enchanted chamber, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "finnick-tiny-terror": {
    "name": "Finnick - Tiny Terror",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Finnick, a tiny fennec fox with huge ears and a gruff scowl, wearing a fluffy white bunny costume, stomping forward with a pacifier and a menacing scowl, in a city street at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Finnick, a tiny fennec fox with huge ears and a gruff scowl, wearing a fluffy white bunny costume, stomping forward with a pacifier and a menacing scowl, in a city street at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "flynn-rider-spectral-scoundrel": {
    "name": "Flynn Rider - Spectral Scoundrel",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Flynn Rider, a roguish young man with tousled brown hair, a goatee and a smug smile, wearing a teal vest over a white shirt, as a glowing translucent green ghost, sneaking off with a jewelled crown, in a haunted moonlit castle hall, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Flynn Rider, a roguish young man with tousled brown hair, a goatee and a smug smile, wearing a teal vest over a white shirt, as a glowing translucent green ghost, sneaking off with a jewelled crown, in a haunted moonlit castle hall, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "freeze-the-vine": {
    "name": "Freeze the Vine",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Elsa blasting a wall of twisting glowing purple vines into sparkling ice, in a magical night sky, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Elsa blasting a wall of twisting glowing purple vines into sparkling ice, in a magical night sky, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "gaetan-moliere-clever-burrower": {
    "name": "Gaetan Moliere - Clever Burrower",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Mole, a short stocky mole-like digger with a bushy beard, a big nose, a miner helmet with a lamp and dusty overalls, popping out of a tunnel with a handful of dirt, grinning, in an underground cavern with glowing roots, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Mole, a short stocky mole-like digger with a bushy beard, a big nose, a miner helmet with a lamp and dusty overalls, popping out of a tunnel with a handful of dirt, grinning, in an underground cavern with glowing roots, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "gaston-superior-archer": {
    "name": "Gaston - Superior Archer",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Gaston, a huge muscular hunter with a black ponytail tied with a red ribbon, a cleft chin, a red shirt, tan breeches and tall brown boots, drawing a big bow with a smug grin, aiming an arrow, in an autumn forest clearing, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Gaston, a huge muscular hunter with a black ponytail tied with a red ribbon, a cleft chin, a red shirt, tan breeches and tall brown boots, drawing a big bow with a smug grin, aiming an arrow, in an autumn forest clearing, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "grandmother-willow-ancient-advisor": {
    "name": "Grandmother Willow - Ancient Advisor",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Grandmother Willow, a giant ancient weeping willow tree whose gnarled trunk bark forms the kindly wrinkled face of an old woman with gentle eyes, long curtains of hanging green willow branches, smiling warmly, her branches sweeping gently over a little raccoon and a hummingbird, beside a misty river glade, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Grandmother Willow, a giant ancient weeping willow tree whose gnarled trunk bark forms the kindly wrinkled face of an old woman with gentle eyes, long curtains of hanging green willow branches, smiling warmly, her branches sweeping gently over a little raccoon and a hummingbird, beside a misty river glade, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "hades-looking-for-a-deal": {
    "name": "Hades - Looking for a Deal",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Hades, a lanky grey-skinned god of the underworld with blue flame hair, yellow eyes, sharp teeth and a dark smoky toga, leaning forward with a sly grin and an outstretched hand offering a deal, in the gloomy underworld with green smoke, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Hades, a lanky grey-skinned god of the underworld with blue flame hair, yellow eyes, sharp teeth and a dark smoky toga, leaning forward with a sly grin and an outstretched hand offering a deal, in the gloomy underworld with green smoke, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "hamish-hubert-and-harris-troublemaking-triplets": {
    "name": "Hamish, Hubert & Harris - Troublemaking Triplets",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Hamish, Hubert and Harris, mischievous identical little brothers with curly bright red hair and freckles in matching green tartan kilts, running and giggling with stolen pastries and a wooden club, through a misty Scottish forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Hamish, Hubert and Harris, mischievous identical little brothers with curly bright red hair and freckles in matching green tartan kilts, running and giggling with stolen pastries and a wooden club, through a misty Scottish forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "hamm-piggy-bank": {
    "name": "Hamm - Piggy Bank",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Hamm, a pink plastic piggy bank toy with a cork stopper in his belly and a coin slot on his back, jingling happily as gold coins fly out of his coin slot, on a sunny toy shelf in a child bedroom, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Hamm, a pink plastic piggy bank figure with a cork stopper in his belly and a coin slot on his back, jingling happily as gold coins fly out of his coin slot, on a sunny playroom shelf in a child bedroom, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "he-hurled-his-thunderbolt": {
    "name": "He Hurled His Thunderbolt",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Zeus, a huge muscular god with a golden glow and a white beard, hurling a crackling thunderbolt, above the clouds, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Zeus, a huge muscular god with a golden glow and a white beard, hurling a crackling thunderbolt, above the clouds, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "i-find-em-i-flatten-em": {
    "name": "I Find ’Em, I Flatten ’Em",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Luisa Madrigal, a very tall young woman with a bodybuilder physique, huge muscular arms and very broad shoulders in a white blouse and blue-violet skirt, smashing boulders while donkeys float around her, in a magical purple dreamscape, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Luisa Madrigal, a very tall young woman with a bodybuilder physique, huge muscular arms and very broad shoulders in a white blouse and blue-violet skirt, smashing boulders while donkeys float around her, in a magical purple dreamscape, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "inscrutable-map": {
    "name": "Inscrutable Map",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "an old unrolled parchment map covered in glowing mysterious golden symbols, on an explorer table in a jungle tent, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition",
+   "prompt": "an old unrolled parchment map covered in glowing mysterious golden symbols, on an explorer table in a jungle tent, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition",
    "allow": [
     "map",
     "parchment"
@@ -369,35 +369,35 @@
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Isis Vanderchill, a large imposing icy-blue villainess with a towering white bouffant, a pearl necklace and a white fur stole, frost curling from her fingers, blasting a gleeful jet of ice that freezes the street, in a snowy city square at night with icicles everywhere, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Isis Vanderchill, a large imposing icy-blue villainess with a towering white bouffant, a pearl necklace and a white fur stole, frost curling from her fingers, blasting a gleeful jet of ice that freezes the street, in a snowy city square at night with icicles everywhere, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "jasmine-fearless-princess": {
    "name": "Jasmine - Fearless Princess",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Princess Jasmine, a young princess with a long black ponytail bound with gold bands, gold earrings and a teal top with flowing teal trousers, leaping boldly with her ponytail flying, across palace rooftops under a starry desert sky, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Princess Jasmine, a young princess with a long black ponytail bound with gold bands, gold earrings and a teal top with flowing teal trousers, leaping boldly with her ponytail flying, across palace rooftops under a starry desert sky, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "john-silver-alien-pirate": {
    "name": "John Silver - Alien Pirate",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "John Silver, a big burly cyborg pirate captain with a mechanical arm, a glowing cyborg eye, a long dark coat and a tricorn hat, grinning slyly with his mechanical arm raised, on the deck of a solar-sail pirate ship in space, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "John Silver, a big burly cyborg pirate captain with a mechanical arm, a glowing cyborg eye, a long dark coat and a tricorn hat, grinning slyly with his mechanical arm raised, on the deck of a solar-sail pirate ship in space, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "jumba-jookiba-prolific-inventor": {
    "name": "Jumba Jookiba - Prolific Inventor",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Jumba Jookiba, a huge round purple alien scientist with a wide face with two rows of eyes, a pair above a pair, a big toothy grin and a lab coat, grinning proudly beside a group of cute little alien experiments, in a snowy outdoor laboratory, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Jumba Jookiba, a huge round purple alien scientist with a wide face with two rows of eyes, a pair above a pair, a big toothy grin and a lab coat, grinning proudly beside a group of small mischievous alien experiments, in a snowy outdoor laboratory, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "junior-woodchuck-guidebook": {
    "name": "Junior Woodchuck Guidebook",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a big red leather scout guidebook with a golden clasp, a little duckling scout in a green cap peeking excitedly over it, at a forest campsite, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition",
+   "prompt": "a big red leather scout guidebook with a golden clasp, a little duckling scout in a green cap peeking excitedly over it, at a forest campsite, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition",
    "allow": [
     "guidebook",
     "book"
@@ -408,161 +408,161 @@
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Launchpad McQuack, a tall lanky white duck pilot with a red-orange tuft of hair, a brown leather flight jacket, a white scarf and aviator goggles, running eagerly with a wrench and a toolbox, inside a cluttered aircraft hangar at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Launchpad McQuack, a tall lanky white duck pilot with a red-orange tuft of hair, a brown leather flight jacket, a white scarf and aviator goggles, running eagerly with a wrench and a toolbox, inside a cluttered aircraft hangar at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "lenny-toy-binoculars": {
    "name": "Lenny - Toy Binoculars",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Lenny, a little blue plastic toy pair of binoculars come to life, its body is the binoculars, its two big round lenses are its eyes, with small orange wind-up feet, standing alert, peering through his big lenses, in a lush jungle full of sunlight, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Lenny, a little blue plastic pair of binoculars come to life, its body is the binoculars, its two big round lenses are its eyes, with small orange wind-up feet, standing alert, peering through his big lenses, in a lush jungle full of sunlight, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "lexington-small-in-stature": {
    "name": "Lexington - Small in Stature",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Lexington, a small wiry green-brown gargoyle with webbed glider wings, big ears and a clever face, gliding swiftly with webbed wings spread, over a glowing city at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Lexington, a small wiry green-brown gargoyle with webbed glider wings, big ears and a clever face, gliding swiftly with webbed wings spread, over a glowing city at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "lilo-and-stitch-fun-loving-friends": {
    "name": "Lilo & Stitch - Fun-Loving Friends",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Lilo, a little Hawaiian girl with long black hair, big brown eyes and a red dress with a white leaf pattern, together with Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, laughing together as they ride a surfboard, on a sunny Hawaiian beach with palm trees, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Lilo, a little Hawaiian girl with long black hair, big brown eyes and a red dress with a white leaf pattern, together with Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, laughing together as they ride a surfboard, on a sunny Hawaiian beach with palm trees, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "lilo-best-explorer-ever": {
    "name": "Lilo - Best Explorer Ever",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Lilo, a little Hawaiian girl with long black hair, big brown eyes, wearing an orange astronaut spacesuit, charging forward bravely with one fist raised, inside a futuristic alien spaceship, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Lilo, a little Hawaiian girl with long black hair, big brown eyes, wearing an orange astronaut spacesuit, charging forward bravely with one fist raised, inside a futuristic alien spaceship, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "look-at-this-family": {
    "name": "Look at This Family",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a big joyful family gathered at the glowing doorway of their colourful magical house, golden butterflies swirling, at night in a mountain village, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "a big joyful family gathered at the glowing doorway of their colourful magical house, golden butterflies swirling, at night in a mountain village, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "luisa-madrigal-confident-climber": {
    "name": "Luisa Madrigal - Confident Climber",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Luisa Madrigal, a very tall young woman with an extremely muscular bodybuilder physique, massive bulging biceps, a thick neck and very broad shoulders with dark hair in a short bob with a tiny topknot, small earrings, a white embroidered peasant blouse and a long blue-violet skirt, climbing a sheer cliff with ropes and a red scarf, grinning confidently, wearing climbing gear, on a towering rock face above the clouds, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Luisa Madrigal, a very tall young woman with an extremely muscular bodybuilder physique, massive bulging biceps, a thick neck and very broad shoulders with dark hair in a short bob with a tiny topknot, small earrings, a white embroidered peasant blouse and a long blue-violet skirt, climbing a sheer cliff with ropes and a red scarf, grinning confidently, wearing climbing gear, on a towering rock face above the clouds, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "luisa-madrigal-pushing-through": {
    "name": "Luisa Madrigal - Pushing Through",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Luisa Madrigal, a very tall young woman with an extremely muscular bodybuilder physique, massive bulging biceps, a thick neck and very broad shoulders with dark hair in a short bob with a tiny topknot, small earrings, a white embroidered peasant blouse and a long blue-violet skirt, hauling a pair of stubborn donkeys up a steep path on her broad shoulders, gritting her teeth, on a sunny mountain trail with waterfalls, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Luisa Madrigal, a very tall young woman with an extremely muscular bodybuilder physique, massive bulging biceps, a thick neck and very broad shoulders with dark hair in a short bob with a tiny topknot, small earrings, a white embroidered peasant blouse and a long blue-violet skirt, hauling a pair of stubborn donkeys up a steep path on her broad shoulders, gritting her teeth, on a sunny mountain trail with waterfalls, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "lyle-tiberius-rourke-adventurer-for-hire": {
    "name": "Lyle Tiberius Rourke - Adventurer for Hire",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Commander Rourke, a huge square-jawed mercenary with a grey crew cut and a cleft chin in a tank top and cargo trousers, swinging a rifle with a confident grin, in an ancient jungle ruin, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Commander Rourke, a huge square-jawed mercenary with a grey crew cut and a cleft chin in a tank top and cargo trousers, swinging a rifle with a confident grin, in an ancient jungle ruin, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "maleficent-and-diablo-evil-incarnate": {
    "name": "Maleficent & Diablo - Evil Incarnate",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Maleficent, a tall dark fairy with pale green skin, a black horned headdress, a high-collared black-and-purple robe and a staff topped with a glowing green orb, together with Diablo, a sleek black raven with a sharp beak and glinting eyes, casting dark magic with her raven flying beside her, in a swirling stormy purple sky, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Maleficent, a tall dark fairy with pale green skin, a black horned headdress, a high-collared black-and-purple robe and a staff topped with a glowing green orb, together with Diablo, a sleek black raven with a sharp beak and glinting eyes, casting dark magic with her raven flying beside her, in a swirling stormy purple sky, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "maleficent-exultant-spellcaster": {
    "name": "Maleficent - Exultant Spellcaster",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Maleficent, a tall dark fairy with pale green skin, a black horned headdress, a high-collared black-and-purple robe and a staff topped with a glowing green orb, raising her staff triumphantly as green magic crackles, on a stormy mountain peak, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Maleficent, a tall dark fairy with pale green skin, a black horned headdress, a high-collared black-and-purple robe and a staff topped with a glowing green orb, raising her staff triumphantly as green magic crackles, on a stormy mountain peak, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "malicious-mean-and-scary": {
    "name": "Malicious, Mean, and Scary",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a gang of burly scary tavern thugs with hooks, horned helmets and scars, grinning menacingly, in a dark rustic pub, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "a gang of burly scary tavern thugs with hooks, horned helmets and scars, grinning menacingly, in a dark rustic pub, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "max-goof-chart-topper": {
    "name": "Max Goof - Chart Topper",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Max Goof, a lanky teenage cartoon dog with a tuft of black hair, long black ears, a red hoodie and blue jeans, in neon sunglasses and a flashy neon jacket, singing into a microphone, on a concert stage with laser lights and a cheering crowd, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Max Goof, a lanky teenage cartoon dog with a tuft of black hair, long black ears, a red hoodie and blue jeans, in neon sunglasses and a flashy neon jacket, singing into a microphone, on a concert stage with laser lights and a cheering crowd, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "max-goof-rebellious-teen": {
    "name": "Max Goof - Rebellious Teen",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Max Goof, a lanky teenage cartoon dog with a tuft of black hair, long black ears, a red hoodie and blue jeans, skateboarding down a hill with a cheeky grin, on a sunny suburban street, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Max Goof, a lanky teenage cartoon dog with a tuft of black hair, long black ears, a red hoodie and blue jeans, skateboarding down a hill with a cheeky grin, on a sunny suburban street, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "meilin-lee-losing-control": {
    "name": "Meilin Lee - Losing Control",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Meilin Lee, a teenage girl with black hair, round glasses, a red top and a plaid skirt, panicking as fluffy red panda ears and tail pop out, in her colourful bedroom, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Meilin Lee, a teenage girl with black hair, round glasses, a red top and a plaid skirt, panicking as fluffy red panda ears and tail pop out, in her colourful bedroom, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "mickey-mouse-expedition-leader": {
    "name": "Mickey Mouse - Expedition Leader",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Mickey Mouse, the classic cheerful cartoon mouse with round black ears, white gloves, red shorts and yellow shoes, in an explorer outfit with a lantern, leading the way, at a campfire in a dark mysterious forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Mickey Mouse, the classic cheerful cartoon mouse with round black ears, white gloves, red shorts and yellow shoes, in an explorer outfit with a lantern, leading the way, at a campfire in a dark mysterious forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "mickey-mouse-snowboard-ace": {
    "name": "Mickey Mouse - Snowboard Ace",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Mickey Mouse, the classic cheerful cartoon mouse with round black ears, white gloves, red shorts and yellow shoes, snowboarding fast on a green snowboard in an aviator cap and goggles, down a steep powdery slope, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Mickey Mouse, the classic cheerful cartoon mouse with round black ears, white gloves, red shorts and yellow shoes, snowboarding fast on a green snowboard in an aviator cap and goggles, down a steep powdery slope, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "mike-wazowski-heroic-climber": {
    "name": "Mike Wazowski - Heroic Climber",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Mike Wazowski, a round green one-eyed monster with small horns, thin arms and legs and a big grin, clinging bravely to a twisting vine as he climbs, in a colourful jungle canyon, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Mike Wazowski, a round green one-eyed monster with small horns, thin arms and legs and a big grin, clinging bravely to a twisting vine as he climbs, in a colourful jungle canyon, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "milo-thatch-getting-his-hands-dirty": {
    "name": "Milo Thatch - Getting His Hands Dirty",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Milo Thatch, a lanky young explorer with round glasses, messy brown hair and a khaki expedition outfit, hacking through knotted green vines with a determined look, in a lush glowing jungle, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Milo Thatch, a lanky young explorer with round glasses, messy brown hair and a khaki expedition outfit, hacking through knotted green vines with a determined look, in a lush glowing jungle, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "mowgli-man-cub": {
    "name": "Mowgli - Man Cub",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Mowgli, a wiry jungle boy with shaggy black hair and a red loincloth, swinging playfully on a jungle vine, in a lush green jungle, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Mowgli, a wiry jungle boy with shaggy black hair and a red loincloth, swinging playfully on a jungle vine, in a lush green jungle, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "mrs-incredible-super-stretchy": {
    "name": "Mrs. Incredible - Super Stretchy",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Mrs. Incredible, a confident heroine with an auburn bob, a black eye mask and a solid red superhero suit with a wide plain black chest band, black gloves, black boots and a black belt, stretching her arms and legs impossibly long in an action pose, on a city street, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Mrs. Incredible, a confident heroine with an auburn bob, a black eye mask and a solid red superhero suit with a wide plain black chest band, black gloves, black boots and a black belt, stretching her arms and legs impossibly long in an action pose, on a city street, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "mushu-stealthy-dragon": {
    "name": "Mushu - Stealthy Dragon",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Mushu, a small red dragon with a yellow belly, golden horns, long whiskers and a sneaky grin, creeping on tiptoe with a sneaky grin, through a misty bamboo forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Mushu, a small red dragon with a yellow belly, golden horns, long whiskers and a sneaky grin, creeping on tiptoe with a sneaky grin, through a misty bamboo forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "my-adventure-book": {
    "name": "My Adventure Book",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "an open adventure scrapbook full of photos of waterfalls and colourful drawings, a hand turning a page, on a cosy table, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition",
+   "prompt": "an open adventure scrapbook full of photos of waterfalls and colourful drawings, a hand turning a page, on a cosy table, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition",
    "allow": [
     "page"
    ]
@@ -572,399 +572,399 @@
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Nakoma, a young Powhatan woman with long straight black hair and a fringed tan deerskin dress, wrapped in a warm red woven blanket, kneeling calmly by a crackling campfire, inside a cosy longhouse while a storm rages outside, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Nakoma, a young Powhatan woman with long straight black hair and a fringed tan deerskin dress, wrapped in a warm red woven blanket, kneeling calmly by a crackling campfire, inside a cosy longhouse while a storm rages outside, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "nani-stage-manager": {
    "name": "Nani - Stage Manager",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Nani, a young Hawaiian woman with long black hair and a flower tucked behind one ear, in a blue blazer, confidently directing a show with a smile, backstage at a theatre with red curtains, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Nani, a young Hawaiian woman with long black hair and a flower tucked behind one ear, in a blue blazer, confidently directing a show with a smile, backstage at a theatre with red curtains, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "ohana-means-family": {
    "name": "Ohana Means Family",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Lilo, a little Hawaiian girl with long black hair in a red dress with a white leaf pattern, hugging Stitch the small blue alien warmly as tiny cute alien creatures cuddle around them, on a cosy living room floor, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Lilo, a little Hawaiian girl with long black hair in a red dress with a white leaf pattern, hugging Stitch the small blue alien warmly as tiny alien creatures cuddle around them, on a cosy living room floor, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "omnidroid-v-8": {
    "name": "Omnidroid - V.8",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "the Omnidroid, a giant black spherical battle robot with long jointed tentacle legs and a glowing red sensor eye, rising menacingly from wreckage with its tentacle legs spread, in a burning city street, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "the Omnidroid, a giant black spherical battle robot with long jointed tentacle legs and a glowing red sensor eye, rising menacingly from wreckage with its tentacle legs spread, in a burning city street, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "piercing-attack": {
    "name": "Piercing Attack",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a crackling green magical spear piercing straight through a thorny wooden shield, in a dark enchanted forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "a crackling green magical spear piercing straight through a thorny wooden shield, in a dark enchanted forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "pluto-friendly-pooch": {
    "name": "Pluto - Friendly Pooch",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Pluto, a friendly golden-yellow cartoon dog with long black ears, a black nose and a green collar, wagging his tail with his tongue out happily, in front of a cosy house doorway, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Pluto, a friendly golden-yellow cartoon dog with long black ears, a black nose and a green collar, wagging his tail with his tongue out happily, in front of a cosy house doorway, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "pocahontas-guiding-the-tribe": {
    "name": "Pocahontas - Guiding the Tribe",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Pocahontas, a young woman with very long flowing black hair, a tan one-shoulder deerskin dress and a turquoise necklace, pointing the way forward with confidence, leaves swirling, in a forest village at sunrise, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Pocahontas, a young woman with very long flowing black hair, a tan one-shoulder deerskin dress and a turquoise necklace, pointing the way forward with confidence, leaves swirling, in a forest village at sunrise, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "pocahontas-peacekeeper": {
    "name": "Pocahontas - Peacekeeper",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Pocahontas, a young woman with very long flowing black hair, a tan one-shoulder deerskin dress and a turquoise necklace, standing calm and resolute with her hair streaming in the wind, colourful leaves swirling, on a cliff at sunset, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Pocahontas, a young woman with very long flowing black hair, a tan one-shoulder deerskin dress and a turquoise necklace, standing calm and resolute with her hair streaming in the wind, colourful leaves swirling, on a cliff at sunset, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "potion-of-malice": {
    "name": "Potion of Malice",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "an ornate glass vial of glowing pink potion with a heart-shaped stopper, in a swirling green magical mist, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "an ornate glass vial of glowing pink potion with a heart-shaped stopper, in a swirling green magical mist, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "prince-charming-protector-of-the-realm": {
    "name": "Prince Charming - Protector of the Realm",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Prince Charming, a handsome prince with short brown hair in a white military jacket with gold epaulettes and a red sash, holding a silver shield, raising his shield protectively, in a sparkling palace ballroom, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Prince Charming, a handsome prince with short brown hair in a white military jacket with gold epaulettes and a red sash, holding a silver shield, raising his shield protectively, in a sparkling palace ballroom, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "prince-eric-noble-swordsman": {
    "name": "Prince Eric - Noble Swordsman",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Prince Eric, a handsome young prince with black hair, a loose white shirt, a red sash and navy trousers, raising a gleaming sword with a determined look, in a sea cave full of treasure, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Prince Eric, a handsome young prince with black hair, a loose white shirt, a red sash and navy trousers, raising a gleaming sword with a determined look, in a sea cave full of treasure, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "prince-phillip-vanquisher-of-foes": {
    "name": "Prince Phillip - Vanquisher of Foes",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Prince Phillip, a brave prince with brown hair, a red cape, a shield and a sword, riding his white horse, charging forward with sword raised, through a forest of giant thorns, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Prince Phillip, a brave prince with brown hair, a red cape, a shield and a sword, riding his white horse, charging forward with sword raised, through a forest of giant thorns, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "put-that-thing-back": {
    "name": "Put That Thing Back",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Sulley the big blue furry monster and Mike Wazowski the green one-eyed monster panicking as a happy little girl in a purple monster costume runs past, in a factory hallway full of doors, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Sulley the big blue furry monster and Mike Wazowski the green one-eyed monster panicking as a happy little girl in a purple monster costume runs past, in a factory hallway full of doors, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "rafiki-mystical-fighter": {
    "name": "Rafiki - Mystical Fighter",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Rafiki, a wise old mandrill shaman with grey fur, a long white beard, a colourful blue-and-red face and a long staff hung with gourds, spinning his staff in a mystic fighting stance with swirling magic, on a moonlit savanna rock at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Rafiki, a wise old mandrill shaman with grey fur, a long white beard, a colourful blue-and-red face and a long staff hung with gourds, spinning his staff in a mystic fighting stance with swirling magic, on a moonlit savanna rock at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "raging-storm": {
    "name": "Raging Storm",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Nani holding little Lilo tight as a huge stormy wave crashes over them, in a raging ocean storm, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Nani holding little Lilo tight as a huge stormy wave crashes over them, in a raging ocean storm, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "rapunzel-tower-defender": {
    "name": "Rapunzel - Tower Defender",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Rapunzel, a young princess with impossibly long golden hair, green eyes and a pink-and-lavender dress, barefoot, swinging her long golden hair like a whip to drive off intruders, in her tower room overgrown with dark thorny vines, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Rapunzel, a young princess with impossibly long golden hair, green eyes and a pink-and-lavender dress, barefoot, swinging her long golden hair like a whip to drive off intruders, in her tower room overgrown with dark thorny vines, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "retro-evolution-device": {
    "name": "Retro Evolution Device",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a still life of a chunky retro sci-fi ray gun with glowing green tubes and a purple barrel, lying by itself half-encased in a block of ice, on a snowy laboratory bench, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "a still life of a chunky retro sci-fi ray gun with glowing green tubes and a purple barrel, lying by itself half-encased in a block of ice, on a snowy laboratory bench, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "sabotage": {
    "name": "Sabotage",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Commander Rourke, a huge square-jawed mercenary with a grey crew cut, smirking as a fiery explosion blooms behind him, in an ancient underground ruin, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Commander Rourke, a huge square-jawed mercenary with a grey crew cut, smirking as a fiery explosion blooms behind him, in an ancient underground ruin, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "safety-rope": {
    "name": "Safety Rope",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a thick coil of sturdy braided rope, on a wooden dock in warm sunlight, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "a thick coil of sturdy braided rope, on a wooden dock in warm sunlight, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "second-star-to-the-right": {
    "name": "Second Star to the Right",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Peter Pan leading Wendy and her brothers flying through the night sky toward a bright star, over moonlit London rooftops, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Peter Pan leading Wendy and her brothers flying through the night sky toward a bright star, over moonlit London rooftops, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "squeaks-cozy-caterpillar": {
    "name": "Squeaks - Cozy Caterpillar",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Squeaks, a plump caterpillar with a green head and a fluffy pink body, snuggled up snugly in a nest of leaves, in a frosty autumn tree hollow, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Squeaks, a plump caterpillar with a green head and a fluffy pink body, snuggled up snugly in a nest of leaves, in a frosty autumn tree hollow, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "stegmutt-clumsy-dinosaur": {
    "name": "Stegmutt - Clumsy Dinosaur",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Stegmutt, a big clumsy green stegosaurus with orange back plates and brown trousers, stumbling clumsily, knocking things over, in a snowy city street at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Stegmutt, a big clumsy green stegosaurus with orange back plates and brown trousers, stumbling clumsily, knocking things over, in a snowy city street at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "stitch-carefree-snowboarder": {
    "name": "Stitch - Carefree Snowboarder",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, carving down a slope on an orange snowboard in a brown hat and earmuffs, on a snowy mountain, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, carving down a slope on an orange snowboard in a brown hat and earmuffs, on a snowy mountain, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "stitch-carefree-surfer": {
    "name": "Stitch - Carefree Surfer",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, riding a curling wave on a surfboard with red sunglasses and a sandwich in hand, on a bright tropical sea, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, riding a curling wave on a surfboard with red sunglasses and a sandwich in hand, on a bright tropical sea, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "stitch-protector-of-frogs": {
    "name": "Stitch - Protector of Frogs",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, protectively holding a tiny green frog, wearing a red Hawaiian shirt, in a lush rainy jungle garden, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, protectively holding a tiny green frog, wearing a red Hawaiian shirt, in a lush rainy jungle garden, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "stitch-rock-star": {
    "name": "Stitch - Rock Star",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, wearing a spiky blond wig and a golden studded rock jacket, shredding an electric guitar, on a beachside concert stage at night with confetti and spotlights, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Stitch, a small blue koala-like alien with big notched ears, a fluffy light-blue chest, black eyes, a wide nose and a huge toothy grin, wearing a spiky blond wig and a golden studded rock jacket, shredding an electric guitar, on a beachside concert stage at night with confetti and spotlights, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "strange-things": {
    "name": "Strange Things",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Buzz Lightyear, a space ranger toy in white-and-green armour with purple trim, striking a heroic pose in a beam of light as other toys look on, in a child bedroom, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Buzz Lightyear, a space ranger action figure in white-and-green armour with purple trim, striking a heroic pose in a beam of light as other playthings look on, in a child bedroom, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "strength-of-a-raging-fire": {
    "name": "Strength of a Raging Fire",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Shang and his soldier recruits performing flying martial-arts kicks, in a training camp at sunset, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Shang and his soldier recruits performing flying martial-arts kicks, in a training camp at sunset, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "strike-a-good-match": {
    "name": "Strike a Good Match",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Mulan in white matchmaker makeup and a pink silk gown, dancing gracefully as green tea swirls around her, in a lantern-lit courtyard, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Mulan in white matchmaker makeup and a pink silk gown, dancing gracefully as green tea swirls around her, in a lantern-lit courtyard, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "sven-leaping-reindeer": {
    "name": "Sven - Leaping Reindeer",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Sven, a big friendly brown reindeer with large antlers, a pale muzzle, a lolling tongue and a blue-and-red harness, leaping across an icy chasm with glowing magical antlers, in a snowy mountain gorge, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Sven, a big friendly brown reindeer with large antlers, a pale muzzle, a lolling tongue and a blue-and-red harness, leaping across an icy chasm with glowing magical antlers, in a snowy mountain gorge, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "taran-magically-armed": {
    "name": "Taran - Magically Armed",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Taran, a young hero with shaggy brown hair in a green tunic, wielding a glowing magic sword, charging forward swinging his glowing sword trailing light, through a swirl of magic, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Taran, a young hero with shaggy brown hair in a green tunic, wielding a glowing magic sword, charging forward swinging his glowing sword trailing light, through a swirl of magic, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "the-horseman-strikes": {
    "name": "The Horseman Strikes!",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "the Headless Horseman, a headless rider in a black cloak whose high collar is empty above the shoulders, on a rearing black horse, hurling a flaming jack-o-lantern, on a misty autumn night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "the Headless Horseman, a headless rider in a black cloak whose high collar is empty above the shoulders, on a rearing black horse, hurling a flaming jack-o-lantern, on a misty autumn night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "the-huntsman-on-the-queen-s-orders": {
    "name": "The Huntsman - On the Queen's Orders",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "the Huntsman, a grim burly forester with a dark beard, a brown hood with a red feather and a green tunic, a hunting knife at his belt, standing grim and torn, holding a small carved wooden box, in a dark gloomy forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "the Huntsman, a grim burly forester with a dark beard, a brown hood with a red feather and a green tunic, a hunting knife at his belt, standing grim and torn, holding a small carved wooden box, in a dark gloomy forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "the-queen-devious-disguise": {
    "name": "The Queen - Devious Disguise",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "the Evil Queen disguised as an old hag in a black hooded robe, with a hooked nose, a warty chin and wild white hair, holding out a shiny red poisoned apple with a sinister grin, green magic swirling, at a cottage window in a dark forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "the Evil Queen disguised as an old hag in a black hooded robe, with a hooked nose, a warty chin and wild white hair, holding out a shiny red poisoned apple with a sinister grin, green magic swirling, at a cottage window in a dark forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "the-queen-regal-monarch": {
    "name": "The Queen - Regal Monarch",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "the Evil Queen, a cold beautiful queen with pale skin, red lips and arched eyebrows, her head and hair wrapped in a smooth rounded black cowl, a tall gold crown resting on the cowl, a high stand-up white collar, a purple gown and a long black cape lined in red, seated proudly on a golden throne with a cold stare, in a grand dark throne room, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "the Evil Queen, a cold beautiful queen with pale skin, red lips and arched eyebrows, her head and hair wrapped in a smooth rounded black cowl, a tall gold crown resting on the cowl, a high stand-up white collar, a purple gown and a long black cape lined in red, seated proudly on a golden throne with a cold stare, in a grand dark throne room, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "the-terror-that-flaps-in-the-night": {
    "name": "The Terror That Flaps in the Night",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Darkwing Duck, a white cartoon duck hero with an orange bill, a purple domino mask, a purple gangster-style fedora hat with a pinched creased crown and a wide floppy brim (a fedora, rounded on top), a long purple cape lined in pink and a plain teal turtleneck, swooping down to strike a villain, amid shattering ice crystals at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Darkwing Duck, a white cartoon duck hero with an orange bill, a purple domino mask, a purple gangster-style fedora hat with a pinched creased crown and a wide floppy brim (a fedora, rounded on top), a long purple cape lined in pink and a plain teal turtleneck, swooping down to strike a villain, amid shattering ice crystals at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "thomas-wide-eyed-recruit": {
    "name": "Thomas - Wide-Eyed Recruit",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Thomas, a young settler with shaggy brown hair in a green doublet and brown trousers, carrying a musket, gazing up in wonder, in a breathtaking autumn mountain landscape, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Thomas, a young settler with shaggy brown hair in a green doublet and brown trousers, carrying a musket, gazing up in wonder, in a breathtaking autumn mountain landscape, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "tigger-bouncing-all-the-way": {
    "name": "Tigger - Bouncing All the Way",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Tigger, an orange tiger with black stripes, a cream belly, a big grin and a springy coiled tail, bouncing joyfully on his springy tail through falling snow, over a snowy woodland hill, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Tigger, an orange tiger with black stripes, a cream belly, a big grin and a springy coiled tail, bouncing joyfully on his springy tail through falling snow, over a snowy woodland hill, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "tinker-bell-generous-fairy": {
    "name": "Tinker Bell - Generous Fairy",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Tinker Bell, a tiny fairy with a blonde bun, a green leaf dress, green slippers with pom-poms and glittering wings, sharing a big berry with a friendly mouse, in a golden autumn meadow, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Tinker Bell, a tiny fairy with a blonde bun, a green leaf dress, green slippers with pom-poms and glittering wings, sharing a big berry with a friendly mouse, in a golden autumn meadow, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "tinker-bell-giant-fairy": {
    "name": "Tinker Bell - Giant Fairy",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Tinker Bell, a tiny fairy with a blonde bun, a green leaf dress, green slippers with pom-poms and glittering wings, grown to giant size, holding a pirate ship in her hands with a determined look, above a turquoise lagoon, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Tinker Bell, a tiny fairy with a blonde bun, a green leaf dress, green slippers with pom-poms and glittering wings, grown to giant size, holding a pirate ship in her hands with a determined look, above a turquoise lagoon, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "to-wither-a-flower": {
    "name": "To Wither a Flower",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a cackling white-haired old witch in a pink dress casting a stream of sickly green magic that withers a garden of flowers, at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "a cackling white-haired old witch in a pink dress casting a stream of sickly green magic that withers a garden of flowers, at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "tod-all-alone": {
    "name": "Tod - All Alone",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Tod, a young red fox with cream cheeks and chest, big blue eyes and a fluffy white-tipped tail, curled up sadly in the snow with big lonely eyes, at the edge of a snowy winter forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Tod, a young red fox with cream cheeks and chest, big blue eyes and a fluffy white-tipped tail, curled up sadly in the snow with big lonely eyes, at the edge of a snowy winter forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "tod-clever-fox": {
    "name": "Tod - Clever Fox",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Tod, a young red fox with cream cheeks and chest, big blue eyes and a fluffy white-tipped tail, peeking cleverly out from a tangle of vines, in a dark forest overgrown with twisting vines, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Tod, a young red fox with cream cheeks and chest, big blue eyes and a fluffy white-tipped tail, peeking cleverly out from a tangle of vines, in a dark forest overgrown with twisting vines, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "under-the-sea": {
    "name": "Under the Sea",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Ariel the red-haired mermaid surrounded by dancing fish, crabs and sea creatures in a joyful underwater show, in a colourful coral reef, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Ariel the red-haired mermaid surrounded by dancing fish, crabs and sea creatures in a joyful underwater show, in a colourful coral reef, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "ursula-deceiver": {
    "name": "Ursula - Deceiver",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Ursula, a plump sea witch with lavender skin, short spiky white hair, red lips, a black strapless dress, a golden shell necklace and purple-black octopus tentacles, stirring a bubbling cauldron with a wicked grin, a glowing golden shell in her hand, in her dark undersea grotto lair, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Ursula, a plump sea witch with lavender skin, short spiky white hair, red lips, a black strapless dress, a golden shell necklace and purple-black octopus tentacles, stirring a bubbling cauldron with a wicked grin, a glowing golden shell in her hand, in her dark undersea grotto lair, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "ursula-s-shell-necklace": {
    "name": "Ursula's Shell Necklace",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "a still life of a golden nautilus-shell pendant on a gold chain lying by itself on a mossy rock, glowing with a captured swirl of golden voice, in a dark underwater grotto with drifting bubbles, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "a still life of a golden nautilus-shell pendant on a gold chain lying by itself on a mossy rock, glowing with a captured swirl of golden voice, in a dark underwater grotto with drifting bubbles, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "ursula-vanessa": {
    "name": "Ursula - Vanessa",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Vanessa, a beautiful young woman with long wavy dark brown hair and violet eyes, in a purple gown, a glowing golden nautilus-shell necklace at her throat, singing with a sly smile as her necklace glows with golden magic, on a seaside beach near a palace at sunset, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Vanessa, a beautiful young woman with long wavy dark brown hair and violet eyes, in a purple gown, a glowing golden nautilus-shell necklace at her throat, singing with a sly smile as her necklace glows with golden magic, on a seaside beach near a palace at sunset, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "ursula-whisper-of-vanessa": {
    "name": "Ursula - Whisper of Vanessa",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Ursula, a plump sea witch with lavender skin, short spiky white hair, red lips, a black strapless dress, a golden shell necklace and purple-black octopus tentacles, as a glowing spectral ghost swirling with dark magic, in a shadowy undersea cavern, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Ursula, a plump sea witch with lavender skin, short spiky white hair, red lips, a black strapless dress, a golden shell necklace and purple-black octopus tentacles, as a glowing spectral ghost swirling with dark magic, in a shadowy undersea cavern, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "violet-parr-force-field-practice": {
    "name": "Violet Parr - Force Field Practice",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Violet Parr, a shy teenage girl with long straight black hair over one eye in a lavender sweater, practising a shimmering purple force field with both hands, in a sunny suburban backyard, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Violet Parr, a shy teenage girl with long straight black hair over one eye in a lavender sweater, practising a shimmering purple force field with both hands, in a sunny suburban backyard, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "violet-parr-learning-new-powers": {
    "name": "Violet Parr - Learning New Powers",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Violet Parr, a teenage girl with long straight black hair over one eye, a black eye mask and a plain solid red superhero suit with a plain unmarked chest, black gloves, black boots and a black belt, flying through the air conjuring a glowing purple force bubble, in a pink and purple sky full of debris, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Violet Parr, a teenage girl with long straight black hair over one eye, a black eye mask and a plain solid red superhero suit with a plain unmarked chest, black gloves, black boots and a black belt, flying through the air conjuring a glowing purple force bubble, in a pink and purple sky full of debris, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "violet-parr-super-resilient": {
    "name": "Violet Parr - Super Resilient",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Violet Parr, a teenage girl with long straight black hair over one eye, a black eye mask and a plain solid red superhero suit with a plain unmarked chest, black gloves, black boots and a black belt, crouched inside a glowing purple force field sphere as dark vines lash at it, in a jungle clearing, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Violet Parr, a teenage girl with long straight black hair over one eye, a black eye mask and a plain solid red superhero suit with a plain unmarked chest, black gloves, black boots and a black belt, crouched inside a glowing purple force field sphere as dark vines lash at it, in a jungle clearing, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "vixey-forest-friend": {
    "name": "Vixey - Forest Friend",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Vixey, a pretty young red vixen with long eyelashes, cream cheeks and a fluffy tail, peeking shyly out of a hollow log with a sweet smile, in a misty spring forest, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Vixey, a pretty young red vixen with long eyelashes, cream cheeks and a fluffy tail, peeking shyly out of a hollow log with a sweet smile, in a misty spring forest, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "white-rabbit-late-again": {
    "name": "White Rabbit - Late Again",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "the White Rabbit, a fretful white rabbit with pink ears in a red jacket and a checked waistcoat, carrying a big golden pocket watch and a furled umbrella, dashing in a panic, checking his pocket watch, falling down a magical rabbit hole full of floating teacups, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "the White Rabbit, a fretful white rabbit with pink ears in a red jacket and a checked waistcoat, carrying a big golden pocket watch and a furled umbrella, dashing in a panic, checking his pocket watch, falling down a magical rabbit hole full of floating teacups, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "woody-helping-a-friend": {
    "name": "Woody - Helping a Friend",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Woody, a cowboy toy with a brown hat, a yellow plaid shirt, a cow-print vest, blue jeans and a holster, swinging a lasso heroically to rescue a friend, in a cluttered toy room, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Woody, a stitched cloth cowboy figure with a brown hat, a yellow plaid shirt, a cow-print vest, blue jeans and a holster, swinging a lasso heroically to rescue a friend, in a cluttered playroom, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "woody-waiting-for-a-friend": {
    "name": "Woody - Waiting for a Friend",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Woody, a cowboy toy with a brown hat, a yellow plaid shirt, a cow-print vest, blue jeans and a holster, sitting on a big vine playing a guitar by a warm fire, in a dark jungle at night, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Woody, a stitched cloth cowboy figure with a brown hat, a yellow plaid shirt, a cow-print vest, blue jeans and a holster, sitting on a big vine playing a guitar by a warm fire, in a dark jungle at night, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "world-s-greatest-criminal-mind": {
    "name": "World's Greatest Criminal Mind",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Ratigan, a huge sly rat villain in a black tuxedo and cape, celebrating on a table as his thug henchmen cheer, in a lavish underground lair with red curtains and treasure, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Ratigan, a huge sly rat villain in a black tuxedo and cape, celebrating on a table as his thug henchmen cheer, in a lavish underground lair with red curtains and treasure, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   },
   "you-broke-my-smolder": {
    "name": "You Broke My Smolder",
    "model": "dev",
    "aspect": "2:3",
    "megapixels": 1,
-   "prompt": "Flynn Rider knocked out flat on the floor, a frying pan beside him, in a cluttered tower room, super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
+   "prompt": "Flynn Rider knocked out flat on the floor, a frying pan beside him, in a cluttered tower room, detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition"
   }
  },
  "ui": {

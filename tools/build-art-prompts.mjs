@@ -1,5 +1,5 @@
 // Builds tools/art/art-prompts.json: one prompt per card in data/cards.js plus the UI plates.
-// PLAN.md D17 (supersedes D3): every card shows its ACTUAL character, MGSD proportions,
+// PLAN.md D17 (supersedes D3): every card shows its ACTUAL character, compact large-head figure proportions (about 2.8 head-heights),
 // feature-animation direction; the owner picked FLUX.1 dev with name + description.
 // Card prompt = WHO clause (keyed by character Name; starts with the name) + per-card act + setting
 //               + STYLE. Items/actions/songs = subject + setting + STYLE.
@@ -34,6 +34,8 @@ const COUNTS = ['three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
 // in the pool (Dumbo, Pocahontas, Mulan, Aladdin, ...) stay allowed.
 const TITLES = ['disney', 'pixar', 'lorcana', 'ravensburger', 'illumineer', 'illumineers', 'marvel', 'lucasfilm', 'dreamworks', 'ghibli', 'miyazaki', 'artstation', 'rutkowski', 'frozen', 'encanto', 'zootopia', 'incredibles', 'ducktales', 'gargoyles', 'tangled', 'hercules', 'fantasia', 'pinocchio', 'atlantis', 'storyborn', 'dreamborn', 'floodborn', 'glimmer', 'inkwell', 'lore'];
 const TITLE_PHRASES = ['toy story', 'lion king', 'little mermaid', 'sleeping beauty', 'snow white', 'jungle book', 'robin hood', 'treasure planet', 'black cauldron', 'turning red', 'monsters inc', 'rescue rangers', 'hundred acre', 'beauty and the beast', 'fox and the hound', 'goof troop', 'goofy movie', 'big hero', 'wreck it', 'inside out', 'great mouse detective', 'emperors new groove', 'lilo and stitch', 'three quarter', 'card frame', 'ink bottle label', 'storybook page'];
+// The style block carries its own head-height measurement ("2.8", "a third"), which the count rule would otherwise refuse.
+const STYLE_ALLOW = ['third', '8'];
 const UI_BANNED = ['castle', 'castles', 'palace', 'palaces', 'spire', 'spires', 'turret', 'turrets', 'citadel', 'kingdom'];
 
 const norm = s => ' ' + s.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, ' ').trim() + ' ';
@@ -48,7 +50,7 @@ function lintText(what, text, problems, allow = [], extra = []) {
   for (const w of n.trim().split(' ')) {
     if (BANNED.has(w) && !allow.includes(w)) problems.push(`${what}: "${w}" (${BANNED.get(w)})`);
     if (extra.includes(w)) problems.push(`${what}: "${w}" (castle trade-dress risk on UI art)`);
-    if (/^\d+$/.test(w) && +w > 2) problems.push(`${what}: "${w}" (count above two)`);
+    if (/^\d+$/.test(w) && +w > 2 && !allow.includes(w)) problems.push(`${what}: "${w}" (count above two)`);
   }
   for (const p of TITLE_PHRASES) if (n.includes(' ' + p + ' ')) problems.push(`${what}: "${p}" (title phrase)`);
   if (/\bn['’]t\b/i.test(text)) problems.push(`${what}: contraction negation`);
@@ -56,7 +58,7 @@ function lintText(what, text, problems, allow = [], extra = []) {
 
 export function buildAll() {
   const problems = [];
-  lintText('STYLE', STYLE, problems); lintText('UI_STYLE', UI_STYLE, problems); lintText('UI_EMPTY', UI_EMPTY, problems);
+  lintText('STYLE', STYLE, problems, STYLE_ALLOW); lintText('UI_STYLE', UI_STYLE, problems); lintText('UI_EMPTY', UI_EMPTY, problems);
   for (const [k, v] of Object.entries(WHO)) lintText('WHO ' + k, v, problems);
   const prompts = {};
   for (const id of Object.keys(C).sort()) {
@@ -78,7 +80,7 @@ export function buildAll() {
     }
     const prompt = lead + ', ' + STYLE;
     if (prompt.length > 900) problems.push(id + ': prompt ' + prompt.length + ' chars (> 900)');
-    lintText(id + ' (whole)', prompt, problems, allow);
+    lintText(id + ' (whole)', lead, problems, allow);
     prompts[id] = { name: c.name + (c.version ? ' - ' + c.version : ''), model: MODEL, aspect: '2:3', megapixels: 1, prompt, ...(allow.length ? { allow } : {}) };
   }
   for (const id of Object.keys(CARDS)) if (!C[id]) problems.push(id + ': CARDS entry for an id that is not in data/cards.js');
@@ -98,7 +100,7 @@ if (process.argv.includes('--selftest')) {
   for (const t of bad) { const p = []; lintText('t', t, p); if (!p.length) { ok = false; console.log('selftest: lint MISSED "' + t + '"'); } }
   { const p = []; lintText('t', 'a castle on a hill', p, [], UI_BANNED); if (!p.length) { ok = false; console.log('selftest: UI castle ban MISSED'); } }
   { const p = []; lintText('t', 'a red guidebook', p, ['guidebook']); if (p.length) { ok = false; console.log('selftest: allow list ignored'); } }
-  for (const t of ['Stitch, a small blue alien with a pair of maracas', STYLE, UI_STYLE]) { const p = []; lintText('t', t, p); if (p.length) { ok = false; console.log('selftest: false positive ' + p.join('; ')); } }
+  for (const t of ['Stitch, a small blue alien with a pair of maracas', STYLE, UI_STYLE]) { const p = []; lintText('t', t, p, STYLE_ALLOW); if (p.length) { ok = false; console.log('selftest: false positive ' + p.join('; ')); } }
   console.log(ok ? 'selftest: lint bites (' + (bad.length + 1) + ' bad strings refused, allow list and clean strings pass)' : 'selftest: FAILED');
   process.exit(ok ? 0 : 1);
 }

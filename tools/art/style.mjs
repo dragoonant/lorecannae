@@ -2,9 +2,9 @@
 // description). Byte-identical on every card prompt; changing a single character starts a new set.
 // It describes the feature-animation direction without naming a studio (a studio name invites its
 // logo). build-art-prompts.mjs lints it like any prompt. (D3's painterly STYLE is superseded.)
-export const STYLE = 'super-deformed chibi figure with MGSD proportions, about two and a half heads tall, oversized head with big expressive eyes, short stubby limbs, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition';
+export const STYLE = 'detailed figure about 2.8 head-heights tall, head a third of its height, broad shoulders, short thick legs, expressive eyes, richly detailed costume and textures, classic feature-animation art direction, clean appealing shapes, bright saturated colours, polished soft cel shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, vertical portrait composition';
 
-// Item, action and song cards whose subject is an object or a scene: same direction, the chibi
+// Item, action and song cards whose subject is an object or a scene: same direction, the figure-proportion
 // clause applies to any characters present.
 // UI backdrops ("empty places", no figures): the same animation direction as a background painting.
 export const UI_STYLE = 'classic feature-animation background painting, clean appealing shapes, bright saturated colours, polished soft shading, cinematic lighting, full-bleed scene edge to edge, purely pictorial, wordless and untitled, wide panoramic landscape composition';

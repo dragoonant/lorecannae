@@ -49,7 +49,7 @@ All art and sound is made on the owner's machine; no cloud service is called (D1
 | Use | Tool | Licence of the model |
 |---|---|---|
 | Card and board art | FLUX.2 klein 4B, run locally through Flux Studio | Apache-2.0 |
-| MGSD style audition (D17) | FLUX.1 dev (fp8) and FLUX.1 schnell (fp8), run locally through Flux Studio | dev: FLUX.1 [dev] **Non-Commercial** Licence, used only because this is a free, non-commercial fan project (owner's call, D17); schnell: Apache-2.0 |
+| Figure-style audition (D17) | FLUX.1 dev (fp8) and FLUX.1 schnell (fp8), run locally through Flux Studio | dev: FLUX.1 [dev] **Non-Commercial** Licence, used only because this is a free, non-commercial fan project (owner's call, D17); schnell: Apache-2.0 |
 | Sound effects | Stable Audio Open, run locally through Audio Studio | Stability AI community licence |
 | Music | ACE-Step, run locally through Audio Studio | Apache-2.0 |
 | Floor sound kit | Procedural Web Audio, written in this repo | this repo |
